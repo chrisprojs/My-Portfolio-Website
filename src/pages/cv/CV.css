@@ -1,0 +1,193 @@
+/* Slider */
+.slider-container {
+  position: fixed;
+  top: 100px;
+  right: 20px;
+}
+
+.slider-text {
+  font-size: 10px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #007bff;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.scrollable {
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.cv-container {
+  max-width: 768px;
+  margin: 2% auto;
+  padding: 40px;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.cv-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.cv-header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.cv-header p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+.cv-section {
+  margin-bottom: 20px;
+}
+
+.cv-section h2 {
+  font-weight: 900;
+  border-bottom: 2px solid #333;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.cv-subsection {
+  margin-bottom: 15px;
+}
+
+.cv-subsection-h3 {
+  font-weight: 600;
+  margin: 0;
+  font-size: 18px;
+}
+
+.cv-subsection-p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+.cv-subsection-ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.cv-section-input{
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-input {
+  padding: 5px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.cv-skills-li {
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+.cv-skills-p {
+  display: inline;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+.slider-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.slider-text {
+  font-size: 6px;
+  margin-bottom: 2px;
+}
+
+.switch {
+  width: 30px;
+  height: 17px;
+}
+
+.slider {
+  border-radius: 17px;
+}
+
+.slider:before {
+  height: 13px;
+  width: 13px;
+  left: 2px;
+  bottom: 2px;
+}
+
+input:checked + .slider:before {
+  transform: translateX(13px);
+}
+
+  .cv-container {
+    padding: 10px;
+  }
+
+  .cv-header h1 {
+    font-size: 20px;
+  }
+
+  .search-input {
+    font-size: 12px;
+    padding: 4px;
+  }
+
+  .cv-header p,
+  .cv-section h2,
+  .cv-subsection-h3,
+  .cv-subsection-p,
+  .cv-skills-li {
+    font-size: 14px;
+  }
+}

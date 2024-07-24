@@ -1,0 +1,101 @@
+.contact-container {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  color: #333;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.contact-info-link{
+  margin: 5px 0;
+  text-decoration: none;
+  color: #0073b1; /* LinkedIn blue */
+}
+
+.contact-info-link:hover {
+  color: #6bc4f4;
+}
+
+.contact-button-offer-job {
+  border-radius: 10px;
+  border: 5px solid black;
+  margin-top: 20%;
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: center; /* Add this line */
+  align-items: center; /* Add this line */
+  text-align: center;
+  text-decoration: none;
+  animation: contact-button-offer-job-anim 3s infinite;
+  color: white;
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000,
+    2px 2px 0 #000, -2px 0 0 #000, 2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000,
+    -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  font-size: 2vw;
+}
+
+.contact-button-offer-job:hover {
+  animation: contact-button-offer-job-anim2 3s infinite, contact-button-offer-job-anim 3s infinite;
+  .section-1-gif{
+    visibility: visible;
+  }
+}
+
+@keyframes contact-button-offer-job-anim {
+  0% {
+    background-color: red;
+  }
+  16.7% {
+    background-color: orange;
+  }
+  33.4% {
+    background-color: yellow;
+  }
+  50.1% {
+    background-color: green;
+  }
+  66.8% {
+    background-color: blue;
+  }
+  83.5% {
+    background-color: indigo;
+  }
+  100% {
+    background-color: violet;
+  }
+}
+
+@keyframes contact-button-offer-job-anim2 {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-10px);
+  }
+  75% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-button-offer-job {
+    height: 16vw;
+    border: 3px solid black;
+    font-size: 4vw;
+  }
+}

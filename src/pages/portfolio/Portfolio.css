@@ -1,0 +1,26 @@
+.portfolio{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.portfolio-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px; /* Adjust the gap between grid items as needed */
+    width: 100%;
+    padding: 16px; /* Optional padding around the grid */
+}
+
+.no-scroll {
+    overflow: hidden !important;
+}
+
+@media (max-width: 768px) {
+    .portfolio-box{
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 8px;
+        padding: 8px;
+    }
+}

@@ -1,0 +1,137 @@
+.portfolio-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: auto;
+  width: 300px;
+  height: 500px;
+}
+
+.portfolio-card:hover{
+  opacity: 1; /* Show the border on hover */
+  border: 2px solid rgba(0, 0, 0, 0.5); /* Border color and width */
+  animation: cycleBorder 2s infinite;
+}
+
+@keyframes cycleBorder {
+  0% {
+    border: 2px solid rgba(0, 0, 0, 0.5);
+  }
+  50% {
+    border: 2px solid rgba(0, 0, 0, 0.2);
+  }
+  100% {
+    border: 2px solid rgba(0, 0, 0, 0.5);
+  }
+}
+
+.portfolio-card-slider {
+  width: 300px;
+  height: 300px;
+  border-bottom: 1px solid #ddd;
+}
+
+.portfolio-card-slider img{
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+}
+
+.slick-dots{
+  display: flex;
+  bottom: -20px;
+  justify-content: center;
+}
+
+.slick-dots ul{
+  width: fit-content;
+  padding: 0;
+}
+
+.portfolio-content {
+  display: flex;
+  height: 200px;
+  flex-direction: column;
+  padding: 15px;
+  align-items: start;
+  justify-content: space-around;
+}
+
+.portfolio-text h3 {
+  height: 30px;
+  max-width: 270px;
+  font-size: 24px;
+  margin: 0 0 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.portfolio-text p {
+  height: 70px;
+  max-width: 270px;
+  font-size: 12px;
+  margin: 0 0 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* Number of lines to show */
+  -webkit-box-orient: vertical;
+}
+
+.skills {
+  display: flex;
+  width: 270px;
+}
+
+.skill-badge {
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin: 0 5px 5px 0;
+  font-size: 12px;
+}
+
+@media (max-width: 768px) {
+  .portfolio-card {
+    width: 180px; /* 60% of 300px */
+    height: 320px; /* 60% of 500px */
+  }
+
+  .portfolio-card-slider {
+    width: 180px; /* 60% of 300px */
+    height: 180px; /* 60% of 300px */
+  }
+
+  .portfolio-card-slider img{
+    width: 180px; /* 60% of 300px */
+    height: 180px;
+  }
+
+  .portfolio-content {
+    margin-top: 1px;
+    height: 150px; /* 60% of 200px */
+    padding: 12px; /* 60% of 15px */
+  }
+
+  .portfolio-text h3 {
+    height: 18px;
+    max-width: 158px;
+    font-size: 16px; /* 60% of 24px */
+    margin: 0 0 6px; /* 60% of 10px */
+  }
+
+  .portfolio-text p {
+    max-width: 158px;
+    height: 60px; /* 60% of 80px */
+    font-size: 10px; /* 60% of 12px */
+    margin: 0 0 3px; /* 60% of 15px */
+    -webkit-line-clamp: 4;
+  }
+
+  .skill-badge {
+    margin: 0 1px 1px 0 !important; /* 60% of 5px */
+    font-size: 8px !important; /* 60% of 12px */
+  }
+}
