@@ -22,7 +22,7 @@ export const projects = [
       { picture: require(`${portfolioImageRoot}/My Portfolio Website/2.jpg`), desc: "Home page" },
       { picture: require(`${portfolioImageRoot}/My Portfolio Website/3.jpg`), desc: "My CV page" }
     ],
-    publicationLink: "",
+    publicationLink: "https://christian-antonius-portfolio.netlify.app/portfolio",
     author: ["Christian Antonius Anggaresta"],
   },
   {
