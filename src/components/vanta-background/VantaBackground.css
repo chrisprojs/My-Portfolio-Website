@@ -1,0 +1,9 @@
+.vanta-bg {
+  position: fixed; /* Fixed positioning to stay in place while scrolling */
+  top: 0;
+  left: 0;
+  width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+  z-index: -2; /* Behind other content */
+  overflow: hidden; /* Ensure no scrollbars appear */
+}

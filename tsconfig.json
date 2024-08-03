@@ -21,6 +21,7 @@
     "jsx": "react-jsx"
   },
   "include": [
-    "src"
+    "src",
+    "src/crypto-js/crypto-js.d.ts"
   ]
 }

@@ -1,4 +1,16 @@
 /* Slider */
+.cv-header,
+.cv-section,
+.cv-subsection,
+.cv-subsection-h3,
+.cv-subsection-p,
+.cv-skills-li,
+.cv-skills-p,
+.cv-header h1,
+.cv-header p {
+  color: black; /* Ensures all related text elements inside cv-container are also black */
+}
+
 .slider-container {
   position: fixed;
   top: 100px;

@@ -1,5 +1,5 @@
 .contact-container {
-  height: 70vh;
+  height: 60vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -47,7 +47,7 @@ h1 {
 }
 
 .contact-button-offer-job:hover {
-  animation: contact-button-offer-job-anim2 3s infinite, contact-button-offer-job-anim 3s infinite;
+  animation: contact-button-offer-job-anim2 1s linear infinite, contact-button-offer-job-anim 1s linear infinite;
   .section-1-gif{
     visibility: visible;
   }

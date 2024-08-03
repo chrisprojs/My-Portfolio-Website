@@ -1,9 +1,41 @@
-import React from 'react';
-import './PortfolioModal.css';
-import Slider from 'react-slick';
+import React, { useEffect, useState } from "react";
+import { CSSTransition } from 'react-transition-group';
+import "./PortfolioModal.css";
+import Slider from "react-slick";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "../../../redux/ReduxStorage";
+import { likeProject } from "../PortfolioAPI";
+import { likeProjectAction } from "../likedProjectsReducer";
 
 function PortfolioModal({ project, onClose, onNext, onPrev }: any) {
-  const { images = [], title = '', details = '', skills = [], author = [], publicationLink = '' } = project;
+  const projectData = project;
+  const [liked, setLiked] = useState(projectData.likes);
+  const [isLiked, setIsLiked] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+
+  const dispatch = useDispatch();
+  const likedProjects = useSelector((state: RootState) => state.likedProjects.likedProjects);
+
+  useEffect(() => {
+    setShowModal(true);
+    if(likedProjects.some((id:number) => id === projectData.projectId)){
+      setIsLiked(true)
+    }
+  }, [isLiked, likedProjects, projectData.projectId]);
+
+  const handleLikeClick = async (event: React.MouseEvent) => {
+    event.stopPropagation();
+    if (!isLiked && !likedProjects.some((id:number) => id === projectData.projectId)) {
+      try {
+        await likeProject(projectData.projectId);
+        setIsLiked(true);
+        setLiked(liked + 1);
+        dispatch(likeProjectAction(projectData.projectId));
+      } catch (error) {
+        console.error('Failed to update likes:', error);
+      }
+    }
+  };
 
   const NextArrow = ({ onClick }: any) => (
     <div className="arrow next-arrow" onClick={onClick}>
@@ -17,9 +49,16 @@ function PortfolioModal({ project, onClose, onNext, onPrev }: any) {
     </div>
   );
 
+  const handleClose = () => {
+    setShowModal(false);
+    setTimeout(() => {
+      onClose();
+    }, 100); // Match the duration of the closing transition
+  };
+
   const settings = {
     dots: true,
-    infinite: images.length > 1,
+    infinite: projectData.images.length > 1,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -33,41 +72,71 @@ function PortfolioModal({ project, onClose, onNext, onPrev }: any) {
   };
 
   return (
-    <div className="modal-overlay" onClick={onClose}>
-      <div className="modal-content-wrapper" onClick={(e) => e.stopPropagation()}>
+    <CSSTransition
+      in={showModal}
+      timeout={100}
+      classNames="modal"
+      unmountOnExit
+    >
+      <div className="modal-overlay" onClick={handleClose}>
+      <div
+        className="modal-content-wrapper"
+        onClick={(e) => e.stopPropagation()}
+      >
         <div className="modal-navigation">
-          <button onClick={onPrev} className="modal-prev-button">&larr;</button>
+          <button onClick={onPrev} className="modal-prev-button">
+            &larr;
+          </button>
         </div>
         <div className="modal-content">
-          <button className="close-button" onClick={onClose}>
+          <button className="close-button" onClick={handleClose}>
             &times;
           </button>
-          <h2>{title}</h2>
-          <div className='modal-body'>
-            <Slider {...settings} className="modal-slider">
-              {images.map((image: any, index: number) => (
-                <div key={index}>
-                  <img src={image.picture} alt={`${title} slide ${index + 1}`} />
-                  <p className="image-description">{image.desc}</p>
-                </div>
-              ))}
-            </Slider>
+          <h2>{projectData.title}</h2>
+          <div className="modal-body">
+            <div className="modal-slider-box">
+              <Slider {...settings} className="modal-slider">
+                {projectData.images.map((image: any, index: number) => (
+                  <div key={index}>
+                    <img
+                      src={image.picture}
+                      alt={`${projectData.title} slide ${index + 1}`}
+                    />
+                    <p className="image-description">{image.desc}</p>
+                  </div>
+                ))}
+              </Slider>
+              <div className="like-container">
+                <button
+                  className={`like-button ${isLiked ? "liked" : ""}`}
+                  onClick={handleLikeClick}
+                  disabled={isLiked}
+                >
+                  👍 {liked}
+                </button>
+              </div>
+            </div>
             <div className="modal-details">
-              <p className="modal-details-text">{details}</p>
+              <p className="modal-details-text">{projectData.details}</p>
               <div className="modal-skills">
-                <strong className='modal-skills-strong'>Skills: </strong>
-                {skills.map((skill: string, index: number) => (
+                <strong className="modal-skills-strong">Skills: </strong>
+                {projectData.skills.map((skill: string, index: number) => (
                   <span key={index} className="skill-badge">
                     {skill}
                   </span>
                 ))}
               </div>
               <div className="modal-authors">
-                <strong>Authors: </strong>{author.join(', ')}
+                <strong>Authors: </strong>
+                {projectData.authors.join(", ")}
               </div>
-              {publicationLink && (
+              {projectData.publicationLink && (
                 <div className="modal-link">
-                  <a href={publicationLink} target="_blank" rel="noopener noreferrer">
+                  <a
+                    href={projectData.publicationLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     View Project
                   </a>
                 </div>
@@ -76,10 +145,13 @@ function PortfolioModal({ project, onClose, onNext, onPrev }: any) {
           </div>
         </div>
         <div className="modal-navigation">
-          <button onClick={onNext} className="modal-next-button">&rarr;</button>
+          <button onClick={onNext} className="modal-next-button">
+            &rarr;
+          </button>
         </div>
       </div>
     </div>
+    </CSSTransition>
   );
 }
 

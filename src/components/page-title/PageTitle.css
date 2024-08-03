@@ -1,0 +1,40 @@
+.page-title-box{
+  display: flex;
+  width: 100%;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.page-title-text{
+  position: absolute;
+  font-size: 32px;
+  z-index: 1;
+  color: white; /* Change text color if needed */
+  text-align: center;
+  margin-top: 35px;
+  margin-bottom: 0;
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000,
+    2px 2px 0 #000, -2px 0 0 #000, 2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000,
+    -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.page-title-nyan-cat{
+  visibility: visible;
+  width: 500px;
+  height: 80px; /* Set the desired height */
+  object-fit: cover; /* Crop the image to fit the specified dimensions */
+}
+
+@media (max-width: 768px) {
+  .page-title-text{
+    font-size: 19.2px;
+    margin-top: 21px;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+      1px 1px 0 #000;
+  }
+
+  .page-title-nyan-cat{
+    width: 300px;
+    height: 48px;
+  }
+}
