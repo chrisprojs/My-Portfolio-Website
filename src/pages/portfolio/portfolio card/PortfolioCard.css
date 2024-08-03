@@ -1,8 +1,8 @@
 .portfolio-card {
+  position: relative;
   border: 1px solid #ddd;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   margin: auto;
   width: 300px;
   height: 500px;
@@ -10,26 +10,69 @@
 
 .portfolio-card:hover{
   opacity: 1; /* Show the border on hover */
-  border: 2px solid rgba(0, 0, 0, 0.5); /* Border color and width */
-  animation: cycleBorder 2s infinite;
+  animation: portfolio-card-anim 2s infinite;
+  .portfolio-card-slider{
+    animation: portfolio-card-slider-anim 2s infinite;
+  }
 }
 
-@keyframes cycleBorder {
+@keyframes portfolio-card-anim {
   0% {
-    border: 2px solid rgba(0, 0, 0, 0.5);
+    border: 1px solid red;
   }
-  50% {
-    border: 2px solid rgba(0, 0, 0, 0.2);
+  16.7% {
+    border: 1px solid orange;
+  }
+  33.4% {
+    border: 1px solid yellow;
+  }
+  50.1% {
+    border: 1px solid green;
+  }
+  66.8% {
+    border: 1px solid blue;
+  }
+  83.5% {
+    border: 1px solid indigo;
   }
   100% {
-    border: 2px solid rgba(0, 0, 0, 0.5);
+    border: 1px solid violet;
   }
+}
+
+.card-content {
+  position: relative; /* Added for the like button to position relative to this */
 }
 
 .portfolio-card-slider {
   width: 300px;
-  height: 300px;
+  height: 301px;
   border-bottom: 1px solid #ddd;
+  z-index: 1;
+}
+
+@keyframes portfolio-card-slider-anim {
+  0% {
+    border-bottom: 1px solid red;
+  }
+  16.7% {
+    border-bottom: 1px solid orange;
+  }
+  33.4% {
+    border-bottom: 1px solid yellow;
+  }
+  50.1% {
+    border-bottom: 1px solid green;
+  }
+  66.8% {
+    border-bottom: 1px solid blue;
+  }
+  83.5% {
+    border-bottom: 1px solid indigo;
+  }
+  100% {
+    border-bottom: 1px solid violet;
+  }
 }
 
 .portfolio-card-slider img{
@@ -47,6 +90,15 @@
 .slick-dots ul{
   width: fit-content;
   padding: 0;
+}
+
+.slick-dots li button:before {
+  color: #8f8f8f; /* Change to your desired color */
+}
+
+/* Active dot */
+.slick-dots li.slick-active button:before {
+  color: purple; /* Change to your desired color for the active dot */
 }
 
 .portfolio-content {
@@ -87,10 +139,42 @@
 
 .skill-badge {
   background-color: #f0f0f0;
+  color: #555;
   border-radius: 5px;
   padding: 5px 10px;
   margin: 0 5px 5px 0;
   font-size: 12px;
+}
+
+.like-container {
+  position: absolute; /* Change to absolute to position it relative to the card */
+  top: 10px;
+  right: 10px;
+  z-index: 4; /* Ensure it appears above the slider */
+}
+
+.like-button {
+  opacity: 0.5;
+  background: white;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #555;
+  transition: opacity 0.3s linear;
+}
+
+.like-button.liked {
+  background: #007bff;
+  border-color: white;
+  color: white;
+}
+
+.like-container:hover{
+  .like-button{
+    opacity: 1;
+  }
 }
 
 @media (max-width: 768px) {
@@ -101,7 +185,7 @@
 
   .portfolio-card-slider {
     width: 180px; /* 60% of 300px */
-    height: 180px; /* 60% of 300px */
+    height: 181px; /* 60% of 300px */
   }
 
   .portfolio-card-slider img{

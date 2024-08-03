@@ -1,0 +1,86 @@
+/* SkeletonCard.css */
+.skeleton-card {
+  width: 300px;
+  height: 500px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #f0f0f0;
+  margin: 10px;
+  animation: skeleton-loading 1.5s infinite;
+}
+
+.skeleton-image {
+  width: 100%;
+  height: 300px;
+  background-color: #555;
+  animation: skeleton-component-loading 1.5 infinite;
+}
+
+.skeleton-content {
+  padding: 15px;
+}
+
+.skeleton-title,
+.skeleton-details,
+.skeleton-skill {
+  border-radius: 5px;
+  height: 20px;
+  background-color: #555;
+  margin-bottom: 10px;
+  animation: skeleton-component-loading 2 linear infinite;
+}
+
+.skeleton-title {
+  width: 70%;
+}
+
+.skeleton-details {
+  width: 90%;
+  height: 60px;
+}
+
+.skeleton-skills {
+  display: flex;
+  gap: 5px;
+}
+
+.skeleton-skill {
+  flex: 1;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: #f0f0f0;
+  }
+  50% {
+    background-color: #adadad;
+  }
+  100% {
+    background-color: #f0f0f0;
+  }
+}
+
+@keyframes skeleton-component-loading {
+  0% {
+    background-color: #555;
+  }
+  50% {
+    background-color: #3a3a3a;
+  }
+  100% {
+    background-color: #555;
+  }
+}
+
+@media (max-width: 768px) {
+  .skeleton-card {
+    width: 180px; /* 60% of 300px */
+    height: 320px; /* 60% of 500px */
+  }
+
+  .skeleton-image {
+    width: 180px; /* 60% of 300px */
+    height: 180px;
+  }
+}

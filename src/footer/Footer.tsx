@@ -11,10 +11,10 @@ function Footer() {
         <div className="footer-icon-box">
           <div className="footer-contact-column">
             <a href={PersonalInformation.instagramLink} className="icon">
-              <i className="fab fa-instagram"></i>
+              <i className="icon-logo fab fa-instagram"></i>
             </a>
             <a href={PersonalInformation.linkedinLink} className="icon">
-              <i className="fab fa-linkedin"></i>
+              <i className="icon-logo fab fa-linkedin"></i>
             </a>
           </div>
           <div className="footer-contact-column footer-icon-text-box">

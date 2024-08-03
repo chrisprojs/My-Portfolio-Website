@@ -9,7 +9,6 @@ import chipiChapaCat from "./../../asset/chipi-chapa-cat.gif";
 function Contact() {
   return (
     <div className="contact-container">
-      <h1>Contact</h1>
       <div className="contact-info">
         <div>
           <a

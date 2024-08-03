@@ -5,8 +5,8 @@
   height: 80px;
   position: fixed;
   top: 0;
-  background-color: white;
-  z-index: 3;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .navbar-box {
@@ -37,7 +37,7 @@
 
 .navbar-link {
   font-family: "Roboto Mono", monospace;
-  color: black;
+  color: white;
   text-decoration: none;
   margin: 0 15px;
 }
@@ -63,7 +63,7 @@
     position: absolute;
     top: 60px;
     left: 0;
-    background-color: white;
+    background-color: rgba(0, 0, 0, 0.8);
     padding: 10px 0;
     border-top: 1px solid #eaeaea;
     overflow: hidden;
@@ -79,6 +79,7 @@
   }
 
   .navbar-link {
+    color: white;
     margin: 10px 0;
   }
 
