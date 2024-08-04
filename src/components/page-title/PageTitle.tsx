@@ -1,5 +1,5 @@
 import React from 'react'
-import nyanCat from './../asset/nyan-cat.gif'
+import nyanCat from './../../asset/nyan-cat.gif'
 import './PageTitle.css'
 
 interface PageTitleInterface{
