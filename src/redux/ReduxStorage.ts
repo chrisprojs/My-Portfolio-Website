@@ -6,23 +6,23 @@ import storage from 'redux-persist/lib/storage'; // Use localStorage for persist
 import { decrypt, encrypt } from './../crypto-js/CryptoJS';
 
 // Create a transform to handle encryption and decryption
-// const encryptTransform = createTransform(
-//   (inboundState, key) => {
-//     // Encrypt the state before saving to storage
-//     return encrypt(JSON.stringify(inboundState));
-//   },
-//   (outboundState, key) => {
-//     // Decrypt the state when loading from storage
-//     return JSON.parse(decrypt(outboundState));
-//   },
-//   { whitelist: ['likedProjects'] } // Specify which reducers to transform
-// );
+const encryptTransform = createTransform(
+  (inboundState, key) => {
+    // Encrypt the state before saving to storage
+    return encrypt(JSON.stringify(inboundState));
+  },
+  (outboundState, key) => {
+    // Decrypt the state when loading from storage
+    return JSON.parse(decrypt(outboundState));
+  },
+  { whitelist: ['likedProjects'] } // Specify which reducers to transform
+);
 
 // Persist configuration
 const persistConfig = {
   key: 'root',
   storage,
-  // transforms: [encryptTransform],
+  transforms: [encryptTransform],
 };
 
 // Configure store with middleware

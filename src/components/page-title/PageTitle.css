@@ -1,8 +1,20 @@
-.page-title-box{
+.page-title-box {
   display: flex;
   width: 100%;
   align-items: center !important;
   justify-content: center !important;
+  animation: slideIn 5s ease-out; /* Adjust the duration and timing function as needed */
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 .page-title-text{
@@ -19,6 +31,8 @@
 }
 
 .page-title-nyan-cat{
+  position: relative;
+  right: -50px;
   visibility: visible;
   width: 500px;
   height: 80px; /* Set the desired height */
@@ -34,6 +48,7 @@
   }
 
   .page-title-nyan-cat{
+    right: -25px;
     width: 300px;
     height: 48px;
   }
