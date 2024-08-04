@@ -1,5 +1,6 @@
 // VantaBackground.tsx
 import React, { useEffect, useRef, useState } from 'react';
+import { gsap } from 'gsap';
 import './VantaBackground.css'
 
 type VantaBackgroundProps = {
@@ -10,6 +11,7 @@ type VantaBackgroundProps = {
 const VantaBackground: React.FC<VantaBackgroundProps> = () => {
   const vantaRef = useRef<HTMLDivElement | null>(null);
   const [vantaEffect, setVantaEffect] = useState<any>(null);
+  const colorRef = useRef({ r: 255, g: 0, b: 82 }); // Initial color in RGB
 
   useEffect(() => {
     const VANTA = (window as any).VANTA; // Access Vanta.js from the global window object
@@ -45,8 +47,17 @@ const VantaBackground: React.FC<VantaBackgroundProps> = () => {
       if (vantaEffect) {
         const { innerWidth } = window;
         const halfWidth = innerWidth / 2;
-        const newColor = e.clientX > halfWidth ? 0xff0052 : 0x0000ff; // Red if right, blue if left
-        vantaEffect.setOptions({ color: newColor });
+        const newColor = e.clientX > halfWidth ? { r: 255, g: 0, b: 82 } : { r: 0, g: 0, b: 255 }; // Red if right, blue if left
+
+        gsap.to(colorRef.current, {
+          duration: 1,
+          ...newColor,
+          onUpdate: () => {
+            const { r, g, b } = colorRef.current;
+            const hexColor = (r << 16) | (g << 8) | b;
+            vantaEffect.setOptions({ color: hexColor });
+          }
+        });
       }
     };
 
