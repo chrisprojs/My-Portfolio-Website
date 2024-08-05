@@ -21,4 +21,3 @@ Checkout my portfolio website: https://christian-antonius-portfolio.netlify.app/
 - [Instagram](https://www.instagram.com/chris88xyz/)
 - [LinkedIn](https://www.linkedin.com/in/christian-antonius-anggaresta-84b715243/)
 - [Email](mailto:christiananggaresta20@gmail.com)
-- [Phone](tel:+6285824853321)
