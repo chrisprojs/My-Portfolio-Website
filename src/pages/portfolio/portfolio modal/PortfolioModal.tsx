@@ -38,13 +38,13 @@ function PortfolioModal({ project, onClose, onNext, onPrev }: any) {
   };
 
   const NextArrow = ({ onClick }: any) => (
-    <div className="arrow next-arrow" onClick={onClick}>
+    <div className="arrow next-arrow" onClick={(e) => { e.stopPropagation(); onClick(); }}>
       &#9654;
     </div>
   );
 
   const PrevArrow = ({ onClick }: any) => (
-    <div className="arrow prev-arrow" onClick={onClick}>
+    <div className="arrow prev-arrow" onClick={(e) => { e.stopPropagation(); onClick(); }}>
       &#9664;
     </div>
   );
@@ -81,14 +81,13 @@ function PortfolioModal({ project, onClose, onNext, onPrev }: any) {
       <div className="modal-overlay" onClick={handleClose}>
       <div
         className="modal-content-wrapper"
-        onClick={(e) => e.stopPropagation()}
       >
-        <div className="modal-navigation">
+        <div className="modal-navigation" onClick={(e) => e.stopPropagation()}>
           <button onClick={onPrev} className="modal-prev-button">
             &larr;
           </button>
         </div>
-        <div className="modal-content">
+        <div className="modal-content" onClick={(e) => e.stopPropagation()}>
           <button className="close-button" onClick={handleClose}>
             &times;
           </button>
@@ -106,7 +105,7 @@ function PortfolioModal({ project, onClose, onNext, onPrev }: any) {
                   </div>
                 ))}
               </Slider>
-              <div className="like-container">
+              <div className="like-container like-modal">
                 <button
                   className={`like-button ${isLiked ? "liked" : ""}`}
                   onClick={handleLikeClick}
@@ -144,7 +143,7 @@ function PortfolioModal({ project, onClose, onNext, onPrev }: any) {
             </div>
           </div>
         </div>
-        <div className="modal-navigation">
+        <div className="modal-navigation" onClick={(e) => e.stopPropagation()}>
           <button onClick={onNext} className="modal-next-button">
             &rarr;
           </button>
