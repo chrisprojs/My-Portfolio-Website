@@ -4,3 +4,5 @@ I am a software engineer with a strong focus on front-end development, crafting 
 Checkout my portfolio website: https://christian-antonius-portfolio.netlify.app/
 
 ![Portfolio page of what I have ever done before](https://github.com/chrisprojs/My-Portfolio-Website/blob/main/src/pages/portfolio/portfolio-image/My%20Portfolio%20Website/1.jpg)
+![Home page](https://github.com/chrisprojs/My-Portfolio-Website/blob/main/src/pages/portfolio/portfolio-image/My%20Portfolio%20Website/2.jpg)
+![My CV page](https://github.com/chrisprojs/My-Portfolio-Website/blob/main/src/pages/portfolio/portfolio-image/My%20Portfolio%20Website/3.jpg)
