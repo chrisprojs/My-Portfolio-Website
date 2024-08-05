@@ -80,6 +80,7 @@
 }
 
 .modal-slider{
+  z-index: 1002;
   width: 30vw;
   height: auto;
 }
@@ -154,7 +155,10 @@
   position: absolute;
   top: 10px;
   right: 10px;
-  z-index: 2;
+}
+
+.like-modal{
+  z-index: 1002;
 }
 
 .like-button {
@@ -184,33 +188,35 @@
 .arrow {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%) translateX(-100%); /* Start off-screen */
   font-size: 30px;
-  color: rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 0.5);
   cursor: pointer;
-  z-index: 1001;
+  z-index: 1005;
   opacity: 0; /* Hide arrows by default */
-  transition: transform 0.2s ease, opacity 0.2s ease, color 0.2s ease; /* Smooth transition */
+  transition: transform 0.2s ease, opacity 0.2s ease; /* Smooth transition */
 }
 
 .next-arrow {
   right: 10px;
-  transform: translateY(-50%) translateX(100%); /* Start off-screen from the right */
+  transform: translateY(-50%) translateX(100%);
 }
 
 .prev-arrow {
   left: 10px;
+  transform: translateY(-50%) translateX(-100%);
 }
 
-.arrow:hover{
-  color: rgba(0, 0, 0, 0.8);
+.modal-slider:hover {
+  .arrow{
+    opacity: 0.7;
+  }
+
+  .arrow:hover {
+    color: rgba(0, 0, 0, 1);
+  }
 }
 
 .modal-slider:hover{
-  .arrow{
-    opacity: 1;
-  }
-
   .next-arrow{
     transform: translateY(-50%) translateX(0);
   }
