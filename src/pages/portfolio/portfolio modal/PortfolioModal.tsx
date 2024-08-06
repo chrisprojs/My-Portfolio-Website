@@ -62,8 +62,8 @@ function PortfolioModal({ project, onClose, onNext, onPrev }: any) {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,
+    nextArrow: <NextArrow onClick={onNext} />,
+    prevArrow: <PrevArrow onClick={onPrev} />,
     appendDots: (dots: React.ReactNode) => (
       <div>
         <ul>{dots}</ul>

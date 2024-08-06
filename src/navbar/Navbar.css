@@ -40,11 +40,11 @@
   color: white;
   text-decoration: none;
   margin: 0 15px;
+  transition: all 0.1s ease-out;
 }
 
 .navbar-link:hover {
   color: #8d8d8d;
-  transition: all 0.1s ease-out;
 }
 
 .navbar-link.active {
