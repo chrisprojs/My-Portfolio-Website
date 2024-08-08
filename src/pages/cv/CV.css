@@ -58,6 +58,34 @@
   border-radius: 50%;
 }
 
+.download-button {
+  position: fixed;
+  top: 200px;
+  right: 32px;
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 10px;
+  font-size: 16px;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.download-button:hover {
+  background-color: #0056b3;
+}
+
+.hide-scrollbar {
+  overflow: hidden !important;
+}
+
+.hide-input {
+  display: none !important;
+}
+
 input:checked + .slider {
   background-color: #007bff;
 }
@@ -180,6 +208,12 @@ input:checked + .slider:before {
   bottom: 2px;
 }
 
+.download-button{
+  top: 140px;
+  right: 20px;
+  scale: 0.6;
+}
+
 input:checked + .slider:before {
   transform: translateX(13px);
 }
@@ -203,5 +237,15 @@ input:checked + .slider:before {
   .cv-subsection-p,
   .cv-skills-li {
     font-size: 14px;
+  }
+}
+
+@media print {
+  .cv-container {
+    overflow: visible;
+  }
+
+  .page-break {
+    page-break-before: always; /* Add page breaks where necessary */
   }
 }

@@ -7,6 +7,8 @@
 
 .portfolio-box {
     display: grid;
+    margin-left: 5%;
+    margin-right: 5%;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 16px; /* Adjust the gap between grid items as needed */
     width: 100%;

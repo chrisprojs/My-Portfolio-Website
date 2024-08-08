@@ -6,7 +6,7 @@
   border-radius: 10px;
   overflow: hidden;
   background-color: #f0f0f0;
-  margin: 10px;
+  margin: auto;
   animation: skeleton-loading 1.5s infinite;
 }
 

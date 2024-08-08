@@ -39,3 +39,6 @@ html {
   overflow: hidden; /* Prevents scrollbars */
 }
 
+.slick-list{
+  width: 100%;
+}

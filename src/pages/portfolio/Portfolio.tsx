@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Portfolio.css";
-import PortfolioCard from "./portfolio card/PortfolioCard";
+import PortfolioCard from "../../components/portfolio card/PortfolioCard";
 import { getAllProjects } from "./PortfolioAPI";
-import PortfolioModal from "./portfolio modal/PortfolioModal";
+import PortfolioModal from "../../components/portfolio modal/PortfolioModal";
 import { Project } from "./PortfolioInterface";
-import PortfolioSkeletonCard from "./portfolio card/PortfolioSkeletonCard";
+import PortfolioSkeletonCard from "../../components/portfolio card/PortfolioSkeletonCard";
 
 function Portfolio() {
   const [selectedProjectIndex, setSelectedProjectIndex] = useState<

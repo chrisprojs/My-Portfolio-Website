@@ -3,9 +3,9 @@ import { CSSTransition } from 'react-transition-group';
 import "./PortfolioModal.css";
 import Slider from "react-slick";
 import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../../../redux/ReduxStorage";
-import { likeProject } from "../PortfolioAPI";
-import { likeProjectAction } from "../likedProjectsReducer";
+import { RootState } from "../../redux/ReduxStorage";
+import { likeProject } from "../../pages/portfolio/PortfolioAPI";
+import { likeProjectAction } from "../../pages/portfolio/likedProjectsReducer";
 
 function PortfolioModal({ project, onClose, onNext, onPrev }: any) {
   const projectData = project;
