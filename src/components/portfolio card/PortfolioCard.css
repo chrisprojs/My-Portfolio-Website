@@ -10,6 +10,7 @@
 
 .portfolio-card:hover{
   opacity: 1; /* Show the border on hover */
+  scale: 1.02;
   animation: portfolio-card-anim 2s infinite;
   .portfolio-card-slider{
     animation: portfolio-card-slider-anim 2s infinite;

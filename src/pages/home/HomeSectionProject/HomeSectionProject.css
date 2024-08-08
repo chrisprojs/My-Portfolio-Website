@@ -1,7 +1,6 @@
 .section-project {
   margin-left: 5%;
   margin-right: 5%;
-  padding: 16px 0; /* Adjust padding for better aesthetics */
 }
 
 .section-project-header {
@@ -18,6 +17,13 @@
   display: flex;
   width: 100%;
   justify-content: space-between;
+}
+
+.section-project-slider > .slick-list{
+  display: grid;
+  height: 550px;
+  justify-content: center;
+  width: 100%;
 }
 
 .section-project-prev-button,
@@ -58,5 +64,9 @@
     width: 30px;
     height: 30px;
     border-radius: 15px;
+  }
+
+  .section-project-slider > .slick-list{
+    height: 330px;
   }
 }
