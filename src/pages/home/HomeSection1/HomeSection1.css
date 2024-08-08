@@ -219,7 +219,7 @@
   width: 45%;
   height: 10vw;
   display: flex;
-  justify-content: center; /* Add this line */
+  justify-content: space-between; /* Add this line */
   align-items: center; /* Add this line */
   text-align: center;
   text-decoration: none;
@@ -364,5 +364,10 @@
       1px 1px 0 #000;
     height: 16vw;
     border: 3px solid black;
+  }
+
+  .section-1-gif{
+    width: 6vw;
+    height: 6vw;
   }
 }

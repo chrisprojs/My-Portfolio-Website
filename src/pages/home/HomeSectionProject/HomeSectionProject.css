@@ -20,7 +20,8 @@
 }
 
 .section-project-slider > .slick-list{
-  display: grid;
+  display: flex;
+  flex-direction: column;
   height: 550px;
   justify-content: center;
   width: 100%;

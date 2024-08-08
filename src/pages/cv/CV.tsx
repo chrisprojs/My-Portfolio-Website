@@ -17,6 +17,7 @@ const textPreprocessing = (str: string) => {
 
 function CV() {
   const [isScrollable, setIsScrollable] = useState(false);
+  const [isTempScroll, setIsTempScroll] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
 
   const toggleScrollView = () => {
@@ -42,6 +43,11 @@ function CV() {
     const cvContent = document.getElementById("cv-content");
     const scrollableSections = document.querySelectorAll(".scrollable");
     const sectionInput = document.querySelector(".search-input");
+
+    if(isScrollable){
+      toggleScrollView();
+      setIsTempScroll(true)
+    }
 
     if (cvContent) {
       // Temporarily hide scrollbars and section input
