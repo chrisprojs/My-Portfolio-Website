@@ -38,4 +38,3 @@ html {
   position: relative; /* Ensure this is relative so children can use absolute positioning */
   overflow: hidden; /* Prevents scrollbars */
 }
-

@@ -3,10 +3,10 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./PortfolioCard.css";
-import { likeProject } from "../PortfolioAPI";
-import { likeProjectAction } from "../likedProjectsReducer";
+import { likeProject } from "../../pages/portfolio/PortfolioAPI";
+import { likeProjectAction } from "../../pages/portfolio/likedProjectsReducer";
 import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../../../redux/ReduxStorage";
+import { RootState } from "../../redux/ReduxStorage";
 
 function PortfolioCard({ project, onClick }: any) {
   const projectData = project;

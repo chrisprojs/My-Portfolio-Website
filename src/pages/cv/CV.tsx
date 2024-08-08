@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import html2pdf from "html2pdf.js";
 import "./CV.css";
 import {
   PersonalInformation,
@@ -16,6 +17,7 @@ const textPreprocessing = (str: string) => {
 
 function CV() {
   const [isScrollable, setIsScrollable] = useState(false);
+  const [isTempScroll, setIsTempScroll] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
 
   const toggleScrollView = () => {
@@ -28,12 +30,59 @@ function CV() {
 
   const strippedSearchQuery = textPreprocessing(searchQuery);
 
-  const filteredSkills = 
-    SkillList.filter((skill) => {
-        const skillName = textPreprocessing(skill.skill);
-        const skillDetails = textPreprocessing(skill.details);
-        return skillName.toLowerCase().includes(strippedSearchQuery) || skillDetails.toLowerCase().includes(strippedSearchQuery)
-    });
+  const filteredSkills = SkillList.filter((skill) => {
+    const skillName = textPreprocessing(skill.skill);
+    const skillDetails = textPreprocessing(skill.details);
+    return (
+      skillName.toLowerCase().includes(strippedSearchQuery) ||
+      skillDetails.toLowerCase().includes(strippedSearchQuery)
+    );
+  });
+
+  const downloadCV = () => {
+    const cvContent = document.getElementById("cv-content");
+    const scrollableSections = document.querySelectorAll(".scrollable");
+    const sectionInput = document.querySelector(".search-input");
+
+    if(isScrollable){
+      toggleScrollView();
+      setIsTempScroll(true)
+    }
+
+    if (cvContent) {
+      // Temporarily hide scrollbars and section input
+      scrollableSections.forEach((section) =>
+        section.classList.add("hide-scrollbar")
+      );
+      if (sectionInput) {
+        sectionInput.classList.add("hide-input");
+      }
+
+      // Define HTML2PDF options
+      const options = {
+        margin: [0.5, 0.5],
+        filename: "Christian-Antonius-Anggaresta-CV.pdf",
+        image: { type: "jpeg", quality: 0.98 },
+        html2canvas: { scale: 2, useCORS: true, logging: true },
+        jsPDF: {
+          unit: "in",
+          format: "a4",
+          orientation: "portrait",
+        },
+        pagebreak: { avoid: ['.cv-skills-li', '.cv-subsection'] }
+      };
+
+      html2pdf(cvContent, options).then(() => {
+          // Revert the visibility changes after saving
+          scrollableSections.forEach((section) =>
+            section.classList.remove("hide-scrollbar")
+          );
+          if (sectionInput) {
+            sectionInput.classList.remove("hide-input");
+          }
+        });
+    }
+  };
 
   return (
     <>
@@ -48,7 +97,12 @@ function CV() {
           <span className="slider"></span>
         </label>
       </div>
-      <div className="cv-container">
+      <div className="download-container" onClick={downloadCV}>
+        <div className="download-button">
+          <i className="fas fa-download"></i>
+        </div>
+      </div>
+      <div id="cv-content" className="cv-container">
         <div className="cv-header">
           <h1>Christian Antonius Anggaresta</h1>
           <p>Software Engineer</p>
@@ -128,13 +182,16 @@ function CV() {
         </div>
 
         <div className="cv-section">
-          <h2 className="cv-section-input">Skills<input
+          <h2 className="cv-section-input">
+            Skills
+            <input
               type="text"
               className="search-input"
               placeholder="Search Skills..."
               value={searchQuery}
               onChange={handleSearch}
-            /></h2>
+            />
+          </h2>
           <ul
             className={`cv-subsection-ul ${isScrollable ? "scrollable" : ""}`}
           >
