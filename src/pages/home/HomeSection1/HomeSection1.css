@@ -70,6 +70,7 @@
     2px 2px 0 #000, -2px 0 0 #000, 2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000,
     -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
   animation: section-1-button-view-anim2 3s infinite;
+  scale: 1.02;
   .section-1-text-view-cv {
     animation: section-1-button-view-cv-anim 3s infinite;
   }
@@ -90,6 +91,7 @@
 .section-1-button-view-portfolio:hover {
   background-color: black;
   animation: section-1-button-view-anim2 3s infinite;
+  scale: 1.02;
   .section-1-text-view-portfolio {
     color: white;
     animation: section-1-button-view-portfolio-anim 3s infinite;
