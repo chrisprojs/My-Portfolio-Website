@@ -77,7 +77,7 @@
   }
 }
 
-.portfolio-card-slider img{
+.portfolio-card-slider img, .portfolio-card-slider video{
   width: 300px;
   height: 300px;
   object-fit: contain;
