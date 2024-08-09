@@ -113,8 +113,14 @@ function PortfolioCard({ project, onClick }: any) {
         <Slider {...settings} className="portfolio-card-slider">
           {projectData.images.map((image: any, index: any) => (
             <div key={index}>
-              <img src={image.picture} alt={`${projectData.title} slide ${index + 1}`} />
-            </div>
+              {image.picture.endsWith('.jpg') ? (
+                <img src={image.picture} alt={`${projectData.title} slide ${index + 1}`} />
+              ) : image.picture.endsWith('.mp4') ? (
+                <video controls autoPlay muted>
+                  <source src={image.picture} type="video/mp4" />
+                </video>
+              ) : null}
+              </div>
           ))}
         </Slider>
         <div className="portfolio-content">

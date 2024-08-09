@@ -105,7 +105,7 @@
   padding: 0;
 }
 
-.modal-slider img {
+.modal-slider img, .modal-slider video {
   width: 30vw;
   height: 30vw;
   object-fit: contain;
