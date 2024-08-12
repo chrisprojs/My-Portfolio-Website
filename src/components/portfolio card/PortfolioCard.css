@@ -181,17 +181,17 @@
 
 @media (max-width: 768px) {
   .portfolio-card {
-    width: 180px; /* 60% of 300px */
+    width: 100%; /* 60% of 300px */
     height: 320px; /* 60% of 500px */
   }
 
   .portfolio-card-slider {
-    width: 180px; /* 60% of 300px */
+    width: 100%; /* 60% of 300px */
     height: 181px; /* 60% of 300px */
   }
 
-  .portfolio-card-slider img{
-    width: 180px; /* 60% of 300px */
+  .portfolio-card-slider img, .portfolio-card-slider video{
+    width: 100%; /* 60% of 300px */
     height: 180px;
   }
 

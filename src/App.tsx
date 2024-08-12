@@ -1,21 +1,21 @@
 import React, { useEffect, useState } from "react";
 import {
+  Route,
   BrowserRouter as Router,
   Routes,
-  Route,
   useLocation,
 } from "react-router-dom";
-import "./App.css";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
-import Navbar from "./navbar/Navbar";
-import Home from "./pages/home/Home";
-import CV from "./pages/cv/CV";
-import Portfolio from "./pages/portfolio/Portfolio";
-import Contact from "./pages/contact/Contact";
-import Footer from "./footer/Footer";
+import "./App.css";
+import Loading from "./components/loading/Loading";
 import PageTitle from "./components/page-title/PageTitle";
 import VantaBackground from "./components/vanta-background/VantaBackground";
-import Loading from "./components/loading/Loading";
+import Footer from "./footer/Footer";
+import Navbar from "./navbar/Navbar";
+import Contact from "./pages/contact/Contact";
+import CV from "./pages/cv/CV";
+import Home from "./pages/home/Home";
+import Portfolio from "./pages/portfolio/Portfolio";
 
 function PageTitleWrapper() {
   const location = useLocation();
