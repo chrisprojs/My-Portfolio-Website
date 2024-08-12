@@ -197,8 +197,12 @@
 
   .portfolio-content {
     margin-top: 1px;
-    height: 150px; /* 60% of 200px */
-    padding: 12px; /* 60% of 15px */
+    height: 140px; /* 60% of 200px */
+    padding: 4px; /* 60% of 15px */
+  }
+  
+  .slick-dots{
+    scale: 0.6;
   }
 
   .portfolio-text h3 {
@@ -217,6 +221,7 @@
   }
 
   .skills{
+    padding: 1px 1px;
     width: 162px;
   }
 
@@ -244,7 +249,7 @@
 
   .portfolio-content {
     margin-top: 1px;
-    height: 150px; /* 60% of 200px */
+    height: 140px; /* 60% of 200px */
     padding: 12px; /* 60% of 15px */
   }
 
