@@ -84,3 +84,15 @@
     height: 180px;
   }
 }
+
+@media (max-width: 440px) {
+  .skeleton-card {
+    width: 160px; /* 60% of 300px */
+    height: 320px; /* 60% of 500px */
+  }
+
+  .skeleton-image {
+    width: 160px; /* 60% of 300px */
+    height: 160px;
+  }
+}

@@ -190,7 +190,7 @@
     height: 181px; /* 60% of 300px */
   }
 
-  .portfolio-card-slider img{
+  .portfolio-card-slider img, .portfolio-card-slider video{
     width: 180px; /* 60% of 300px */
     height: 180px;
   }
@@ -214,6 +214,57 @@
     font-size: 10px; /* 60% of 12px */
     margin: 0 0 3px; /* 60% of 15px */
     -webkit-line-clamp: 4;
+  }
+
+  .skills{
+    width: 162px;
+  }
+
+  .skill-badge {
+    margin: 0 1px 1px 0 !important; /* 60% of 5px */
+    font-size: 8px !important; /* 60% of 12px */
+  }
+}
+
+@media (max-width: 440px) {
+  .portfolio-card {
+    width: 160px; /* /1.2 */
+    height: 320px; /* 60% of 500px */
+  }
+
+  .portfolio-card-slider {
+    width: 160px; /* 60% of 300px */
+    height: 181px; /* 60% of 300px */
+  }
+
+  .portfolio-card-slider img, .portfolio-card-slider video{
+    width: 160px; /* 60% of 300px */
+    height: 160px;
+  }
+
+  .portfolio-content {
+    margin-top: 1px;
+    height: 150px; /* 60% of 200px */
+    padding: 12px; /* 60% of 15px */
+  }
+
+  .portfolio-text h3 {
+    height: 18px;
+    max-width: 132px;
+    font-size: 16px; /* 60% of 24px */
+    margin: 0 0 6px; /* 60% of 10px */
+  }
+
+  .portfolio-text p {
+    max-width: 132px;
+    height: 60px; /* 60% of 80px */
+    font-size: 10px; /* 60% of 12px */
+    margin: 0 0 3px; /* 60% of 15px */
+    -webkit-line-clamp: 4;
+  }
+
+  .skills{
+    width: 135px;
   }
 
   .skill-badge {

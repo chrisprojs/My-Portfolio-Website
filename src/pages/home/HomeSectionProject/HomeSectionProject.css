@@ -41,6 +41,7 @@
   align-items: center;
   justify-content: center;
   transition: background 0.3s, transform 0.3s;
+  padding: 0px;
 }
 
 .section-project-prev-button:hover,
