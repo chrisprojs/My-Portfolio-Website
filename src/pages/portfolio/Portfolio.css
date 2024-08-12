@@ -21,8 +21,16 @@
 
 @media (max-width: 768px) {
     .portfolio-box{
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
         gap: 4px;
         padding: 4px;
+    }
+}
+
+@media(max-width: 440px) {
+    .portfolio-box{
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 4px;
+        padding: 0px;
     }
 }

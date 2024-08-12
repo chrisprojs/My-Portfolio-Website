@@ -72,7 +72,7 @@ function App() {
   return (
     <Router>
       <div className="app-container">
-        <VantaBackground />
+        {/* <VantaBackground /> */}
         <Navbar />
         <div className="page-container">
           <PageWrapper />
