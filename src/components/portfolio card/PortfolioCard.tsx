@@ -60,6 +60,9 @@ function PortfolioCard({ project, onClick, isSkillFlex = false }: any) {
     if (window.location.pathname === '/') {
       document.body.classList.add('home-page');
     }
+    else{
+      document.body.classList.remove('home-page');
+    }
   }, []);
 
   useEffect(() => {
