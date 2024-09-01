@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from "react";
-import Masonry from "masonry-layout";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Portfolio.css";
