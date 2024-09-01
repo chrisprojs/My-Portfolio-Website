@@ -89,6 +89,6 @@
 
 @media (max-width:400px) {
   body.home-page .skeleton-card{
-    max-width: 200px;
+    max-width: 260px;
   }
 }

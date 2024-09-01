@@ -77,6 +77,6 @@
 
 @media (max-width: 400px) {
   .section-project-slider > .slick-list{
-    height: 450px;
+    height: 500px;
   }
 }
