@@ -9,7 +9,7 @@ export const SkillList = [
     },
     {
       skill: 'Next.js',
-      details: 'Developed strong front end skills in Next.js and fundamental in back end routing api, enabling the building of SSR and SSG website interface'
+      details: 'Developed strong front end skills in Next.js and fundamental in back end routing API, optimizing SSR and SSG website rendering'
     },
     {
       skill: 'Front End Development',
