@@ -57,6 +57,12 @@ function PortfolioCard({ project, onClick, isSkillFlex = false }: any) {
   }, [isSkillFlex, projectData.skills]);
 
   useEffect(() => {
+    if (window.location.pathname === '/') {
+      document.body.classList.add('home-page');
+    }
+  }, []);
+
+  useEffect(() => {
     const minInterval = 3;
     const maxInterval = 10;
     const randomInterval =

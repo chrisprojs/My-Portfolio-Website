@@ -6,7 +6,7 @@
 .skeleton-card {
   position: relative;
   width: 100%;
-  min-width: 180px;
+  min-width: 200px;
   max-width: 300px;
   min-height: 240px;
   max-height: 600px;
@@ -88,7 +88,7 @@
 }
 
 @media (max-width:400px) {
-  .skeleton-card{
+  body.home-page .skeleton-card{
     max-width: 200px;
   }
 }
