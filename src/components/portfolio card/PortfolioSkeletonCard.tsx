@@ -1,9 +1,14 @@
 // SkeletonCard.js
-import React from 'react';
+import React, { useEffect } from 'react';
 import 'react-loading-skeleton/dist/skeleton.css';
 import "./PortfolioSkeletonCard.css";
 
 function PortfolioSkeletonCard() {
+  useEffect(() => {
+    if (window.location.pathname === '/') {
+      document.body.classList.add('home-page');
+    }
+  }, []);
   return (
     <div className='skeleton-card-container'>
       <div className="skeleton-card">
