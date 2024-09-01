@@ -8,6 +8,10 @@ export const SkillList = [
       details: 'Fundamental skills in React Native for making responsive mobile applications.'
     },
     {
+      skill: 'Next.js',
+      details: 'Developed strong front end skills in Next.js and fundamental in back end routing api, enabling the building of SSR and SSG website interface'
+    },
+    {
       skill: 'Front End Development',
       details: 'Strong front end skills by having great work experiences.'
     },
