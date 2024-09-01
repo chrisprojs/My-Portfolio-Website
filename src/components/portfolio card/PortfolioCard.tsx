@@ -8,7 +8,7 @@ import { likeProjectAction } from "../../pages/portfolio/likedProjectsReducer";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../redux/ReduxStorage";
 
-function PortfolioCard({ project, onClick }: any) {
+function PortfolioCard({ project, onClick, isSkillFlex = false }: any) {
   const projectData = project;
   const [visibleSkills, setVisibleSkills] = useState<string[]>([]);
   const skillBoxRef = useRef<HTMLDivElement>(null);
@@ -29,12 +29,11 @@ function PortfolioCard({ project, onClick }: any) {
   useEffect(() => {
     const handleResize = () => {
       if (skillBoxRef.current) {
-        const skillBoxWidth = skillBoxRef.current.offsetWidth;
+        const skillBoxWidth = skillBoxRef.current.offsetWidth * 2;
         let totalWidth = 0;
         let displayedSkills: string[] = [];
-        const isMobile = window.innerWidth <= 768;
-        const charWidth = isMobile ? 18 : 12;
-        const paddingWidth = isMobile ? 38 : 24;
+        const charWidth = 12;
+        const paddingWidth = 24;
 
         for (let i = 0; i < projectData.skills.length; i++) {
           const skillWidth = projectData.skills[i].length * charWidth + paddingWidth;
@@ -55,7 +54,7 @@ function PortfolioCard({ project, onClick }: any) {
     handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
-  }, [projectData.skills]);
+  }, [isSkillFlex, projectData.skills]);
 
   useEffect(() => {
     const minInterval = 3;
@@ -108,43 +107,45 @@ function PortfolioCard({ project, onClick }: any) {
   };
 
   return (
-    <div className="portfolio-card" onClick={onClick}>
-      <div className="card-content">
-        <Slider {...settings} className="portfolio-card-slider">
-          {projectData.images.map((image: any, index: any) => (
-            <div key={index}>
-              {image.picture.endsWith('.jpg') ? (
-                <img src={image.picture} alt={`${projectData.title} slide ${index + 1}`} />
-              ) : image.picture.endsWith('.mp4') ? (
-                <video controls autoPlay muted>
-                  <source src={image.picture} type="video/mp4" />
-                </video>
-              ) : null}
+    <div className="portfolio-card-container">
+      <div className="portfolio-card" onClick={onClick}>
+          <div className="card-content">
+            <Slider {...settings} className="portfolio-card-slider">
+              {projectData.images.map((image: any, index: any) => (
+                <div className="portfolio-card-slider-box" key={index}>
+                  {image.picture.endsWith('.jpg') ? (
+                    <img src={image.picture} alt={`${projectData.title} slide ${index + 1}`} />
+                  ) : image.picture.endsWith('.mp4') ? (
+                    <video controls autoPlay muted>
+                      <source src={image.picture} type="video/mp4" />
+                    </video>
+                  ) : null}
+                  </div>
+              ))}
+            </Slider>
+            <div className="portfolio-content">
+              <div className="portfolio-text">
+                <h3>{projectData.title}</h3>
+                <p>{projectData.details}</p>
               </div>
-          ))}
-        </Slider>
-        <div className="portfolio-content">
-          <div className="portfolio-text">
-            <h3>{projectData.title}</h3>
-            <p>{projectData.details}</p>
+              <div className="skills" ref={skillBoxRef}>
+                {visibleSkills.map((skill:String, index:any) => (
+                  <span key={index} className="skill-badge">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
           </div>
-          <div className="skills" ref={skillBoxRef}>
-            {visibleSkills.map((skill, index) => (
-              <span key={index} className="skill-badge">
-                {skill}
-              </span>
-            ))}
+          <div className="like-container">
+            <button
+              className={`like-button ${isLiked ? "liked" : ""}`}
+              onClick={handleLikeClick}
+              disabled={isLiked}
+            >
+              👍 {liked}
+            </button>
           </div>
-        </div>
-      </div>
-      <div className="like-container">
-        <button
-          className={`like-button ${isLiked ? "liked" : ""}`}
-          onClick={handleLikeClick}
-          disabled={isLiked}
-        >
-          👍 {liked}
-        </button>
       </div>
     </div>
   );

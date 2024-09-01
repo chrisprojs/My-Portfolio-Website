@@ -5,7 +5,8 @@ import "./PortfolioSkeletonCard.css";
 
 function PortfolioSkeletonCard() {
   return (
-    <div className="skeleton-card">
+    <div className='skeleton-card-container'>
+      <div className="skeleton-card">
       <div className="skeleton-image" />
       <div className="skeleton-content">
         <div className="skeleton-title" />
@@ -15,6 +16,7 @@ function PortfolioSkeletonCard() {
           <div className="skeleton-skill" />
           <div className="skeleton-skill" />
         </div>
+      </div>
       </div>
     </div>
   );
