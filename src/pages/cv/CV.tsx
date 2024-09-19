@@ -17,7 +17,6 @@ const textPreprocessing = (str: string) => {
 
 function CV() {
   const [isScrollable, setIsScrollable] = useState(false);
-  const [isTempScroll, setIsTempScroll] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
 
   const toggleScrollView = () => {
@@ -46,7 +45,6 @@ function CV() {
 
     if(isScrollable){
       toggleScrollView();
-      setIsTempScroll(true)
     }
 
     if (cvContent) {

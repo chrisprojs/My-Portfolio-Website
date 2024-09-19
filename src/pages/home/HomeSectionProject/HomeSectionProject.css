@@ -22,10 +22,16 @@
 .section-project-slider > .slick-list{
   display: flex;
   flex-direction: column;
-  height: 550px;
+  height: 600px;
   justify-content: center;
   width: 100%;
 }
+
+.section-project-slider .slick-slide > div {
+  display: flex;
+  justify-content: center;
+} 
+
 
 .section-project-prev-button,
 .section-project-next-button {
@@ -67,8 +73,10 @@
     height: 30px;
     border-radius: 15px;
   }
+}
 
+@media (max-width: 400px) {
   .section-project-slider > .slick-list{
-    height: 330px;
+    height: 500px;
   }
 }

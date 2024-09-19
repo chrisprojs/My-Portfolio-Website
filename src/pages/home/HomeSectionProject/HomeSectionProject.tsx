@@ -8,9 +8,6 @@ import { Project } from '../../portfolio/PortfolioInterface';
 import './HomeSectionProject.css';
 import Slider from 'react-slick';
 
-const DESKTOP_CARD_WIDTH = 332; // Width of card for desktop
-const MOBILE_CARD_WIDTH = 196;  // Width of card for mobile
-
 function HomeSectionProject() {
   const [selectedProjectIndex, setSelectedProjectIndex] = useState<number | null>(null);
   const [projects, setProjects] = useState<Project[]>([]);
@@ -31,9 +28,8 @@ function HomeSectionProject() {
     const handleResize = debounce(() => {
       if (containerRef.current) {
         const containerWidth = containerRef.current.clientWidth;
-        const cardWidth = window.innerWidth <= 768 ? MOBILE_CARD_WIDTH : DESKTOP_CARD_WIDTH;
+        const cardWidth = 332;
         const numCards = Math.floor((containerWidth-80) / cardWidth);
-        console.log('projectperpage' + projectsPerPage + ' containerwidth' + containerWidth + ' cardwidth' + cardWidth);
         setProjectsPerPage(numCards > 0 ? numCards : 1); // Ensure at least one card per page
       }
     }, 200); // Debounce delay in milliseconds
@@ -100,6 +96,7 @@ function HomeSectionProject() {
         <PortfolioCard
           project={project}
           onClick={() => handleCardClick(index)}
+          isSkillFlex={true}
         />
       </React.Fragment>
     ));

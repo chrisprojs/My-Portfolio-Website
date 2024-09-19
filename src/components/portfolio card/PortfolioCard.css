@@ -1,11 +1,19 @@
+.portfolio-card-container{
+  display: flex;
+  justify-content: center;
+}
+
 .portfolio-card {
   position: relative;
+  width: 100%;
+  min-width: 200px;
+  max-width: 300px;
+  min-height: 240px;
+  max-height: 800px;
   border: 1px solid #ddd;
   border-radius: 10px;
   overflow: hidden;
-  margin: auto;
-  width: 300px;
-  height: 500px;
+  margin: 8px;
   transition: scale 0.3s ease;
 }
 
@@ -43,12 +51,11 @@
 }
 
 .card-content {
-  position: relative; /* Added for the like button to position relative to this */
+  position: relative;
 }
 
 .portfolio-card-slider {
-  width: 300px;
-  height: 301px;
+  width: 100%;
   border-bottom: 1px solid #ddd;
   z-index: 1;
 }
@@ -77,9 +84,19 @@
   }
 }
 
+.portfolio-card-slider-box{
+  position: relative;
+  width: 100%;
+  padding-top: 100%; /* 1:1 Aspect Ratio */
+  overflow: hidden;
+}
+
 .portfolio-card-slider img, .portfolio-card-slider video{
-  width: 300px;
-  height: 300px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
 }
 
@@ -105,26 +122,33 @@
 
 .portfolio-content {
   display: flex;
-  height: 200px;
+  min-height: 200px;
+  width: 100%;
+  min-width: 180px;
+  max-width: 300px;
   flex-direction: column;
-  padding: 15px;
+  padding: 10px;
   align-items: start;
   justify-content: space-around;
 }
 
+.portfolio-text{
+  width: 100%;
+  min-width: 180px;
+  max-width: 280px;
+}
+
 .portfolio-text h3 {
-  height: 30px;
-  max-width: 270px;
-  font-size: 24px;
-  margin: 0 0 10px;
+  min-height: 10px;
+  font-size: 16px;
+  margin: 0 0 2px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 .portfolio-text p {
-  height: 70px;
-  max-width: 270px;
+  min-height: 70px;
   font-size: 12px;
   margin: 0 0 15px;
   overflow: hidden;
@@ -136,7 +160,11 @@
 
 .skills {
   display: flex;
-  width: 270px;
+  flex-wrap: wrap;
+  min-width: 180px;
+  max-width: 290px;
+  height: 80px;
+  align-items: flex-start;
 }
 
 .skill-badge {
@@ -180,95 +208,21 @@
 }
 
 @media (max-width: 768px) {
-  .portfolio-card {
-    width: 180px; /* 60% of 300px */
-    height: 320px; /* 60% of 500px */
-  }
-
-  .portfolio-card-slider {
-    width: 180px; /* 60% of 300px */
-    height: 181px; /* 60% of 300px */
-  }
-
-  .portfolio-card-slider img, .portfolio-card-slider video{
-    width: 180px; /* 60% of 300px */
-    height: 180px;
-  }
-
-  .portfolio-content {
-    margin-top: 1px;
-    height: 150px; /* 60% of 200px */
-    padding: 12px; /* 60% of 15px */
-  }
-
-  .portfolio-text h3 {
-    height: 18px;
-    max-width: 158px;
-    font-size: 16px; /* 60% of 24px */
-    margin: 0 0 6px; /* 60% of 10px */
-  }
-
-  .portfolio-text p {
-    max-width: 158px;
-    height: 60px; /* 60% of 80px */
-    font-size: 10px; /* 60% of 12px */
-    margin: 0 0 3px; /* 60% of 15px */
-    -webkit-line-clamp: 4;
-  }
-
-  .skills{
-    width: 162px;
-  }
-
-  .skill-badge {
-    margin: 0 1px 1px 0 !important; /* 60% of 5px */
-    font-size: 8px !important; /* 60% of 12px */
+  .portfolio-card{
+    margin: 4px;
   }
 }
 
-@media (max-width: 440px) {
-  .portfolio-card {
-    width: 160px; /* /1.2 */
-    height: 320px; /* 60% of 500px */
+@media (max-width: 400px) {
+  body.home-page .portfolio-card {
+    max-width: 260px;
   }
 
-  .portfolio-card-slider {
-    width: 160px; /* 60% of 300px */
-    height: 181px; /* 60% of 300px */
+  body.home-page .skill-badge {
+    font-size: 10px !important;
   }
 
-  .portfolio-card-slider img, .portfolio-card-slider video{
-    width: 160px; /* 60% of 300px */
-    height: 160px;
-  }
-
-  .portfolio-content {
-    margin-top: 1px;
-    height: 150px; /* 60% of 200px */
-    padding: 12px; /* 60% of 15px */
-  }
-
-  .portfolio-text h3 {
-    height: 18px;
-    max-width: 132px;
-    font-size: 16px; /* 60% of 24px */
-    margin: 0 0 6px; /* 60% of 10px */
-  }
-
-  .portfolio-text p {
-    max-width: 132px;
-    height: 60px; /* 60% of 80px */
-    font-size: 10px; /* 60% of 12px */
-    margin: 0 0 3px; /* 60% of 15px */
-    -webkit-line-clamp: 4;
-  }
-
-  .skills{
-    width: 135px;
-  }
-
-  .skill-badge {
-    margin: 0 1px 1px 0 !important; /* 60% of 5px */
-    font-size: 8px !important; /* 60% of 12px */
+  body.home-page .skills {
+    height: 70px !important;
   }
 }

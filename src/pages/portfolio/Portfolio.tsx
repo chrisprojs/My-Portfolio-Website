@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Portfolio.css";
@@ -64,12 +64,12 @@ function Portfolio() {
 
   const renderCards = () => {
     return projects.map((project, index) => (
-      <React.Fragment key={index}>
+      <div className="portfolio-card-component" key={index}>
         <PortfolioCard
           project={project}
           onClick={() => handleCardClick(index)}
         />
-      </React.Fragment>
+      </div>
     ));
   };
 
