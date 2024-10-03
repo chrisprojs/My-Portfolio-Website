@@ -9,16 +9,5 @@ export const WorkExperienceList = [
       `Enhanced the performance of web applications by implementing efficient coding practices and optimizing resource usage.`,
       `Worked closely with the design and backend teams to ensure seamless integration of user interfaces with server-side logic.`,
     ],
-  },
-  {
-    company: "Eksotika Prima",
-    position: "Web Developer and Marketer",
-    duration: "August 2024 - Present",
-    responsibilities: [
-      `Developed and maintained a rub oil supplier website, showcasing products sourced from Makassar.`,
-      `Managed digital marketing campaigns, focusing on targeted promotions near Danau Sunter and surrounding area.`,
-      `Successfully converted promotional efforts into a sale, securing a customer through strategic marketing initiatives.`,
-      `Helping family business by making promotional website for company`,
-    ],
-  },
+  }
 ];
