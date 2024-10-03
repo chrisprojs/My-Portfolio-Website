@@ -2,6 +2,8 @@ export const PersonalInformation = {
   instagramLink: "https://www.instagram.com/chris88xyz/",
   linkedinLink:
     "https://www.linkedin.com/in/christian-antonius-anggaresta-84b715243/",
+  githubLink: "https://github.com/chrisprojs?tab=repositories",
+  youtubeLink: "https://www.youtube.com/@christianantoniusanggarest3504",
   emailLink: "christiananggaresta20@gmail.com",
   phoneNumber: "+6285824853321"
 };

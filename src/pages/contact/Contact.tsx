@@ -33,6 +33,26 @@ function Contact() {
           </div>
           <div>
             <a
+              href={PersonalInformation.githubLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="contact-info-link"
+            >
+              <i className="fab fa-github"></i> chrisprojs
+            </a>
+          </div>
+          <div>
+            <a
+              href={PersonalInformation.youtubeLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="contact-info-link"
+            >
+              <i className="fab fa-youtube"></i> Christian Antonius Anggaresta
+            </a>
+          </div>
+          <div>
+            <a
               href={`mailto:${PersonalInformation.emailLink}`}
               className="contact-info-link"
             >

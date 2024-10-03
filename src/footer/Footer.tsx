@@ -10,17 +10,27 @@ function Footer() {
         <p>Contact Me:</p>
         <div className="footer-icon-box">
           <div className="footer-contact-column">
-            <a href={PersonalInformation.instagramLink} className="icon">
+            <a href={PersonalInformation.instagramLink} target="_blank"
+              rel="noopener noreferrer" className="icon">
               <i className="icon-logo fab fa-instagram"></i>
             </a>
-            <a href={PersonalInformation.linkedinLink} className="icon">
+            <a href={PersonalInformation.linkedinLink} target="_blank"
+              rel="noopener noreferrer" className="icon">
               <i className="icon-logo fab fa-linkedin"></i>
+            </a>
+            <a href={PersonalInformation.githubLink} target="_blank"
+              rel="noopener noreferrer" className="icon">
+              <i className="icon-logo fab fa-github"></i>
+            </a>
+            <a href={PersonalInformation.youtubeLink} target="_blank"
+              rel="noopener noreferrer" className="icon">
+              <i className="icon-logo fab fa-youtube"></i>
             </a>
           </div>
           <div className="footer-contact-column footer-icon-text-box">
             <a
-              href={`mailto:${PersonalInformation.emailLink}`}
-              className="icon"
+              href={`mailto:${PersonalInformation.emailLink}`} target="_blank"
+              rel="noopener noreferrer" className="icon"
             >
               <p className="footer-icon-text">
                 {PersonalInformation.emailLink}
@@ -29,8 +39,8 @@ function Footer() {
           </div>
           <div className="footer-contact-column footer-icon-text-box">
             <a
-              href={`tel:${PersonalInformation.phoneNumber}`}
-              className="icon"
+              href={`tel:${PersonalInformation.phoneNumber}`} target="_blank"
+              rel="noopener noreferrer" className="icon"
             >
               <p className="footer-icon-text">
                 {formatPhoneNumber(PersonalInformation.phoneNumber)}

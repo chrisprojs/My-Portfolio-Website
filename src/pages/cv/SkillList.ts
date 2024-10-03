@@ -1,7 +1,11 @@
 export const SkillList = [
     {
-      skill: 'React',
-      details: 'Developed strong front end skills in React, enabling the building of dynamic, efficient, and scalable user interfaces.'
+      skill: 'Go',
+      details: 'Fundamental skills in back end development using Golang Chi as back end.'
+    },
+    {
+      skill: 'Postgresql',
+      details: 'Fundamental skills in making queries with Postgresql integrated with Golang Chi as back end.'
     },
     {
       skill: 'React Native',
@@ -29,7 +33,7 @@ export const SkillList = [
     },
     {
       skill: 'Back End Development',
-      details: 'Fundamental skills in back end development making REST API.'
+      details: 'Fundamental skills in back end development making REST API using Next.js, ASP.NET, and Go.'
     },
     {
       skill: 'Software Engineering',
@@ -57,7 +61,7 @@ export const SkillList = [
     },
     {
       skill: 'RESTful API',
-      details: 'Fundamental skills in back end development making RESTful API with ASP.NET.'
+      details: 'Fundamental skills in back end development making RESTful API with Next.js, ASP.NET, and Go.'
     },
     {
       skill: 'ChatGPT',

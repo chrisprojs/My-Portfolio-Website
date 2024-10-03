@@ -24,7 +24,8 @@ async function retryFetch(url: string, delay: number = 1000): Promise<Response> 
 const customSortOrder: Record<string, number> = {
   "BINUSMAYA LMS Website": 1,
   "My Portfolio Website": 2,
-  "Eksotika Prima Rub Oil Supplier Website": 3
+  "Secure Auth With Golang": 3,
+  "Eksotika Prima Rub Oil Supplier Website": 4
 };
 
 function customSort(a: Project, b: Project): number {
