@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Typewriter from "typewriter-effect";
 import { Link } from "react-router-dom";
 import shigureUiDance from "./../../../asset/shigure-ui-dance.gif";
@@ -8,12 +8,15 @@ import chipiChapaCat from "./../../../asset/chipi-chapa-cat.gif";
 import './HomeSection1.css'
 
 function HomeSection1() {
+  const [isProfilePictureLoaded, setProfilePictureLoaded] = useState(false);
+
   return (
     <div className="section-1">
         <img
           src={require("./../../../asset/main_photo1.jpg")}
-          className="profile-picture-1"
+          className={`profile-picture-1 ${!isProfilePictureLoaded ? "blur" : "clear"}`}
           alt="profile-picture-1"
+          onLoad={() => setProfilePictureLoaded(true)}
         />
         <div className="section-1-button-box">
           <div className="section-1-text">
