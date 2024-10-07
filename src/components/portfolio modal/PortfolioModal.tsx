@@ -6,6 +6,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../redux/ReduxStorage";
 import { likeProject } from "../../pages/portfolio/PortfolioAPI";
 import { likeProjectAction } from "../../pages/portfolio/likedProjectsReducer";
+import cuteDancing from "./../../asset/cute-dancing.gif";
+import { Link } from "react-router-dom";
 
 function PortfolioModal({ project, onClose, onNext, onPrev }: any) {
   const projectData = project;
@@ -161,11 +163,22 @@ function PortfolioModal({ project, onClose, onNext, onPrev }: any) {
                 {projectData.publicationLink && (
                   <div className="modal-link">
                     <a
+                      className="modal-view-portfolio section-1-button section-1-button-view-portfolio"
                       href={projectData.publicationLink}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      View Project
+                      <img
+                        src={cuteDancing}
+                        alt="ricardo-ricardo-flick"
+                        className="section-1-gif"
+                      />
+                      <p className="section-1-text-view-portfolio">View Project</p>
+                      <img
+                        src={cuteDancing}
+                        alt="ricardo-ricardo-flick"
+                        className="section-1-gif"
+                      />
                     </a>
                   </div>
                 )}
