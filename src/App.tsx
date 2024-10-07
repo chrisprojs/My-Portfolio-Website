@@ -9,7 +9,7 @@ import { CSSTransition, TransitionGroup } from "react-transition-group";
 import "./App.css";
 import Loading from "./components/loading/Loading";
 import PageTitle from "./components/page-title/PageTitle";
-import VantaBackground from "./components/vanta-background/VantaBackground";
+// import VantaBackground from "./components/vanta-background/VantaBackground";
 import Footer from "./footer/Footer";
 import Navbar from "./navbar/Navbar";
 import Contact from "./pages/contact/Contact";
@@ -72,7 +72,7 @@ function App() {
   return (
     <Router>
       <div className="app-container">
-        <VantaBackground />
+        {/* <VantaBackground /> */}
         <Navbar />
         <div className="page-container">
           <PageWrapper />
