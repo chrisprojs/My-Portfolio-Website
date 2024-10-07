@@ -250,6 +250,11 @@
   transform: scale(1.05);
 }
 
+.modal-view-portfolio{
+  margin-left: 1%;
+  width: 50%;
+}
+
 @media (max-width: 768px) {
   .modal-prev-button,
   .modal-next-button {
