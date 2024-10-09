@@ -13,7 +13,6 @@ function PortfolioCard({ project, onClick, isSkillFlex = false }: any) {
   const [visibleSkills, setVisibleSkills] = useState<string[]>([]);
   const skillBoxRef = useRef<HTMLDivElement>(null);
   const sliderRef = useRef<Slider | null>(null);
-  const [currentSlide, setCurrentSlide] = useState(0);
   const [liked, setLiked] = useState(projectData.likes);
   const [isLiked, setIsLiked] = useState(false);
 
@@ -65,23 +64,6 @@ function PortfolioCard({ project, onClick, isSkillFlex = false }: any) {
     }
   }, []);
 
-  useEffect(() => {
-    const minInterval = 3;
-    const maxInterval = 10;
-    const randomInterval =
-      Math.floor(Math.random() * ((maxInterval - minInterval + 1) * 1000)) +
-      minInterval * 1000; // Random interval between 3000ms to 10000ms
-    const timeout = setTimeout(() => {
-      if (sliderRef.current) {
-        const nextSlide = (currentSlide + 1) % projectData.images.length;
-        sliderRef.current.slickGoTo(nextSlide);
-        setCurrentSlide(nextSlide);
-      }
-    }, randomInterval);
-
-    return () => clearTimeout(timeout);
-  }, [currentSlide, projectData.images.length]);
-
   const handleLikeClick = async (event: React.MouseEvent) => {
     event.stopPropagation();
     if (!isLiked && !likedProjects.some((id:number) => id === projectData.projectId)) {
@@ -112,7 +94,6 @@ function PortfolioCard({ project, onClick, isSkillFlex = false }: any) {
         <ul onClick={handleDotClick}>{dots}</ul>
       </div>
     ),
-    beforeChange: (current: any, next: any) => setCurrentSlide(next),
   };
 
   return (

@@ -39,3 +39,11 @@ html {
   overflow: hidden; /* Prevents scrollbars */
   background-color: black;
 }
+
+.blur {
+  filter: blur(20px);
+}
+
+.clear {
+  filter: none;
+}
