@@ -8,12 +8,16 @@ export const SkillList = [
       details: 'Fundamental skills in making queries with Postgresql integrated with Golang Chi as back end.'
     },
     {
-      skill: 'React Native',
-      details: 'Fundamental skills in React Native for making responsive mobile applications.'
+      skill: 'React',
+      details: 'In my role as a web developer, I have developed strong skills in React, enabling me to build dynamic, efficient, and scalable user interfaces.'
     },
     {
       skill: 'Next.js',
       details: 'Developed strong front end skills in Next.js and fundamental in back end routing API, optimizing SSR and SSG website rendering'
+    },
+    {
+      skill: 'React Native',
+      details: 'Fundamental skills in React Native for making responsive mobile applications.'
     },
     {
       skill: 'Front End Development',
