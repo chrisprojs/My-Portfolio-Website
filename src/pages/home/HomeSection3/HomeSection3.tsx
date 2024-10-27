@@ -12,33 +12,13 @@ function HomeSection3() {
             <p className="section-3-list-title">Front-End Development</p>
             <ul>
               <li className="section-3-list-item">
-                Build responsive and interactive user interfaces using React,
-                HTML, and CSS to ensure a seamless user experience across
-                various devices and screen sizes.
+                Build responsive and accessible user interfaces with React, HTML, and CSS, ensuring compatibility across devices, browsers, and screen sizes.
               </li>
               <li className="section-3-list-item">
-                Design and implement reusable React components to promote code
-                reusability and maintainability, leading to a more efficient
-                development process.
+                Design and implement reusable React components for efficient and maintainable code, while crafting visually appealing and user-centered web pages.
               </li>
               <li className="section-3-list-item">
-                Craft visually appealing and accessible web pages using modern
-                CSS techniques
-              </li>
-              <li className="section-3-list-item">
-                Ensure that web applications function correctly across different
-                browsers and platforms, addressing compatibility issues and
-                implementing polyfills as necessary.
-              </li>
-              <li className="section-3-list-item">
-                Work closely with other developer to implement user-centered
-                designs, ensuring that the end product is both functional and
-                aesthetically pleasing.
-              </li>
-              <li className="section-3-list-item">
-                Stay updated with the latest industry trends and best practices
-                in front-end development, continuously improving skills and
-                adopting new technologies when appropriate.
+              Continuously enhance skills and adopt front-end best practices by staying current with industry trends and new technologies.
               </li>
             </ul>
           </div>
@@ -46,36 +26,16 @@ function HomeSection3() {
             <p className="section-3-list-title">Backend Development</p>
             <ul>
               <li className="section-3-list-item">
-                Develop robust and scalable server-side applications using
-                ASP.NET, Laravel, and Django to support the needs of web and
-                mobile applications.
+                Build scalable REST API server-side applications and manage efficient databases to support web and mobile functionality.
               </li>
               <li className="section-3-list-item">
-                Design, implement, and maintain databases using SQL, ensuring
-                efficient data storage, retrieval, and management to support
-                application functionality.
-              </li>
-              <li className="section-3-list-item">
-                Build and integrate RESTful API, enabling seamless communication
-                between the front end and backend systems, and facilitating data
-                exchange with third-party services.
+                Develop and integrate RESTful APIs for seamless front-end and third-party communication.
               </li>
             </ul>
             <p className="section-3-list-title">Mobile App Development</p>
             <ul>
               <li className="section-3-list-item">
-                Build high-quality, cross-platform mobile applications for iOS
-                and Android using React Native, ensuring consistent performance
-                and user experience on both platforms.
-              </li>
-              <li className="section-3-list-item">
-                Implement intuitive and engaging user interfaces by translating
-                design wireframes and prototypes into responsive,
-                high-performance React Native components.
-              </li>
-              <li className="section-3-list-item">
-                Manage application state effectively using libraries, ensuring
-                data consistency and smooth interactions within the app.
+                Develop high-quality, cross-platform mobile apps with React Native, delivering responsive interfaces and smooth performance across iOS and Android.
               </li>
             </ul>
           </div>

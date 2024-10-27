@@ -16,7 +16,7 @@ function HomeSection2() {
           </p>
         </div>
         <img
-          src={require("./../../../asset/main_photo2.png")}
+          src={require("./../../../asset/main_photo2.jpg")}
           className="profile-picture-2"
           alt="profile-picture-2"
           loading='lazy'

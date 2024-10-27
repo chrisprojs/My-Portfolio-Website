@@ -6,24 +6,37 @@
   margin-left: 5%;
   margin-right: 5%;
   margin-top: 1%;
-  margin-bottom: 5%;
+  margin-bottom: 2%;
 }
 
 .profile-picture-1 {
   border-radius: 10px;
-  margin-right: 10%;
+  margin-right: 5%;
   width: 20vw;
   height: 20vw;
 }
 
 .section-1-button-box {
   width: 100%;
-  min-height: 25vh;
+  min-height: 25vw;
 }
 
 .section-1-text {
-  min-height: 15vw;
+  margin-bottom: 1%;
+  text-align: center;
+}
+
+.section-1-typewriter-box{
+  min-height: 12vw;
+}
+
+.section-1-typewriter{
   font-size: 3.8vw;
+}
+
+.section-1-quote-text{
+  font-style: italic;
+  font-size: 1rem;
 }
 
 .typewriter-gif {
@@ -280,14 +293,15 @@
 
 @media (max-width: 768px) {
   .section-1 {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
   }
 
   .profile-picture-1 {
-    width: 50vw;
-    height: 50vw;
+    width: 25vw;
+    height: 25vw;
     margin: auto;
     margin-bottom: 10%;
   }
@@ -295,6 +309,10 @@
   .section-1-text {
     min-height: 20vw;
     font-size: 5vw;
+  }
+  
+  .section-1-quote-text{
+    font-size: 0.6rem;
   }
 
   .typewriter-mobile-hidden{

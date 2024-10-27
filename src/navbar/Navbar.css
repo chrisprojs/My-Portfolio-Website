@@ -36,6 +36,7 @@
 }
 
 .navbar-link {
+  font-size: 0.8rem;
   font-family: "Roboto Mono", monospace;
   color: white;
   text-decoration: none;

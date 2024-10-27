@@ -83,12 +83,13 @@
 
 @media (max-width: 768px) {
   .skeleton-card{
+    max-width: 220px;
     margin: 4px;
   }
 }
 
 @media (max-width:400px) {
-  body.home-page .skeleton-card{
-    max-width: 260px;
+  .skeleton-card{
+    max-width: 220px;
   }
 }

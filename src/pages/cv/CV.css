@@ -116,13 +116,19 @@ input:checked + .slider:before {
 
 .cv-header h1 {
   margin: 0;
-  font-size: 24px;
+  font-size: 1.2rem;
 }
 
 .cv-header p {
   margin: 5px 0;
-  font-size: 16px;
+  font-size: 0.8rem;
 }
+
+.cv-header a {
+  margin: 5px 0;
+  font-size: 0.8rem;
+}
+
 
 .cv-section {
   margin-bottom: 20px;
@@ -133,7 +139,7 @@ input:checked + .slider:before {
   border-bottom: 2px solid #333;
   padding-bottom: 5px;
   margin-bottom: 10px;
-  font-size: 20px;
+  font-size: 1rem;
 }
 
 .cv-subsection {
@@ -148,7 +154,7 @@ input:checked + .slider:before {
 
 .cv-subsection-p {
   margin: 5px 0;
-  font-size: 16px;
+  font-size: 0.8rem;
 }
 
 .cv-subsection-ul {
@@ -171,10 +177,11 @@ input:checked + .slider:before {
 
 .cv-skills-li {
   margin-bottom: 5px;
-  font-size: 16px;
+  font-size: 0.8rem;
 }
 
 .cv-skills-p {
+  font-size: 0.8rem;
   display: inline;
   font-weight: bold;
 }
@@ -246,6 +253,8 @@ input:checked + .slider:before {
   }
 
   .page-break {
-    page-break-before: always; /* Add page breaks where necessary */
+    page-break-after: avoid;
+    page-break-inside: always;
+    page-break-before: avoid;
   }
 }

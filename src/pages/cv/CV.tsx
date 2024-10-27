@@ -10,6 +10,8 @@ import { WorkExperienceList } from "./WorkExperienceList";
 import { EducationList } from "./EducationList";
 import { VolunteerExperienceList } from "./VolunteerExperienceList";
 import { SkillList } from "./SkillList";
+import htmlDocx from 'html-docx-js';
+import { saveAs } from 'file-saver';
 
 const textPreprocessing = (str: string) => {
   return str.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()\s]/g, "").toLowerCase();
@@ -61,13 +63,12 @@ function CV() {
         margin: [0.5, 0.5],
         filename: "Christian-Antonius-Anggaresta-CV.pdf",
         image: { type: "jpeg", quality: 0.98 },
-        html2canvas: { scale: 2, useCORS: true, logging: true },
+        html2canvas: { scale: 2, useCORS: false },
         jsPDF: {
           unit: "in",
           format: "a4",
           orientation: "portrait",
         },
-        pagebreak: { avoid: ['.cv-skills-li', '.cv-subsection'] }
       };
 
       html2pdf(cvContent, options).then(() => {
@@ -82,6 +83,17 @@ function CV() {
     }
   };
 
+  function downloadDocx() {
+    const cvContentElement = document.getElementById("cv-content");
+
+    // Check if cvContentElement exists
+    if (cvContentElement) {
+        const cvContent = cvContentElement.innerHTML;
+        const docxContent = htmlDocx.asBlob(cvContent);
+        saveAs(docxContent, 'Christian-Antonius-Anggaresta-CV.docx');
+    }
+  }
+
   return (
     <>
       <div className="slider-container">
@@ -95,7 +107,7 @@ function CV() {
           <span className="slider"></span>
         </label>
       </div>
-      <div className="download-container" onClick={downloadCV}>
+      <div className="download-container" onClick={downloadDocx}>
         <div className="download-button">
           <i className="fas fa-download"></i>
         </div>
