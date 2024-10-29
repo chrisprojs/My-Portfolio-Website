@@ -1,0 +1,31 @@
+.skillCaro-container{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 2%;
+}
+
+.skillCaro-box{
+  display: flex;
+  align-items: center;
+  background-color: rgba(85, 85, 85, 0.5);
+  width: 90%;
+  gap: 20px;
+  height: 80px;
+  overflow: hidden;
+}
+
+.skillCaro-card{
+  width: 50px;
+  height: 70px;
+}
+
+.skillCaro-card img{
+  width: 50px;
+  height: 50px;
+}
+
+.skillCaro-card p{
+  text-align: center;
+  font-size: 0.8rem;
+}

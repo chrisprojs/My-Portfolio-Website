@@ -1,14 +1,13 @@
 /* Slider */
-.cv-header,
-.cv-section,
-.cv-subsection,
-.cv-subsection-h3,
-.cv-subsection-p,
-.cv-skills-li,
-.cv-skills-p,
-.cv-header h1,
-.cv-header p {
-  color: black; /* Ensures all related text elements inside cv-container are also black */
+.cv-container *:not(a) {
+  color: black;
+}
+
+.cv-container a,
+.cv-container p,
+.cv-container li,
+.cv-container span {
+  font-size: 0.8rem;
 }
 
 .slider-container {
@@ -121,21 +120,18 @@ input:checked + .slider:before {
 
 .cv-header p {
   margin: 5px 0;
-  font-size: 0.8rem;
 }
 
 .cv-header a {
   margin: 5px 0;
-  font-size: 0.8rem;
 }
-
 
 .cv-section {
   margin-bottom: 20px;
 }
 
 .cv-section h2 {
-  font-weight: 900;
+  font-weight: bold;
   border-bottom: 2px solid #333;
   padding-bottom: 5px;
   margin-bottom: 10px;
@@ -147,7 +143,7 @@ input:checked + .slider:before {
 }
 
 .cv-subsection-h3 {
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   font-size: 18px;
 }
@@ -175,55 +171,49 @@ input:checked + .slider:before {
   border-radius: 4px;
 }
 
-.cv-skills-li {
-  margin-bottom: 5px;
+.cv-skills-span {
   font-size: 0.8rem;
-}
-
-.cv-skills-p {
-  font-size: 0.8rem;
-  display: inline;
   font-weight: bold;
 }
 
 @media (max-width: 768px) {
-.slider-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+  .slider-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 
-.slider-text {
-  background-color: rgba(0,0,0,0.5);
-  font-size: 6px;
-  margin-bottom: 2px;
-}
+  .slider-text {
+    background-color: rgba(0,0,0,0.5);
+    font-size: 6px;
+    margin-bottom: 2px;
+  }
 
-.switch {
-  width: 30px;
-  height: 17px;
-}
+  .switch {
+    width: 30px;
+    height: 17px;
+  }
 
-.slider {
-  border-radius: 17px;
-}
+  .slider {
+    border-radius: 17px;
+  }
 
-.slider:before {
-  height: 13px;
-  width: 13px;
-  left: 2px;
-  bottom: 2px;
-}
+  .slider:before {
+    height: 13px;
+    width: 13px;
+    left: 2px;
+    bottom: 2px;
+  }
 
-.download-button{
-  top: 140px;
-  right: 20px;
-  scale: 0.6;
-}
+  .download-button{
+    top: 140px;
+    right: 20px;
+    scale: 0.6;
+  }
 
-input:checked + .slider:before {
-  transform: translateX(13px);
-}
+  input:checked + .slider:before {
+    transform: translateX(13px);
+  }
 
   .cv-container {
     padding: 10px;
@@ -238,23 +228,19 @@ input:checked + .slider:before {
     padding: 4px;
   }
 
-  .cv-header p,
-  .cv-section h2,
-  .cv-subsection-h3,
-  .cv-subsection-p,
-  .cv-skills-li {
-    font-size: 14px;
+  .cv-container a,
+  .cv-container p,
+  .cv-container li,
+  .cv-container span {
+    font-size: 0.7rem;
   }
 }
 
 @media print {
-  .cv-container {
-    overflow: visible;
+  .cv-section {
+    page-break-inside: avoid;
   }
-
-  .page-break {
-    page-break-after: avoid;
-    page-break-inside: always;
-    page-break-before: avoid;
+  .cv-subsection-ul {
+    page-break-inside: avoid;
   }
 }

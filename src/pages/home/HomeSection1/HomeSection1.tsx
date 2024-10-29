@@ -6,6 +6,8 @@ import ricardoRicardoFlick from "./../../../asset/ricardo-ricardo-flick.gif";
 import rickRoll from "./../../../asset/rick-roll.gif";
 import chipiChapaCat from "./../../../asset/chipi-chapa-cat.gif";
 import './HomeSection1.css'
+import linkedin from "./../../../asset/contact-icon/linkedin.png";
+import { PersonalInformation } from '../../../PersonalInformation';
 
 function HomeSection1() {
   const [isProfilePictureLoaded, setProfilePictureLoaded] = useState(false);
@@ -31,6 +33,21 @@ function HomeSection1() {
       />
     )
   }
+
+  const handleScroll = (sectionId:any) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      // Set an offset of, for example, 50px above the section
+      const offset = 80;
+      const sectionPosition = section.getBoundingClientRect().top + window.scrollY;
+      const offsetPosition = sectionPosition - offset;
+  
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    }
+  };
 
   const profileDesc = () => {
     return(
@@ -59,30 +76,31 @@ function HomeSection1() {
   }
 
   return (
-    <div className="section-1">
+    <section id='mainSection' className="section-1">
         {isMobile ? profileDesc(): profileImage()}
         <div className="section-1-button-box">
           {isMobile ? profileImage(): profileDesc()}
           <div className="section-1-button-list">
             <div className="section-1-button-stack">
-              <Link
-                to="/cv"
+              <a
+                href={`${PersonalInformation.linkedinLink}`}
                 className="section-1-button section-1-button-view-cv"
+                target="_blank" rel="noopener noreferrer"
               >
                 <img
                   src={shigureUiDance}
                   alt="shigure-ui-dance"
                   className="section-1-gif"
                 />
-                <p className="section-1-text-view-cv">View CV</p>
+                <p className="section-1-text-view-cv">View <img src={linkedin} alt='linkedin-logo'/></p>
                 <img
                   src={shigureUiDance}
                   alt="shigure-ui-dance"
                   className="section-1-gif"
                 />
-              </Link>
-              <Link
-                to="/portfolio"
+              </a>
+              <div
+                onClick={() => handleScroll('projectSection')}
                 className="section-1-button section-1-button-view-portfolio"
               >
                 <img
@@ -90,13 +108,13 @@ function HomeSection1() {
                   alt="ricardo-ricardo-flick"
                   className="section-1-gif"
                 />
-                <p className="section-1-text-view-portfolio">View Portfolio</p>
+                <p className="section-1-text-view-portfolio">View Project</p>
                 <img
                   src={ricardoRicardoFlick}
                   alt="ricardo-ricardo-flick"
                   className="section-1-gif"
                 />
-              </Link>
+              </div>
             </div>
             <a
               href="mailto:christiananggaresta20@gmail.com"
@@ -117,7 +135,7 @@ function HomeSection1() {
             </a>
           </div>
         </div>
-      </div>
+      </section>
   )
 }
 

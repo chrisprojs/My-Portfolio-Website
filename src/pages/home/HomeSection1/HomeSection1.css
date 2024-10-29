@@ -5,7 +5,7 @@
   align-items: center;
   margin-left: 5%;
   margin-right: 5%;
-  margin-top: 1%;
+  margin-top: 2%;
   margin-bottom: 2%;
 }
 
@@ -125,7 +125,14 @@
   margin: auto;
   color: white;
   text-align: center;
+  display: flex;
+  align-items: center;
   font-size: 2vw;
+}
+
+.section-1-text-view-cv img{
+  width: 30px;
+  height: 30px;
 }
 
 .section-1-text-view-portfolio {
@@ -338,8 +345,9 @@
       1px 1px 0 #000;
   }
 
-  .section-1-text-view-cv {
-    font-size: 2vw;
+  .section-1-text-view-cv img{
+    width: 20px;
+    height: 20px;
   }
 
   .section-1-text-view-portfolio {

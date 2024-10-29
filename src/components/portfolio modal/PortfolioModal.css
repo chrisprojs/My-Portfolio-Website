@@ -269,6 +269,7 @@
 
   .modal-body{
     flex-direction: column;
+    overflow-y: auto;
   }
 
   .modal-slider{
@@ -288,6 +289,7 @@
 
   .modal-details {
     max-height: 40%;
+    overflow-y: unset;
   }
 
   .modal-strong{

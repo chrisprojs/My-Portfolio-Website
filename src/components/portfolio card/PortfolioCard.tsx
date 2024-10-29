@@ -8,7 +8,7 @@ import { likeProjectAction } from "../../pages/portfolio/likedProjectsReducer";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../redux/ReduxStorage";
 
-function PortfolioCard({ project, onClick, isSkillFlex = false }: any) {
+function PortfolioCard({ project, onClick}: any) {
   const projectData = project;
   const [visibleSkills, setVisibleSkills] = useState<string[]>([]);
   const skillBoxRef = useRef<HTMLDivElement>(null);
@@ -32,7 +32,7 @@ function PortfolioCard({ project, onClick, isSkillFlex = false }: any) {
         let totalWidth = 0;
         let displayedSkills: string[] = [];
         const charWidth = 12;
-        const paddingWidth = 24;
+        const paddingWidth = 20;
 
         for (let i = 0; i < projectData.skills.length; i++) {
           const skillWidth = projectData.skills[i].length * charWidth + paddingWidth;
@@ -53,16 +53,7 @@ function PortfolioCard({ project, onClick, isSkillFlex = false }: any) {
     handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
-  }, [isSkillFlex, projectData.skills]);
-
-  useEffect(() => {
-    if (window.location.pathname === '/') {
-      document.body.classList.add('home-page');
-    }
-    else{
-      document.body.classList.remove('home-page');
-    }
-  }, []);
+  }, [projectData.skills]);
 
   const handleLikeClick = async (event: React.MouseEvent) => {
     event.stopPropagation();

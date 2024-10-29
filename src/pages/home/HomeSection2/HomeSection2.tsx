@@ -3,7 +3,7 @@ import './HomeSection2.css'
 
 function HomeSection2() {
   return (
-    <div className="section-2">
+    <section id='aboutSection' className="section-2">
         <div className="section-2-textbox">
           <p className="section-2-text">
             I am a software engineer with a strong focus on front-end
@@ -21,7 +21,7 @@ function HomeSection2() {
           alt="profile-picture-2"
           loading='lazy'
         />
-      </div>
+      </section>
   )
 }
 

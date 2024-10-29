@@ -34,9 +34,6 @@ function PageWrapper() {
           <div className="page-content">
             <Routes location={location}>
               <Route path="/" element={<Home />} />
-              <Route path="/cv" element={<CV />} />
-              <Route path="/portfolio" element={<Portfolio />} />
-              <Route path="/contact" element={<Contact />} />
             </Routes>
           </div>
         </CSSTransition>

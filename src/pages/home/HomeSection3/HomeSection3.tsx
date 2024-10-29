@@ -3,7 +3,7 @@ import './HomeSection3.css'
 
 function HomeSection3() {
   return (
-    <div className="section-3">
+    <section id='serviceSection' className="section-3">
         <div className="section-3-textbox">
           <h1>WHAT I DO?</h1>
         </div>
@@ -40,7 +40,7 @@ function HomeSection3() {
             </ul>
           </div>
         </div>
-      </div>
+      </section>
   )
 }
 

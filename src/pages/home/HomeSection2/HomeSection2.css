@@ -7,8 +7,7 @@
   background-size: cover; /* Ensure the image covers the entire background */
   background-repeat: no-repeat; /* Prevent image from repeating */
   background-position: center; /* Center the background image */
-  margin-top: 5%;
-  margin-bottom: 5%;
+  margin-bottom: 2%;
 }
 
 .section-2::before {
