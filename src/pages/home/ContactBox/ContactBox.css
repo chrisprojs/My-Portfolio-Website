@@ -1,0 +1,122 @@
+.contactBox-container{
+  display: flex;
+  position: fixed;
+  top:15%;
+  left: -280px;
+  width: 330px;
+  height: 180px;
+  z-index: 50;
+  transition: left 0.3s ease;
+}
+
+.contactBox-container.activate{
+  left: 0px;
+  .contactBox-button{
+    background-color: rgba(20, 20, 20, 0.8);
+  }
+  .contactBox-box{
+    visibility: visible;
+  }
+}
+
+.contactBox-box{
+  display: flex;
+  visibility: hidden;
+  width: 280px;
+  height: 180px;
+  background: rgba(85, 85, 85, 0.8);
+  border: 1px solid #ddd;
+  border-left-width: 0 !important;
+  border-top-right-radius: 5px !important;
+  border-bottom-right-radius: 5px !important;
+  transition: visibility 0.3s ease;
+}
+
+.contactBox-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  width: 100%;
+  margin: 5%;
+  gap: 5px;
+}
+
+.contactBox-button{
+  background-color: rgba(54, 54, 54, 0.8);
+  width: 30px;
+  height: 150px;
+  border: 1px solid #ddd;
+  border-left-width: 0 !important;
+  border-top-right-radius: 5px !important;
+  border-bottom-right-radius: 5px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  user-select: none; /* Prevent text selection */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contactBox-container:not(.activate):has(.contactBox-button:hover) {
+  left: -275px;
+  .contactBox-button{
+    background-color: rgba(32, 32, 32, 0.8);
+  }
+  .contactBox-box {
+    visibility: visible;
+  }
+}
+
+.contactBox-button p{
+  margin-bottom: 0;
+  font-size: 0.6rem;
+  text-align: center;
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+}
+
+.contactBox-button img {
+  width: 20px;
+  height: 20px;
+}
+
+.contactBox-icon{
+  display: flex;
+  text-decoration: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contactBox-icon img{
+  object-fit: contain;
+  width: 50px;
+  height: 50px;
+}
+
+.contactBox-icon p{
+  margin-bottom: 0;
+  height: 20px;
+  max-width: 100%;
+  text-align: center;
+  font-size: 0.4rem;
+  overflow-wrap: break-word; /* Use this for wrapping long words */
+  white-space: normal;
+}
+
+@media (max-width:768px) {
+  .contactBox-button{
+    width: 25px;
+    height: 120px;
+  }
+
+  .contactBox-button p{
+    font-size: 0.5rem;
+  }
+
+  .contactBox-button img {
+    width: 16px;
+    height: 16px;
+  }
+}

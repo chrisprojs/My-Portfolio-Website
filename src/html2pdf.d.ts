@@ -5,3 +5,5 @@ declare module 'html2pdf.js' {
   export function html2pdf(element: HTMLElement, options?: any): any;
   export default html2pdf;
 }
+
+declare module 'html-docx-js';

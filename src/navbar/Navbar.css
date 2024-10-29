@@ -5,7 +5,7 @@
   height: 80px;
   position: fixed;
   top: 0;
-  z-index: 1000;
+  z-index: 100;
   background-color: rgba(0, 0, 0, 0.8);
 }
 
@@ -36,10 +36,13 @@
 }
 
 .navbar-link {
+  font-size: 0.8rem;
   font-family: "Roboto Mono", monospace;
   color: white;
   text-decoration: none;
   margin: 0 15px;
+  user-select: none; /* Prevent text selection */
+  cursor: pointer;
 }
 
 .navbar-link:hover {

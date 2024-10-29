@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import html2pdf from "html2pdf.js";
 import "./CV.css";
 import {
@@ -10,6 +10,8 @@ import { WorkExperienceList } from "./WorkExperienceList";
 import { EducationList } from "./EducationList";
 import { VolunteerExperienceList } from "./VolunteerExperienceList";
 import { SkillList } from "./SkillList";
+import html2canvas from "html2canvas";
+import jsPDF from "jspdf";
 
 const textPreprocessing = (str: string) => {
   return str.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()\s]/g, "").toLowerCase();
@@ -17,7 +19,9 @@ const textPreprocessing = (str: string) => {
 
 function CV() {
   const [isScrollable, setIsScrollable] = useState(false);
+  const [hideScrollTemp, setHideScrollTemp] = useState(false)
   const [searchQuery, setSearchQuery] = useState("");
+  const pdfRef = useRef<HTMLDivElement | null>(null);
 
   const toggleScrollView = () => {
     setIsScrollable(!isScrollable);
@@ -38,49 +42,74 @@ function CV() {
     );
   });
 
-  const downloadCV = () => {
-    const cvContent = document.getElementById("cv-content");
-    const scrollableSections = document.querySelectorAll(".scrollable");
-    const sectionInput = document.querySelector(".search-input");
+  function downloadPdf() {
+      let jsPdf = new jsPDF('p', 'pt', 'a4');
+      var htmlElement = pdfRef.current; // Reference to the HTML content
 
-    if(isScrollable){
-      toggleScrollView();
-    }
-
-    if (cvContent) {
-      // Temporarily hide scrollbars and section input
-      scrollableSections.forEach((section) =>
-        section.classList.add("hide-scrollbar")
-      );
-      if (sectionInput) {
-        sectionInput.classList.add("hide-input");
+      if (!htmlElement) {
+        console.error("pdfRef is null");
+        return;
       }
 
-      // Define HTML2PDF options
-      const options = {
-        margin: [0.5, 0.5],
-        filename: "Christian-Antonius-Anggaresta-CV.pdf",
-        image: { type: "jpeg", quality: 0.98 },
-        html2canvas: { scale: 2, useCORS: true, logging: true },
-        jsPDF: {
-          unit: "in",
-          format: "a4",
-          orientation: "portrait",
-        },
-        pagebreak: { avoid: ['.cv-skills-li', '.cv-subsection'] }
+      const fixedWidth = 728; // Set your desired fixed width here
+
+      // Clone the element and apply fixed width
+      const clonedElement = htmlElement.cloneNode(true) as HTMLElement; // Cast to HTMLElement
+      clonedElement.style.width = `${fixedWidth}px`; // Set the fixed width
+      clonedElement.style.overflow = 'visible'; // Ensure no overflow
+      clonedElement.querySelectorAll('.cv-contact-info a').forEach(el => {
+          el.setAttribute('target', '_blank'); // Ensure links open in a new tab
+      });
+      clonedElement.querySelectorAll<HTMLElement>(".cv-container a, .cv-container p, .cv-container li, .cv-container span").forEach((el) => {
+        el.style.fontSize = "0.8rem";
+      });
+      clonedElement.querySelectorAll<HTMLElement>(".cv-container").forEach((el) => {
+        el.style.padding = "40px";
+      });
+      clonedElement.querySelectorAll<HTMLElement>(".cv-header h1").forEach((el) => {
+        el.style.fontSize = "1.2rem";
+      });
+
+      document.body.appendChild(clonedElement);
+
+      const opt = {
+          callback: function (jsPdf:any) {
+              jsPdf.save("Christian_Antonius_Anggaresta_CV.pdf");
+          },
+          margin: [8, 8, 8, 8],
+          autoPaging: "text" as unknown as boolean | "text" | "slice",
+          html2canvas: {
+              useCors: true,
+              allowTaint: true,
+              letterRendering: true,
+              logging: false,
+              scale: 0.8,
+              onclone: (clonedDoc:any) => {
+                clonedDoc.querySelectorAll(".scrollable").forEach((element:any) => {
+                  element.classList.remove("scrollable");
+                });
+
+                // Array.from(clonedDoc.styleSheets).forEach((sheet) => {
+                //   try {
+                //     if ((sheet as CSSStyleSheet).cssRules) {
+                //       for (let j = (sheet as CSSStyleSheet).cssRules.length - 1; j >= 0; j--) {
+                //         const rule = (sheet as CSSStyleSheet).cssRules[j];
+                //         if (rule instanceof CSSMediaRule && rule.media.mediaText === "(max-width: 768px)") {
+                //           (sheet as CSSStyleSheet).deleteRule(j); // Remove the media query rules
+                //         }
+                //       }
+                //     }
+                //   } catch (error) {
+                //     console.warn("Could not access stylesheet rules:", error);
+                //   }
+                // });
+              }
+          }
       };
 
-      html2pdf(cvContent, options).then(() => {
-          // Revert the visibility changes after saving
-          scrollableSections.forEach((section) =>
-            section.classList.remove("hide-scrollbar")
-          );
-          if (sectionInput) {
-            sectionInput.classList.remove("hide-input");
-          }
-        });
-    }
-  };
+      jsPdf.html(clonedElement, opt);
+      document.body.removeChild(clonedElement);
+  }
 
   return (
     <>
@@ -95,34 +124,38 @@ function CV() {
           <span className="slider"></span>
         </label>
       </div>
-      <div className="download-container" onClick={downloadCV}>
+      <div className="download-container" onClick={downloadPdf}>
         <div className="download-button">
           <i className="fas fa-download"></i>
         </div>
       </div>
-      <div id="cv-content" className="cv-container">
+      <div id="cv-content" className="cv-container" ref={pdfRef}>
         <div className="cv-header">
           <h1>Christian Antonius Anggaresta</h1>
           <p>Software Engineer</p>
           <p>Jakarta, Indonesia</p>
-          <p>
-            <a href={`tel:${PersonalInformation.phoneNumber}`}>
-              {formatPhoneNumber(PersonalInformation.phoneNumber)}
-            </a>{" "}
-            |{" "}
-            <a href={`mailto:${PersonalInformation.emailLink}`}>
-              {PersonalInformation.emailLink}
-            </a>
-          </p>
-          <p>
-            LinkedIn:{" "}
-            <a href={PersonalInformation.linkedinLink}>
-              Christian Antonius Anggaresta
-            </a>
-          </p>
-          <p>
-            Portfolio:{" "}
-            <Link to="/portfolio">chris-software-developer-portfolio</Link>
+          <p className="cv-contact-info">
+            <span>
+              <a href={`tel:${PersonalInformation.phoneNumber}`} target="_blank" rel="noreferrer">
+                {formatPhoneNumber(PersonalInformation.phoneNumber)}
+              </a>{" "}
+              |{" "}
+              <a href={`mailto:${PersonalInformation.emailLink}`} target="_blank" rel="noreferrer">
+                {PersonalInformation.emailLink}
+              </a>{" "}
+            </span>
+            <br></br>
+            <span>
+              LinkedIn:{" "}
+              <a href={PersonalInformation.linkedinLink} target="_blank" rel="noreferrer">
+                {PersonalInformation.linkedinLink}
+              </a>
+            </span>{" "}
+            <br></br>
+            <span>
+              Portfolio:{" "}
+              <a href="https://christian-antonius-portfolio.netlify.app" target="_blank" rel="noreferrer">https://christian-antonius-portfolio.netlify.app</a>
+            </span>
           </p>
         </div>
 
@@ -188,6 +221,7 @@ function CV() {
               placeholder="Search Skills..."
               value={searchQuery}
               onChange={handleSearch}
+              data-html2canvas-ignore
             />
           </h2>
           <ul
@@ -195,8 +229,7 @@ function CV() {
           >
             {filteredSkills.map((skill, index) => (
               <li key={index} className="cv-skills-li">
-                <span className="cv-skills-p">{skill.skill}</span>:{" "}
-                {skill.details}
+                <span className="cv-skills-span">{skill.skill}</span><span>: {skill.details}</span>
               </li>
             ))}
           </ul>

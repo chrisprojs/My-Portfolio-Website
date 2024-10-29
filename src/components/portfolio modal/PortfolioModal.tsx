@@ -149,7 +149,7 @@ function PortfolioModal({ project, onClose, onNext, onPrev }: any) {
               <div className="modal-details">
                 <p className="modal-details-text">{projectData.details}</p>
                 <div className="modal-skills">
-                  <strong className="modal-skills-strong">Skills: </strong>
+                  <strong className="modal-strong">Skills: </strong>
                   {projectData.skills.map((skill: string, index: number) => (
                     <span key={index} className="skill-badge">
                       {skill}
@@ -157,7 +157,7 @@ function PortfolioModal({ project, onClose, onNext, onPrev }: any) {
                   ))}
                 </div>
                 <div className="modal-authors">
-                  <strong>Authors: </strong>
+                  <strong className="modal-strong">Authors: </strong>
                   {projectData.authors.join(", ")}
                 </div>
                 {projectData.publicationLink && (
@@ -170,13 +170,13 @@ function PortfolioModal({ project, onClose, onNext, onPrev }: any) {
                     >
                       <img
                         src={cuteDancing}
-                        alt="ricardo-ricardo-flick"
+                        alt="cute-dancing-flick"
                         className="section-1-gif"
                       />
                       <p className="section-1-text-view-portfolio">View Project</p>
                       <img
                         src={cuteDancing}
-                        alt="ricardo-ricardo-flick"
+                        alt="cute-dancing-flick"
                         className="section-1-gif"
                       />
                     </a>

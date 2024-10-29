@@ -14,6 +14,7 @@
   border-radius: 10px;
   overflow: hidden;
   margin: 8px;
+  cursor: pointer;
   transition: scale 0.3s ease;
 }
 
@@ -207,22 +208,12 @@
   }
 }
 
-@media (max-width: 768px) {
-  .portfolio-card{
-    margin: 4px;
-  }
-}
-
 @media (max-width: 400px) {
-  body.home-page .portfolio-card {
-    max-width: 260px;
-  }
-
-  body.home-page .skill-badge {
+  .skill-badge {
     font-size: 10px !important;
   }
 
-  body.home-page .skills {
+  .skills {
     height: 70px !important;
   }
 }

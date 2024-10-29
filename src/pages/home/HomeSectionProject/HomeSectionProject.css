@@ -1,11 +1,47 @@
 .section-project {
-  margin-left: 5%;
-  margin-right: 5%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2%;
+}
+
+.section-project-head{
+  display: flex;
+  align-items: center;
+  width: 90%;
+  justify-content: space-between;
+  margin-bottom: 1%;
+}
+
+.section-project-grid{
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.section-project-grid{
+  transition: background-color 0.3s ease;
+}
+
+.section-project-grid.active{
+  background-color: #007bff;
+}
+
+.section-project-grid i{
+  font-size: 1.2rem;
+}
+
+.section-project-card-edge{
+  width: 60vw;
 }
 
 .section-project-header {
   font-weight: bold;
   font-size: 24px;
+  margin-bottom: 0;
 }
 
 .section-project-container{
@@ -14,15 +50,17 @@
 }
 
 .section-project-slider{
-  display: flex;
-  width: 100%;
+  display: flex !important;
+  width: 96%;
+  margin-left: 2%;
+  margin-right: 2%;
   justify-content: space-between;
 }
 
 .section-project-slider > .slick-list{
   display: flex;
   flex-direction: column;
-  height: 600px;
+  min-height: 450px;
   justify-content: center;
   width: 100%;
 }
@@ -30,6 +68,7 @@
 .section-project-slider .slick-slide > div {
   display: flex;
   justify-content: center;
+  margin: 1%;
 } 
 
 
@@ -72,11 +111,5 @@
     width: 30px;
     height: 30px;
     border-radius: 15px;
-  }
-}
-
-@media (max-width: 400px) {
-  .section-project-slider > .slick-list{
-    height: 500px;
   }
 }

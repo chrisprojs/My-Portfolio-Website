@@ -9,7 +9,7 @@
   min-width: 200px;
   max-width: 300px;
   min-height: 240px;
-  max-height: 600px;
+  max-height: 800px;
   border: 1px solid #ddd;
   border-radius: 10px;
   overflow: hidden;
@@ -78,17 +78,5 @@
   }
   100% {
     background-color: #555;
-  }
-}
-
-@media (max-width: 768px) {
-  .skeleton-card{
-    margin: 4px;
-  }
-}
-
-@media (max-width:400px) {
-  body.home-page .skeleton-card{
-    max-width: 260px;
   }
 }

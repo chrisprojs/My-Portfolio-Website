@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^6.5.2",
     "@reduxjs/toolkit": "^2.2.7",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -14,9 +13,11 @@
     "@types/react-dom": "^18.3.0",
     "bootstrap": "^5.3.3",
     "crypto-js": "^4.2.0",
+    "file-saver": "^2.0.5",
     "gsap": "^3.12.5",
+    "html2canvas": "^1.4.1",
     "html2pdf.js": "^0.10.2",
-    "masonry-layout": "^4.2.2",
+    "jspdf": "^2.5.2",
     "react": "^18.3.1",
     "react-bootstrap": "^2.10.4",
     "react-dom": "^18.3.1",
@@ -61,14 +62,19 @@
   },
   "devDependencies": {
     "@types/crypto-js": "^4.2.2",
+    "@types/file-saver": "^2.0.7",
     "@types/lodash": "^4.17.7",
-    "@types/masonry-layout": "^4.2.8",
     "@types/react-slick": "^0.23.13",
     "@types/string-similarity": "^4.0.2",
-    "@types/three": "^0.167.1",
-    "file-loader": "^6.2.0",
-    "ts-loader": "^9.5.1",
-    "webpack": "^5.93.0",
-    "webpack-cli": "^5.1.4"
+    "@types/three": "^0.167.1"
+  },
+  "browser": {
+    "crypto": false,
+    "fs": false,
+    "path": false,
+    "os": false,
+    "net": false,
+    "stream": false,
+    "tls": false
   }
 }

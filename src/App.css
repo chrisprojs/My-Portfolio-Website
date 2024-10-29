@@ -28,9 +28,11 @@ html {
     color: white;
     font-family: 'Roboto Mono', monospace;
     align-items: center;
+    font-size: 20px;
 }
 
 .page-container {
+  min-height: 80vh;
   padding-top: 80px; /* Same height as the navbar */
 }
 

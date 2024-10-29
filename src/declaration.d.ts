@@ -1,5 +1,4 @@
-declare module 'masonry-layout' {
-  export default class Masonry {
-    constructor(element: HTMLElement, options?: any);
-  }
+declare module '*.gif' {
+  const content: string;
+  export default content;
 }
