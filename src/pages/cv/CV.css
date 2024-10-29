@@ -12,7 +12,7 @@
 
 .slider-container {
   position: fixed;
-  top: 100px;
+  top: 18vh;
   right: 20px;
 }
 
@@ -59,7 +59,7 @@
 
 .download-button {
   position: fixed;
-  top: 200px;
+  top: 32vh;
   right: 32px;
   display: inline-flex;
   align-items: center;
