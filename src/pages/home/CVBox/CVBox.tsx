@@ -43,59 +43,60 @@ function CVBox() {
     };
   }, []);
 
-  // Start drag event
-  const handleMouseDown = (e: React.MouseEvent) => {
+  // Start drag/touch event
+  const handleStart = (e: React.MouseEvent | React.TouchEvent) => {
     setIsDragging(true);
-    setStartY(e.clientY);
+    setStartY(e.type === 'mousedown' ? (e as React.MouseEvent).clientY : (e as React.TouchEvent).touches[0].clientY);
     setHasMoved(false);
   };
 
-  // Handle mouse move event
-  const handleMouseMove = (e: MouseEvent) => {
+  // Handle mouse/touch move event
+  const handleMove = (e: MouseEvent | TouchEvent) => {
     if (!isDragging) return;
 
     const vhToPx = window.innerHeight / 100;
-
     const startOffset = 0 * vhToPx;
-
-    const deltaY = startY - e.clientY; // Calculate how far the mouse has moved
+    const clientY = e.type === 'mousemove' ? (e as MouseEvent).clientY : (e as TouchEvent).touches[0].clientY;
+    const deltaY = startY - clientY;
     const distanceMoved = Math.abs(deltaY);
-    
+
     if (distanceMoved > 5) {
       setHasMoved(true);
       const newOffset = Math.max(startOffset, offset * vhToPx + deltaY) / vhToPx;
-      console.log(newOffset)
       setOffset(newOffset);
-      setStartY(e.clientY);
+      setStartY(clientY);
     }
   };
 
-  // End drag event
-  const handleMouseUp = () => {
-    setIsDragging(false)
+  // End drag/touch event
+  const handleEnd = () => {
+    setIsDragging(false);
   };
 
   useEffect(() => {
-    // Add mousemove and mouseup listeners
-    window.addEventListener('mousemove', handleMouseMove);
-    window.addEventListener('mouseup', handleMouseUp);
+    // Add mousemove and touchmove listeners
+    window.addEventListener('mousemove', handleMove);
+    window.addEventListener('mouseup', handleEnd);
+    window.addEventListener('touchmove', handleMove);
+    window.addEventListener('touchend', handleEnd);
 
-    if (!isDragging){
+    if (!isDragging) {
       if (offset < 10) {
         setOffset(0);
-      }
-      else if (offset > 70){
-        setOffset(85)
+      } else if (offset > 70) {
+        setOffset(85);
       }
     }
 
-    setTimeout(()=>{
-      setHasMoved(false)
-    },100)
+    setTimeout(() => {
+      setHasMoved(false);
+    }, 100);
 
     return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
-      window.removeEventListener('mouseup', handleMouseUp);
+      window.removeEventListener('mousemove', handleMove);
+      window.removeEventListener('mouseup', handleEnd);
+      window.removeEventListener('touchmove', handleMove);
+      window.removeEventListener('touchend', handleEnd);
     };
   }, [isDragging]);
 
@@ -119,7 +120,7 @@ function CVBox() {
         style={{ bottom: `${isFooterVisible ? '-100vh' : '-1px'}` }}
       >
         <div className='cvBox-button'
-        onMouseDown={handleMouseDown} onClick={handleCVButton}>
+        onMouseDown={handleStart} onTouchStart={handleStart} onClick={handleCVButton}>
           <div><i className={`fa-solid fa-chevrons-${(offset>0) ? 'down' : 'up'}`}></i></div>
           <p>View CV</p>
         </div>
