@@ -14,27 +14,17 @@
   display: flex;
   flex-direction: column;
   position: fixed;
-  bottom: -85vh;
   width: 100%;
   z-index: 102;
-  transition: bottom 0.3s ease;
 }
 
-.cvBox-container.active{
-  bottom: 0;
-  .cvBox-button{
-    background-color: rgba(20, 20, 20, 0.8);
-  }
-  .cvBox-box>div{
-    visibility: visible;
-    opacity: 100%;
-  }
+.cvBox-container:not(.dragged){
+  transition: bottom 0.3s ease;
 }
 
 .cvBox-box{
   overflow-y: auto;
   width: 100%;
-  height: 85vh;
   background-color: rgba(85, 85, 85, 0.8);
   border: 1px solid #ddd;
   border-bottom-width: 0;
@@ -42,10 +32,8 @@
   border-top-right-radius: 10px;
 }
 
-.cvBox-box > div{
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
+.cvBox-box:not(.dragged){
+  transition: height 0.3s ease;
 }
 
 .cvBox-button{
@@ -64,11 +52,8 @@
   cursor: pointer;
 }
 
-.cvBox-container:not(.active):has(.cvBox-button:hover){
-  bottom: -84vh;
-  .cvBox-button{
-    background-color: rgba(32, 32, 32, 0.8);
-  }
+.cvBox-button:hover{
+  background-color: rgba(32, 32, 32, 0.8);
 }
 
 .cvBox-button p{

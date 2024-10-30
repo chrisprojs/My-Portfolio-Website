@@ -7,12 +7,15 @@ import HomeSection3 from "./HomeSection3/HomeSection3";
 import ContactBox from "./ContactBox/ContactBox";
 import SkillCarousel from "../../components/skill-carousel/SkillCarousel";
 import CVBox from "./CVBox/CVBox";
+import { CVProvider } from "../../context/CV-to-CVBox";
 
 function Home() {
   return (
     <>
       <ContactBox/>
-      <CVBox/>
+      <CVProvider>
+        <CVBox/>
+      </CVProvider>
       <div className="box">
         <HomeSection1/>
         <SkillCarousel/>

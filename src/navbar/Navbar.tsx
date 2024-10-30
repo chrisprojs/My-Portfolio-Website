@@ -23,7 +23,7 @@ function Navbar() {
 
   useEffect(() => {
     const sections = ["mainSection", "projectSection", "aboutSection", "serviceSection"];
-    const options = { root: null, rootMargin: "0px", threshold: 0.6 }; // Adjust threshold as needed
+    const options = { root: null, rootMargin: "0px", threshold: 0.4 }; // Adjust threshold as needed
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {

@@ -5,7 +5,7 @@ import { PersonalInformation, formatPhoneNumber } from "../PersonalInformation";
 function Footer() {
 
   return (
-    <div className="footer">
+    <div id="footer" className="footer">
       <div className="footer-box">
         <p>Contact Me:</p>
         <div className="footer-icon-box">
