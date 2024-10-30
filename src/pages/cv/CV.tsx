@@ -12,14 +12,15 @@ import { VolunteerExperienceList } from "./VolunteerExperienceList";
 import { SkillList } from "./SkillList";
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
+import { useCVContext } from "../../context/CV-to-CVBox";
 
 const textPreprocessing = (str: string) => {
   return str.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()\s]/g, "").toLowerCase();
 };
 
 function CV() {
+  const { isOpened }:any = useCVContext()
   const [isScrollable, setIsScrollable] = useState(false);
-  const [hideScrollTemp, setHideScrollTemp] = useState(false)
   const [searchQuery, setSearchQuery] = useState("");
   const pdfRef = useRef<HTMLDivElement | null>(null);
 
@@ -113,7 +114,12 @@ function CV() {
 
   return (
     <>
-      <div className="slider-container">
+      <div className="slider-container"
+          style={{
+            visibility: `${isOpened ? 'visible' : 'hidden'}`,
+            opacity: `${isOpened ? '100%' : '0'}`
+          }}
+        >
         <p className="slider-text">Scroll Mode</p>
         <label className="switch">
           <input
@@ -124,7 +130,12 @@ function CV() {
           <span className="slider"></span>
         </label>
       </div>
-      <div className="download-container" onClick={downloadPdf}>
+      <div className="download-container"
+        style={{
+          visibility: `${isOpened ? 'visible' : 'hidden'}`,
+          opacity: `${isOpened ? '100%' : '0'}`
+        }}
+        onClick={downloadPdf}>
         <div className="download-button">
           <i className="fas fa-download"></i>
         </div>
