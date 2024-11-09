@@ -21,14 +21,14 @@ function Navbar() {
     }
   };
 
-  useEffect(() => {
-    const sections = [
-      { id: "mainSection", offset: 0 },
-      { id: "projectSection", offset: 0 },
-      { id: "aboutSection", offset: 0 },
-      { id: "serviceSection", offset: 0 },
-    ];
+  const sections = [
+    { id: "mainSection", offset: 0 },
+    { id: "projectSection", offset: 0 },
+    { id: "aboutSection", offset: 0 },
+    { id: "serviceSection", offset: 0 },
+  ];
 
+  useEffect(() => {
     const updateActiveSection = () => {
       const scrollPosition = window.scrollY + 100; // Adjust this offset as needed
       let currentSection = "";
