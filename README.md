@@ -8,7 +8,14 @@ I am a software engineer with a strong focus on front-end development, crafting 
 
 Checkout my portfolio website: https://christian-antonius-portfolio.netlify.app/
 
+### Portfolio Landing Page
+![Portfolio Landing Page](https://github.com/chrisprojs/My-Portfolio-Website/blob/main/src/pages/portfolio/portfolio-image/My%20Portfolio%20Website/1.jpg)
 
+### View CV
+![View CV](https://github.com/chrisprojs/My-Portfolio-Website/blob/main/src/pages/portfolio/portfolio-image/My%20Portfolio%20Website/2.jpg)
+
+### Some Projects
+![Some Projects](https://github.com/chrisprojs/My-Portfolio-Website/blob/main/src/pages/portfolio/portfolio-image/My%20Portfolio%20Website/3.jpg)
 
 ### Project Details
 ![Project Details](https://github.com/chrisprojs/My-Portfolio-Website/blob/main/src/pages/portfolio/portfolio-image/My%20Portfolio%20Website/4.jpg)
