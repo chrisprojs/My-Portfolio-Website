@@ -21,29 +21,35 @@ function Navbar() {
     }
   };
 
-  useEffect(() => {
-    const sections = ["mainSection", "projectSection", "aboutSection", "serviceSection"];
-    const options = { root: null, rootMargin: "0px", threshold: 0.4 }; // Adjust threshold as needed
+  const sections = [
+    { id: "mainSection", offset: 0 },
+    { id: "projectSection", offset: 0 },
+    { id: "aboutSection", offset: 0 },
+    { id: "serviceSection", offset: 0 },
+  ];
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setActiveSection(entry.target.id);
+  useEffect(() => {
+    const updateActiveSection = () => {
+      const scrollPosition = window.scrollY + 100; // Adjust this offset as needed
+      let currentSection = "";
+
+      sections.forEach(({ id }) => {
+        const section = document.getElementById(id);
+        if (section) {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.offsetHeight;
+
+          if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+            currentSection = id;
+          }
         }
       });
-    }, options);
 
-    sections.forEach((sectionId) => {
-      const section = document.getElementById(sectionId);
-      if (section) observer.observe(section);
-    });
-
-    return () => {
-      sections.forEach((sectionId) => {
-        const section = document.getElementById(sectionId);
-        if (section) observer.unobserve(section);
-      });
+      setActiveSection(currentSection);
     };
+
+    window.addEventListener("scroll", updateActiveSection);
+    return () => window.removeEventListener("scroll", updateActiveSection);
   }, []);
 
   return (
