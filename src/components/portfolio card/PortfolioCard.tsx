@@ -97,7 +97,7 @@ function PortfolioCard({ project, onClick}: any) {
                   {image.picture.endsWith('.jpg') ? (
                     <img src={image.picture} alt={`${projectData.title} slide ${index + 1}`} />
                   ) : image.picture.endsWith('.mp4') ? (
-                    <video controls autoPlay muted>
+                    <video controls muted>
                       <source src={image.picture} type="video/mp4" />
                     </video>
                   ) : null}

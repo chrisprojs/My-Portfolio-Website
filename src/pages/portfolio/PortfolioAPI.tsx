@@ -21,17 +21,39 @@ async function retryFetch(url: string, delay: number = 1000): Promise<Response> 
   throw new Error('Failed to fetch data after multiple attempts');
 }
 
-const customSortOrder: Record<string, number> = {
-  "BINUSMAYA LMS Website": 1,
-  "My Portfolio Website": 2,
-  "Secure Auth With Golang": 3,
-  "Eksotika Prima Rub Oil Supplier Website": 4
-};
+const customSortOrder = [
+  "BINUSMAYA LMS Website",
+  "Job Sprint API",
+  "Secure Auth With Golang",
+  "My Portfolio Website",
+  "Eksotika Prima Rub Oil Supplier Website",
+];
+
+
+const leastImportantOrder = [
+  "Deacon AI Product Photography",
+  "AI Live Shopping"
+];
 
 function customSort(a: Project, b: Project): number {
-  const aOrder = customSortOrder[a.title] || Infinity;
-  const bOrder = customSortOrder[b.title] || Infinity;
-  return aOrder - bOrder;
+  const aCustomOrder = customSortOrder.indexOf(a.title);
+  const bCustomOrder = customSortOrder.indexOf(b.title);
+
+  const aLeastImportant = leastImportantOrder.indexOf(a.title);
+  const bLeastImportant = leastImportantOrder.indexOf(b.title);
+
+  // Handle least important projects
+  if (aLeastImportant !== -1 && bLeastImportant !== -1) {
+    return aLeastImportant - bLeastImportant; // Compare within leastImportantOrder
+  }
+  if (aLeastImportant !== -1) return 1; // Move `a` to the end
+  if (bLeastImportant !== -1) return -1; // Move `b` to the end
+
+  // Handle custom sort order
+  const aIndex = aCustomOrder !== -1 ? aCustomOrder : Infinity;
+  const bIndex = bCustomOrder !== -1 ? bCustomOrder : Infinity;
+
+  return aIndex - bIndex;
 }
 
 // Function to fetch and transform project data
