@@ -1,5 +1,17 @@
 export const WorkExperienceList = [
   {
+    company: "99 Group",
+    position: "Backend Engineer Intern",
+    duration: "February 2025 - May 2025",
+    responsibilities: [
+      `Building robust, fast, and scalable microservice API for property e-commerce website.`,
+      `Contributed to backend development tasks relevant to building or maintaining property technology microservices for Rumah123 and microsite.`,
+      `Make sure the database transactional secure and efficient.`,
+      `Working agile and dedicated for collaborating in large scope microservices.`,
+      `Reducing unit testing time by 23% by analysis and cleansing deprecated module.`
+    ],
+  },
+  {
     company: "Bina Nusantara IT Division",
     position: "Web Developer",
     duration: "March 2023 - February 2024",

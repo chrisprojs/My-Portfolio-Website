@@ -1,7 +1,7 @@
 export const EducationList = [
     {
       institution: 'Binus University',
-      degree: 'Bachelor of Computer Science (Current GPA: 3.37)',
+      degree: 'Bachelor of Computer Science (Current GPA: 3.43)',
       duration: '2022 - Present'
     }
   ];

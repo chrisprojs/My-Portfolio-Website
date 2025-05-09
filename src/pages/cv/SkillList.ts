@@ -51,12 +51,12 @@ export const SkillList = [
     },
     {
       skill: 'Go',
-      details: 'Fundamental skills in back end development using Golang Chi as back end.',
-      level: 6
+      details: 'Fundamental skills in back end development using Golang Chi, gRPC, and GraphQL as back end.',
+      level: 8
     },
     {
       skill: 'Postgresql',
-      details: 'Fundamental skills in making queries with Postgresql integrated with Golang Chi as back end.',
+      details: 'Fundamental skills in making queries with Postgresql integrated with Golang Chi, gRPC, and GraphQL as back end.',
       level: 7
     },
     {
@@ -98,5 +98,20 @@ export const SkillList = [
       skill: 'Laravel',
       details: 'Fundamental skills in back end development with Laravel.',
       level: 6
+    },
+    {
+      skill: 'Elasticsearch',
+      details: 'Experienced skill in using Elasticsearch as a powerful, open-source, distributed search and analytics engine.',
+      level: 7
+    },
+    {
+      skill: 'gRPC',
+      details: 'Experienced skill in creating and building protobuf microservices.',
+      level: 8
+    },
+    {
+      skill: 'GraphQL',
+      details: 'Experienced skill in creating and building GraphQL microservices.',
+      level: 8
     }
   ];
