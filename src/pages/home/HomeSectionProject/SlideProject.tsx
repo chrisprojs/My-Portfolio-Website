@@ -105,6 +105,7 @@ function SlideProject({projects, loading}: {projects:any[], loading:boolean}) {
     slidesToScroll: 1,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
+    lazyLoad: "progressive" as import("react-slick").LazyLoadTypes,
     appendDots: (dots: React.ReactNode) => (
       <div></div>
     ),

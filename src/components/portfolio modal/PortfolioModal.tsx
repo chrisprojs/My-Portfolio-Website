@@ -7,7 +7,6 @@ import { RootState } from "../../redux/ReduxStorage";
 import { likeProject } from "../../pages/portfolio/PortfolioAPI";
 import { likeProjectAction } from "../../pages/portfolio/likedProjectsReducer";
 import cuteDancing from "./../../asset/cute-dancing.gif";
-import { Link } from "react-router-dom";
 
 function PortfolioModal({ project, onClose, onNext, onPrev }: any) {
   const projectData = project;
@@ -83,6 +82,7 @@ function PortfolioModal({ project, onClose, onNext, onPrev }: any) {
     slidesToScroll: 1,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
+    lazyLoad: "progressive" as import("react-slick").LazyLoadTypes,
     appendDots: (dots: React.ReactNode) => (
       <div>
         <ul>{dots}</ul>

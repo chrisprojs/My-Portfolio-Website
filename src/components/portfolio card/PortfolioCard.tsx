@@ -80,6 +80,7 @@ function PortfolioCard({ project, onClick}: any) {
     slidesToShow: 1,
     slidesToScroll: 1,
     ref: sliderRef,
+    lazyLoad: "progressive" as import("react-slick").LazyLoadTypes,
     appendDots: (dots: React.ReactNode) => (
       <div>
         <ul onClick={handleDotClick}>{dots}</ul>
