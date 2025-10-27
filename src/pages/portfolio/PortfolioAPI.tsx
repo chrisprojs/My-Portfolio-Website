@@ -22,19 +22,22 @@ async function retryFetch(url: string, delay: number = 1000): Promise<Response> 
 }
 
 const customSortOrder = [
+  "Vehicle Management System",
+  "Moladin Marketplace",
   "BINUSMAYA LMS Website",
-  "Rumah123.com",
   "Job Sprint API",
+  "KSN Informatika 2021 Provincial Level",
+  "Rumah123.com",
+  "AI Live Shopping",
   "Secure Auth With Golang",
   "My Portfolio Website",
+  "Karya Asuh",
   "99 Back End Tech Challenge",
   "Eksotika Prima Rub Oil Supplier Website",
 ];
 
-
 const leastImportantOrder = [
-  "Deacon AI Product Photography",
-  "AI Live Shopping"
+  "Deacon AI Product Photography"
 ];
 
 function customSort(a: Project, b: Project): number {
