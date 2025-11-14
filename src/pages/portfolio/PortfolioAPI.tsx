@@ -25,6 +25,7 @@ const customSortOrder = [
   "Vehicle Management System",
   "Moladin Marketplace",
   "BINUSMAYA LMS Website",
+  "EduFun",
   "Job Sprint API",
   "KSN Informatika 2021 Provincial Level",
   "Rumah123.com",
