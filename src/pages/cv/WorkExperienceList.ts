@@ -4,10 +4,10 @@ export const WorkExperienceList = [
     position: "Software Engineer Intern",
     duration: "September 2025 - Present",
     responsibilities: [
-      `Building vehicle management software for managing inventory, tagging, and tracking GPS location.`,
-      `Contributing development of backend microservices-based architecture for dashboard, inventory, asset tagging, and location tracking, supported by a network of 20.000+ GPS-enabled IoT devices.`,
-      `Implemented an asynchronous event-driven system to handle notification, alerts, tasks, and system events.`,
+      `Lead 2 interns in development of project and support manager handling configuration for deployment.`,
+      `Building vehicle management software for managing inventory, tagging, and tracking GPS location supported by a network of 20.000+ GPS-enabled IoT devices.`,
       `Develop and maintain implementation of a car marketplace platform to showcase and manage company assets in a marketplace-style website.`,
+      `Contribute in team for revamping moladin.com from marketplace into automotive article platform.`,
     ],
   },
   {
