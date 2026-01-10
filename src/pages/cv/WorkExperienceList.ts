@@ -4,7 +4,7 @@ export const WorkExperienceList = [
     position: "Software Engineer Intern",
     duration: "September 2025 - Present",
     responsibilities: [
-      `Managed a group of 2 interns in development of project and support manager handling configuration for deployment.`,
+      `Collaborate with a group of 3 interns in development of project and support manager handling configuration for deployment.`,
       `Building vehicle management software for managing inventory, tagging, and tracking GPS location supported by a network of 20.000+ GPS-enabled IoT devices.`,
       `Develop and maintain implementation of a car marketplace platform to showcase and manage company assets in a marketplace-style website.`,
       `Contribute in team collaboration for revamping moladin.com from marketplace into content-first automotive article platform.`,

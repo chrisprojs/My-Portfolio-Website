@@ -1,16 +1,20 @@
 .contactBox-container{
   display: flex;
   position: fixed;
-  top:15%;
-  left: -280px;
-  width: 330px;
-  height: 180px;
+  bottom: -181px;
+  left: 80%;
+  transform: translateX(-50%);
+  width: 280px;
+  height: 210px;
   z-index: 50;
-  transition: left 0.3s ease;
+  transition: transform 0.3s ease;
+  flex-direction: column-reverse;
+  align-items: center;
+  z-index: 103;
 }
 
 .contactBox-container.activate{
-  left: 0px;
+  transform: translate(-50%, -180px);
   .contactBox-button{
     background-color: rgba(20, 20, 20, 0.8);
   }
@@ -26,9 +30,7 @@
   height: 180px;
   background: rgba(85, 85, 85, 0.8);
   border: 1px solid #ddd;
-  border-left-width: 0 !important;
-  border-top-right-radius: 5px !important;
-  border-bottom-right-radius: 5px !important;
+  border-bottom-width: 0 !important;
   transition: visibility 0.3s ease;
 }
 
@@ -42,31 +44,29 @@
 
 .contactBox-button{
   background-color: rgba(54, 54, 54, 0.8);
-  width: 30px;
-  height: 150px;
+  width: 150px;
+  height: 30px;
   border: 1px solid #ddd;
-  border-left-width: 0 !important;
+  border-bottom-width: 0 !important;
+  border-top-left-radius: 5px !important;
   border-top-right-radius: 5px !important;
-  border-bottom-right-radius: 5px !important;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: row;
   gap: 5px;
   user-select: none; /* Prevent text selection */
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-@media (min-width:769px) {
-  .contactBox-container:not(.activate):has(.contactBox-button:hover) {
-    left: -275px;
-    .contactBox-button{
-      background-color: rgba(32, 32, 32, 0.8);
-    }
-    .contactBox-box {
-      visibility: visible;
-    }
+.contactBox-container:not(.activate):has(.contactBox-button:hover) {
+  transform: translate(-50%, -3px);
+  .contactBox-button{
+    background-color: rgba(32, 32, 32, 0.8);
+  }
+  .contactBox-box {
+    visibility: visible;
   }
 }
 
@@ -82,8 +82,6 @@
   margin-bottom: 0;
   font-size: 0.6rem;
   text-align: center;
-  writing-mode: vertical-lr;
-  text-orientation: upright;
 }
 
 .contactBox-button img {
@@ -122,9 +120,22 @@
 }
 
 @media (max-width:768px) {
+  .contactBox-container{
+    width: 90px;
+    height: 465px;
+    bottom: -441px;
+  }
+  .contactBox-container.activate{
+    transform: translate(-50%, -440px);
+  }
+  .contactBox-box{
+    width: 90px;
+    height: 440px;
+  }
+
   .contactBox-button{
-    width: 25px;
-    height: 120px;
+    width: 90px;
+    height: 25px;
   }
 
   .contactBox-button p{

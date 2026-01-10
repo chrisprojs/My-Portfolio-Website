@@ -60,3 +60,16 @@
   margin-bottom: 0;
   font-size: 0.8rem;
 }
+
+@media (max-width:768px) {
+  .cvBox-button{
+    height: 50px;
+    width: 60px;
+  }
+  .cvBox-button i{
+    font-size: 0.6rem;
+  }
+  .cvBox-button p{
+    font-size: 0.6rem;
+  }
+}
