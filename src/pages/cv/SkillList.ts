@@ -55,6 +55,16 @@ export const SkillList = [
       level: 5
     },
     {
+      skill: 'Redis Queue',
+      details: 'Experienced skill in distributed system that utilize redis queue for queueing and processing jobs on background in another worker module',
+      level: 7
+    },
+    {
+      skill: 'Redis',
+      details: 'Experienced skill in caching handling from repetitive input and output',
+      level: 7
+    },
+    {
       skill: 'React',
       details: 'In my role as a web developer, I have developed strong skills in React, enabling me to build dynamic, efficient, and scalable user interfaces.',
       level:6
@@ -118,11 +128,6 @@ export const SkillList = [
       skill: 'SQL Server',
       details: 'Fundamental skills in making queries with SQL Server.',
       level: 6
-    },
-    {
-      skill: 'WooCommerce',
-      details: 'Experienced skill in creating and managing WooCommerce websites.',
-      level: 5
     },
     {
       skill: 'Figma',
