@@ -352,6 +352,8 @@
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
+  touch-action: none;
+  -webkit-touch-callout: none;
 }
 
 .preview-enter {
@@ -381,6 +383,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  touch-action: none;
 }
 
 .preview-image {

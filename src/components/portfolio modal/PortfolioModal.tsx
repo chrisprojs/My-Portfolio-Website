@@ -163,8 +163,11 @@ function PortfolioModal({ project, onClose, onNext, onPrev }: any) {
   };
 
   const handleTouchStart = (e: React.TouchEvent) => {
-    if (e.touches.length === 2 && showPreview && previewOverlayRef.current) {
+    if (!showPreview) return;
+    
+    if (e.touches.length === 2 && previewOverlayRef.current) {
       e.preventDefault();
+      e.stopPropagation();
       const distance = getDistance(e.touches[0], e.touches[1]);
       setLastPinchDistance(distance);
       
@@ -173,15 +176,20 @@ function PortfolioModal({ project, onClose, onNext, onPrev }: any) {
       const centerX = (e.touches[0].clientX + e.touches[1].clientX) / 2 - overlayRect.left;
       const centerY = (e.touches[0].clientY + e.touches[1].clientY) / 2 - overlayRect.top;
       setPinchCenter({ x: centerX, y: centerY });
+      setIsDragging(false); // Stop any dragging when pinch starts
     } else if (e.touches.length === 1 && zoom > 1) {
+      e.preventDefault();
       setIsDragging(true);
       setDragStart({ x: e.touches[0].clientX - position.x, y: e.touches[0].clientY - position.y });
     }
   };
 
   const handleTouchMove = (e: React.TouchEvent) => {
-    if (e.touches.length === 2 && showPreview && previewOverlayRef.current) {
+    if (!showPreview) return;
+    
+    if (e.touches.length === 2 && previewOverlayRef.current) {
       e.preventDefault();
+      e.stopPropagation();
       
       // Initialize pinch if not already started (handles transition from 1 to 2 touches)
       if (lastPinchDistance === null || !pinchCenter) {
@@ -236,7 +244,14 @@ function PortfolioModal({ project, onClose, onNext, onPrev }: any) {
     }
   };
 
-  const handleTouchEnd = () => {
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (e.touches.length === 0 || e.touches.length === 1) {
+      // Only prevent default if we were handling a pinch or drag
+      if (lastPinchDistance !== null || isDragging) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+    }
     setIsDragging(false);
     if (lastPinchDistance !== null) {
       setLastPinchDistance(null);
@@ -424,6 +439,9 @@ function PortfolioModal({ project, onClose, onNext, onPrev }: any) {
             ref={previewContentRef}
             className="preview-content"
             onClick={(e) => e.stopPropagation()}
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
             style={{
               transform: `translate(${position.x}px, ${position.y}px) scale(${zoom})`,
               cursor: zoom > 1 ? (isDragging ? 'grabbing' : 'grab') : 'default',
