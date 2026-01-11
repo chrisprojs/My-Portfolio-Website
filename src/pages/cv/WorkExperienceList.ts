@@ -1,5 +1,28 @@
 export const WorkExperienceList = [
   {
+    company: "Moladin",
+    position: "Software Engineer Intern",
+    duration: "September 2025 - Present",
+    responsibilities: [
+      `Collaborate with a group of 3 interns in development of project and support manager handling configuration for deployment.`,
+      `Building vehicle management software for managing inventory, tagging, and tracking GPS location supported by a network of 20.000+ GPS-enabled IoT devices.`,
+      `Develop and maintain implementation of a car marketplace platform to showcase and manage company assets in a marketplace-style website.`,
+      `Contribute in team collaboration for revamping moladin.com from marketplace into content-first automotive article platform.`,
+    ],
+  },
+  {
+    company: "99 Group",
+    position: "Backend Engineer Intern",
+    duration: "February 2025 - May 2025",
+    responsibilities: [
+      `Building robust, fast, and scalable microservice API for property e-commerce website.`,
+      `Contributed to backend development tasks relevant to building or maintaining property technology microservices for Rumah123 and microsite.`,
+      `Make sure the database transactional secure and efficient.`,
+      `Working agile and dedicated for collaborating in large scope microservices.`,
+      `Reducing unit testing time by 23% by analysis and cleansing deprecated module.`
+    ],
+  },
+  {
     company: "Bina Nusantara IT Division",
     position: "Web Developer",
     duration: "March 2023 - February 2024",

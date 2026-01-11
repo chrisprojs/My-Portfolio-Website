@@ -3,27 +3,20 @@ import PortfolioSkeletonCard from '../../../components/portfolio card/PortfolioS
 import Slider from 'react-slick'
 import PortfolioModal from '../../../components/portfolio modal/PortfolioModal'
 import PortfolioCard from '../../../components/portfolio card/PortfolioCard';
-import { getAllProjects } from '../../portfolio/PortfolioAPI';
-import { Project } from '../../portfolio/PortfolioInterface';
 import { debounce } from 'lodash';
 
-function SlideProject() {
+function SlideProject({projects, loading}: {projects:any[], loading:boolean}) {
   const [selectedProjectIndex, setSelectedProjectIndex] = useState<number | null>(null);
-  const [projects, setProjects] = useState<Project[]>([]);
-  const [loading, setLoading] = useState(true);
   const [projectsPerPage, setProjectsPerPage] = useState(0);
+  const [switchLoad, setSwitchLoad] = useState(true);
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const fetchProjects = async () => {
-      const projectsData = await getAllProjects();
-      setProjects(projectsData);
-      setLoading(false);
-    };
-    if (projects.length === 0) { // Only fetch if projects array is empty
-      fetchProjects();
-    }
-  }, [projects.length]);
+    const timer = setTimeout(() => {
+      setSwitchLoad(false);
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, [projects, loading]);
 
   useEffect(() => {
     const handleResize = debounce(() => {
@@ -109,9 +102,10 @@ function SlideProject() {
     infinite: projects.length > 1,
     speed: 500,
     slidesToShow: projectsPerPage,
-    slidesToScroll: 1,
+    slidesToScroll: projectsPerPage,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
+    // lazyLoad: "progressive" as import("react-slick").LazyLoadTypes,
     appendDots: (dots: React.ReactNode) => (
       <div></div>
     ),
@@ -120,7 +114,7 @@ function SlideProject() {
     <>
         <div className='section-project-container' ref={containerRef}>
             <Slider {...settings} className='section-project-slider'>
-              {loading
+              {(loading || switchLoad)
                 ? Array.from({ length: projectsPerPage }).map((_, index) => (
                     <div className='section-project-card-edge'>
                       <PortfolioSkeletonCard key={index} />

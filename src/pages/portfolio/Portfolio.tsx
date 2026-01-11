@@ -3,26 +3,21 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Portfolio.css";
 import PortfolioCard from "../../components/portfolio card/PortfolioCard";
-import { getAllProjects } from "./PortfolioAPI";
 import PortfolioModal from "../../components/portfolio modal/PortfolioModal";
-import { Project } from "./PortfolioInterface";
 import PortfolioSkeletonCard from "../../components/portfolio card/PortfolioSkeletonCard";
 
-function Portfolio() {
+function Portfolio({projects, loading}: {projects:any[], loading:boolean}) {
   const [selectedProjectIndex, setSelectedProjectIndex] = useState<
     number | null
   >(null);
-  const [projects, setProjects] = useState<Project[]>([]);
-  const [loading, setLoading] = useState(true);
-
+  const [switchLoad, setSwitchLoad] = useState(true);
+  
   useEffect(() => {
-    const fetchProjects = async () => {
-      const projectsData = await getAllProjects();
-      setProjects(projectsData);
-      setLoading(false);
-    };
-    fetchProjects();
-  });
+    const timer = setTimeout(() => {
+      setSwitchLoad(false);
+    }, 1000);
+    return () => clearTimeout(timer); // Clean up the timeout
+  }, [projects, loading]);
 
   useEffect(() => {
     if (selectedProjectIndex !== null) {
@@ -76,7 +71,7 @@ function Portfolio() {
   return (
     <div className="portfolio">
       <div className="portfolio-box">
-        {loading
+        {(loading || switchLoad)
           ? Array.from({ length: 8 }).map((_, index) => (
               <PortfolioSkeletonCard key={index} />
             ))

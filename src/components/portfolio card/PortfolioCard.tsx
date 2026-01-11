@@ -80,6 +80,7 @@ function PortfolioCard({ project, onClick}: any) {
     slidesToShow: 1,
     slidesToScroll: 1,
     ref: sliderRef,
+    lazyLoad: "progressive" as import("react-slick").LazyLoadTypes,
     appendDots: (dots: React.ReactNode) => (
       <div>
         <ul onClick={handleDotClick}>{dots}</ul>
@@ -97,7 +98,7 @@ function PortfolioCard({ project, onClick}: any) {
                   {image.picture.endsWith('.jpg') ? (
                     <img src={image.picture} alt={`${projectData.title} slide ${index + 1}`} />
                   ) : image.picture.endsWith('.mp4') ? (
-                    <video controls autoPlay muted>
+                    <video controls muted>
                       <source src={image.picture} type="video/mp4" />
                     </video>
                   ) : null}

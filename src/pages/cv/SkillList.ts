@@ -1,28 +1,83 @@
 export const SkillList = [
     {
+      skill: 'Go',
+      details: 'Experienced skills in back end development using Golang gRPC and GraphQL as back end.',
+      level: 8
+    },
+    {
+      skill: 'Back End Development',
+      details: 'Experienced skills in back end development making REST API using Next.js, ASP.NET, and Go.',
+      level: 8
+    },
+    {
+      skill: 'Postgresql',
+      details: 'Experienced skills in making queries with Postgresql integrated with Golang Chi, gRPC, and GraphQL as back end.',
+      level: 7
+    },
+    {
+      skill: 'MySQL',
+      details: 'Experienced skills in making queries with MySQL.',
+      level: 8
+    },
+    {
+      skill: 'Python',
+      details: 'Experienced using Python as programming language for AI and backend development',
+      level: 7
+    },
+    {
+      skill: 'Elasticsearch',
+      details: 'Experienced skill in using Elasticsearch as a powerful, open-source, distributed search and analytics engine.',
+      level: 7
+    },
+    {
+      skill: 'WebSocket',
+      details: 'Experienced skill in creating and building live persistent connection using WebSocket',
+      level: 8
+    },
+    {
+      skill: 'REST API',
+      details: 'Experienced skills in back end development making REST API with Go, Python, Next.js, and ASP.NET.',
+      level: 8
+    },
+    {
+      skill: 'gRPC',
+      details: 'Experienced skill in creating and building protobuf microservices.',
+      level: 8
+    },
+    {
+      skill: 'GraphQL',
+      details: 'Experienced skill in creating and building GraphQL microservices.',
+      level: 8
+    },
+    {
+      skill: 'Internet of Things (IoT)',
+      details: 'Fundamental skill in managing microservices-based architecture that use location tracking, supported by a network of 20.000+ GPS-enabled IoT (Internet Of Things) devices.',
+      level: 5
+    },
+    {
       skill: 'React',
       details: 'In my role as a web developer, I have developed strong skills in React, enabling me to build dynamic, efficient, and scalable user interfaces.',
-      level:8
+      level:6
     },
     {
       skill: 'Next.js',
       details: 'Developed strong front end skills in Next.js and fundamental in back end routing API, optimizing SSR and SSG website rendering',
-      level:7
+      level:5
     },
     {
       skill: 'TypeScript',
       details: 'Strong skills in TypeScript, enabling the building of interactive and dynamic web applications.',
-      level:7
+      level:6
     },
     {
       skill: 'JavaScript',
       details: 'Strong skills in JavaScript, enabling the building of interactive and dynamic web applications.',
-      level:7
+      level:6
     },
     {
       skill: 'Front End Development',
       details: 'Strong front end skills by having great work experiences.',
-      level: 8
+      level: 6
     },
     {
       skill: 'Software Development',
@@ -32,7 +87,7 @@ export const SkillList = [
     {
       skill: 'HTML & CSS',
       details: 'Solid skills in HTML and CSS, allowing the creation of well-structured, visually appealing, and responsive web pages.',
-      level: 8
+      level: 6
     },
     {
       skill: 'Software Engineering',
@@ -50,21 +105,6 @@ export const SkillList = [
       level: 5
     },
     {
-      skill: 'Go',
-      details: 'Fundamental skills in back end development using Golang Chi as back end.',
-      level: 6
-    },
-    {
-      skill: 'Postgresql',
-      details: 'Fundamental skills in making queries with Postgresql integrated with Golang Chi as back end.',
-      level: 7
-    },
-    {
-      skill: 'Back End Development',
-      details: 'Fundamental skills in back end development making REST API using Next.js, ASP.NET, and Go.',
-      level: 6
-    },
-    {
       skill: 'ASP.NET',
       details: 'Fundamental skills in back end development using ASP.NET.',
       level: 5
@@ -80,9 +120,9 @@ export const SkillList = [
       level: 6
     },
     {
-      skill: 'MySQL',
-      details: 'Fundamental skills in making queries with MySQL.',
-      level: 6
+      skill: 'WooCommerce',
+      details: 'Experienced skill in creating and managing WooCommerce websites.',
+      level: 5
     },
     {
       skill: 'Figma',
@@ -90,13 +130,13 @@ export const SkillList = [
       level: 5
     },
     {
-      skill: 'REST API',
-      details: 'Fundamental skills in back end development making REST API with Next.js, ASP.NET, and Go.',
-      level: 6
-    },
-    {
       skill: 'Laravel',
       details: 'Fundamental skills in back end development with Laravel.',
       level: 6
-    }
+    },
+    {
+      skill: 'Flask',
+      details: 'Fundamental skill integrating AI Live Shopping to OBS Studio Socket with Flask',
+      level: 5
+    },
   ];
