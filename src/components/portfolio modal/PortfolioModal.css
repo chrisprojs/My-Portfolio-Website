@@ -405,6 +405,7 @@
   display: flex;
   gap: 10px;
   z-index: 2001;
+  touch-action: manipulation;
 }
 
 .preview-close-button,
@@ -418,6 +419,8 @@
   color: #333;
   transition: background 0.3s ease, transform 0.2s ease;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .preview-close-button {

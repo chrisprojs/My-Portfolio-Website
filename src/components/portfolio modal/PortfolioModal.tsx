@@ -19,6 +19,8 @@ function PortfolioModal({ project, onClose, onNext, onPrev }: any) {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isDragging, setIsDragging] = useState(false);
   const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
+  const [touchStartPos, setTouchStartPos] = useState<{ x: number; y: number } | null>(null);
+  const [hasMoved, setHasMoved] = useState(false);
   const [lastPinchDistance, setLastPinchDistance] = useState<number | null>(null);
   const [pinchCenter, setPinchCenter] = useState<{ x: number; y: number } | null>(null);
   const previewImageRef = useRef<HTMLImageElement>(null);
@@ -99,6 +101,9 @@ function PortfolioModal({ project, onClose, onNext, onPrev }: any) {
     setPosition({ x: 0, y: 0 });
     setLastPinchDistance(null);
     setPinchCenter(null);
+    setTouchStartPos(null);
+    setHasMoved(false);
+    setIsDragging(false);
   };
 
   const handleWheel = (e: React.WheelEvent) => {
@@ -165,7 +170,12 @@ function PortfolioModal({ project, onClose, onNext, onPrev }: any) {
   const handleTouchStart = (e: React.TouchEvent) => {
     if (!showPreview) return;
     
+    // Check if touch target is a button or control
+    const target = e.target as HTMLElement;
+    const isButton = target.tagName === 'BUTTON' || target.closest('button') !== null;
+    
     if (e.touches.length === 2 && previewOverlayRef.current) {
+      // Always prevent default for pinch gestures
       e.preventDefault();
       e.stopPropagation();
       const distance = getDistance(e.touches[0], e.touches[1]);
@@ -177,17 +187,28 @@ function PortfolioModal({ project, onClose, onNext, onPrev }: any) {
       const centerY = (e.touches[0].clientY + e.touches[1].clientY) / 2 - overlayRect.top;
       setPinchCenter({ x: centerX, y: centerY });
       setIsDragging(false); // Stop any dragging when pinch starts
-    } else if (e.touches.length === 1 && zoom > 1) {
-      e.preventDefault();
-      setIsDragging(true);
+      setHasMoved(false);
+      setTouchStartPos(null);
+    } else if (e.touches.length === 1 && zoom > 1 && !isButton) {
+      // Store initial touch position but don't prevent default yet
+      setTouchStartPos({ x: e.touches[0].clientX, y: e.touches[0].clientY });
+      setHasMoved(false);
       setDragStart({ x: e.touches[0].clientX - position.x, y: e.touches[0].clientY - position.y });
+    } else {
+      setTouchStartPos(null);
+      setHasMoved(false);
     }
   };
 
   const handleTouchMove = (e: React.TouchEvent) => {
     if (!showPreview) return;
     
+    // Check if touch target is a button or control
+    const target = e.target as HTMLElement;
+    const isButton = target.tagName === 'BUTTON' || target.closest('button') !== null;
+    
     if (e.touches.length === 2 && previewOverlayRef.current) {
+      // Always prevent default for pinch gestures
       e.preventDefault();
       e.stopPropagation();
       
@@ -201,6 +222,8 @@ function PortfolioModal({ project, onClose, onNext, onPrev }: any) {
         const centerY = (e.touches[0].clientY + e.touches[1].clientY) / 2 - overlayRect.top;
         setPinchCenter({ x: centerX, y: centerY });
         setIsDragging(false); // Stop dragging when pinch starts
+        setHasMoved(false);
+        setTouchStartPos(null);
         return;
       }
       
@@ -235,24 +258,40 @@ function PortfolioModal({ project, onClose, onNext, onPrev }: any) {
       setZoom(newZoom);
       setPosition({ x: newX, y: newY });
       setLastPinchDistance(distance);
-    } else if (e.touches.length === 1 && isDragging && zoom > 1) {
-      e.preventDefault();
-      setPosition({
-        x: e.touches[0].clientX - dragStart.x,
-        y: e.touches[0].clientY - dragStart.y,
-      });
+    } else if (e.touches.length === 1 && zoom > 1 && !isButton && touchStartPos) {
+      // Check if user has moved enough to start dragging (threshold: 5px)
+      const moveX = Math.abs(e.touches[0].clientX - touchStartPos.x);
+      const moveY = Math.abs(e.touches[0].clientY - touchStartPos.y);
+      const moved = moveX > 5 || moveY > 5;
+      
+      if (moved) {
+        if (!hasMoved) {
+          setHasMoved(true);
+          setIsDragging(true);
+        }
+        e.preventDefault();
+        setPosition({
+          x: e.touches[0].clientX - dragStart.x,
+          y: e.touches[0].clientY - dragStart.y,
+        });
+      }
     }
   };
 
   const handleTouchEnd = (e: React.TouchEvent) => {
-    if (e.touches.length === 0 || e.touches.length === 1) {
-      // Only prevent default if we were handling a pinch or drag
-      if (lastPinchDistance !== null || isDragging) {
-        e.preventDefault();
-        e.stopPropagation();
-      }
+    // Check if touch target is a button or control
+    const target = e.target as HTMLElement;
+    const isButton = target.tagName === 'BUTTON' || target.closest('button') !== null;
+    
+    // Only prevent default if we were handling a pinch or actually dragging, and not on a button
+    if ((lastPinchDistance !== null || (isDragging && hasMoved)) && !isButton) {
+      e.preventDefault();
+      e.stopPropagation();
     }
+    
     setIsDragging(false);
+    setHasMoved(false);
+    setTouchStartPos(null);
     if (lastPinchDistance !== null) {
       setLastPinchDistance(null);
     }
@@ -439,9 +478,6 @@ function PortfolioModal({ project, onClose, onNext, onPrev }: any) {
             ref={previewContentRef}
             className="preview-content"
             onClick={(e) => e.stopPropagation()}
-            onTouchStart={handleTouchStart}
-            onTouchMove={handleTouchMove}
-            onTouchEnd={handleTouchEnd}
             style={{
               transform: `translate(${position.x}px, ${position.y}px) scale(${zoom})`,
               cursor: zoom > 1 ? (isDragging ? 'grabbing' : 'grab') : 'default',
