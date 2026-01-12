@@ -1,7 +1,7 @@
 @ECHO OFF
 
 REM Loop through all subdirectories
-FOR /R %%F IN (*.png *.jpeg *.jpg) DO (
+FOR /R %%F IN (*.png *.jpeg) DO (
     REM Convert each PNG and JPEG to JPG
     magick convert "%%F" "%%~dpnF.jpg"
 )
