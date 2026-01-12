@@ -41,7 +41,7 @@ function ContactBox() {
             <img src={gmail} alt='gmail-logo'/>
             <p>{PersonalInformation.emailLink}</p>
           </a>
-          <a href={`tel:${PersonalInformation.phoneNumber}`} target="_blank" rel="noopener noreferrer" className='contactBox-icon'>
+          <a href={`https://wa.me/${PersonalInformation.phoneNumber.replace(/\D/g, '')}`} target="_blank" rel="noopener noreferrer" className='contactBox-icon'>
             <img src={whatsapp} alt='whatsapp-logo'/>
             <p>{formatPhoneNumber(PersonalInformation.phoneNumber)}</p>
           </a>
