@@ -24,8 +24,9 @@ async function retryFetch(url: string, delay: number = 1000): Promise<Response> 
 const customSortOrder = [
   "Vehicle Management System",
   "Moladin Marketplace",
-  "Job Sprint API",
+  "Franchiso 2",
   "Rumah123.com",
+  "Job Sprint API",
   "KSN Informatika 2021 Provincial Level",
   "BINUSMAYA LMS Website",
   "Eksotika Prima Rub Oil Supplier Website",
