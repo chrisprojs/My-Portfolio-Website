@@ -4,10 +4,12 @@ export const WorkExperienceList = [
     position: "Software Engineer Intern",
     duration: "September 2025 - Present",
     responsibilities: [
-      `Collaborate with a group of 3 interns in development of project and support manager handling configuration for deployment.`,
-      `Building vehicle management software for managing inventory, tagging, and tracking GPS location supported by a network of 20.000+ GPS-enabled IoT devices.`,
-      `Develop and maintain implementation of a car marketplace platform to showcase and manage company assets in a marketplace-style website.`,
-      `Contribute in team collaboration for revamping moladin.com from marketplace into content-first automotive article platform.`,
+      `Enhanced backend performance by 36% by offloading heavy processing tasks from the monolith architecture to Redis Queue.`,
+      `Built Vehicle Management System for managing inventory, tagging, and tracking GPS location supported by a network of 20.000+ GPS-enabled IoT devices.`,
+      `Developed Notification Alert System feature for Vehicle Management System that potentially increase fraud indication awareness by 70%.`,
+      `Collaborated with a group of 3 interns in development of project and support manager handling configuration for deployment.`,
+      `Maintained implementation of a car marketplace platform to showcase and manage company assets.`,
+      `Contributed to the revamp of moladin.com, transforming the platform from a used-car marketplace into a new-car marketplace system.`
     ],
   },
   {
@@ -15,11 +17,11 @@ export const WorkExperienceList = [
     position: "Backend Engineer Intern",
     duration: "February 2025 - May 2025",
     responsibilities: [
-      `Building robust, fast, and scalable microservice API for property e-commerce website.`,
+      `Architected scalable and high-performance microservice APIs for a property e-commerce platform using Go, gRPC, and GraphQL, achieving over 200% improvement in response time compared to the previous monolith architecture.`,
+      `Developed an email saved search recommendation notification system that potentially increased email click-through rate (CTR) by 2.5%, enabling users to receive personalized property updates based on their saved preferences.`,
+      `Reduced CI/CD unit testing time by 23% by analyzing data synchronization workflows and converting repetitive test data into reusable seed data.`,
       `Contributed to backend development tasks relevant to building or maintaining property technology microservices for Rumah123 and microsite.`,
-      `Make sure the database transactional secure and efficient.`,
-      `Working agile and dedicated for collaborating in large scope microservices.`,
-      `Reducing unit testing time by 23% by analysis and cleansing deprecated module.`
+      `Collaborated within an agile team environment to develop and maintain large-scale microservices.`
     ],
   },
   {
@@ -27,10 +29,10 @@ export const WorkExperienceList = [
     position: "Web Developer",
     duration: "March 2023 - February 2024",
     responsibilities: [
-      `Shaped user experience for Binus University's digital platforms using React.js and Typescript.`,
-      `Built responsive web interfaces for Learning Management System in Binus University.`,
-      `Enhanced the performance of web applications by implementing efficient coding practices and optimizing resource usage.`,
-      `Worked closely with the design and backend teams to ensure seamless integration of user interfaces with server-side logic.`,
+      `Collaborated with a group of 12 people in development of Learning Management System Website.`,
+      `Built high-performance and scalable backend infrastructure to support the Learning Management System.`,
+      `Developed dynamic and adaptable web interfaces for the Learning Management System.`,
+      `Implemented interactive components and features to enhance student engagement and facilitate seamless learning experiences.`,
     ],
   }
 ];
