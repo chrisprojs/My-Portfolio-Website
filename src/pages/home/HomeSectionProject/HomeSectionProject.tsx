@@ -7,7 +7,7 @@ import Portfolio from '../../portfolio/Portfolio';
 
 function HomeSectionProject() {
   const [isGrid, setIsGrid] = useState(
-    () => window.matchMedia('(max-width: 768px)').matches
+    () => window.matchMedia('(max-width: 1024px)').matches
   );
   const [projects, setProjects] = useState<Project[]>([]);
   const [loading, setLoading] = useState(true);

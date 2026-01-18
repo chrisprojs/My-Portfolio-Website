@@ -102,7 +102,7 @@ function PortfolioCard({ project, onClick}: any) {
                       <source src={image.picture} type="video/mp4" />
                     </video>
                   ) : null}
-                  </div>
+                </div>
               ))}
             </Slider>
             <div className="portfolio-content">
