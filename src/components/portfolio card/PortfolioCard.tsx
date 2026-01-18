@@ -28,21 +28,21 @@ function PortfolioCard({ project, onClick}: any) {
   useEffect(() => {
     const handleResize = () => {
       if (skillBoxRef.current) {
-        const skillBoxWidth = skillBoxRef.current.offsetWidth * 3;
-        let totalWidth = 0;
+        // const skillBoxWidth = skillBoxRef.current.offsetWidth * 3;
+        // let totalWidth = 0;
         let displayedSkills: string[] = [];
-        const charWidth = 5;
-        const paddingWidth = 20;
+        // const charWidth = 5;
+        // const paddingWidth = 20;
 
         for (let i = 0; i < projectData.skills.length; i++) {
-          const skillWidth = projectData.skills[i].length * charWidth + paddingWidth;
-          if (totalWidth + skillWidth > skillBoxWidth) {
-            displayedSkills.push(
-              `+${projectData.skills.length - i} other${projectData.skills.length - i > 1 ? "s" : ""}`
-            );
-            break;
-          }
-          totalWidth += skillWidth;
+          // const skillWidth = projectData.skills[i].length * charWidth + paddingWidth;
+          // if (totalWidth + skillWidth > skillBoxWidth) {
+          //   displayedSkills.push(
+          //     `+${projectData.skills.length - i} other${projectData.skills.length - i > 1 ? "s" : ""}`
+          //   );
+          //   break;
+          // }
+          // totalWidth += skillWidth;
           displayedSkills.push(projectData.skills[i]);
         }
 
