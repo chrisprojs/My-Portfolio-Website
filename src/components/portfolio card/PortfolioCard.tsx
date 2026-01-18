@@ -28,7 +28,7 @@ function PortfolioCard({ project, onClick}: any) {
   useEffect(() => {
     const handleResize = () => {
       if (skillBoxRef.current) {
-        const skillBoxWidth = skillBoxRef.current.offsetWidth * 2;
+        const skillBoxWidth = skillBoxRef.current.offsetWidth * 3;
         let totalWidth = 0;
         let displayedSkills: string[] = [];
         const charWidth = 5;
