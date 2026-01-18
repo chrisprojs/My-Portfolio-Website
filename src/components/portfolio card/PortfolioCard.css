@@ -165,7 +165,7 @@
   min-width: 180px;
   max-width: 290px;
   height: 90px;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .skill-measure-box {
