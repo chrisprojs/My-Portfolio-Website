@@ -212,13 +212,3 @@
     opacity: 1;
   }
 }
-
-@media (max-width: 400px) {
-  .skill-badge {
-    font-size: 10px !important;
-  }
-
-  .skills {
-    height: 70px !important;
-  }
-}
