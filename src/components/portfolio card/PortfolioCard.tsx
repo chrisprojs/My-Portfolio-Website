@@ -31,7 +31,7 @@ function PortfolioCard({ project, onClick}: any) {
         const skillBoxWidth = skillBoxRef.current.offsetWidth * 2;
         let totalWidth = 0;
         let displayedSkills: string[] = [];
-        const charWidth = 12;
+        const charWidth = 10;
         const paddingWidth = 20;
 
         for (let i = 0; i < projectData.skills.length; i++) {
@@ -111,11 +111,14 @@ function PortfolioCard({ project, onClick}: any) {
                 <p>{projectData.details}</p>
               </div>
               <div className="skills" ref={skillBoxRef}>
-                {visibleSkills.map((skill:String, index:any) => (
-                  <span key={index} className="skill-badge">
-                    {skill}
-                  </span>
-                ))}
+                {visibleSkills.map((skill:String, index:any) => {
+                  const displaySkill = skill.length > 10 ? skill.substring(0, 10) + '...' : skill;
+                  return (
+                    <span key={index} className="skill-badge">
+                      {displaySkill}
+                    </span>
+                  );
+                })}
               </div>
             </div>
           </div>
