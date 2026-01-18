@@ -4,7 +4,7 @@ import "./Navbar.css";
 
 function Navbar() {
   const [isClicked, setClicked] = useState(false);
-  const [activeSection, setActiveSection] = useState("");
+  const [activeSection, setActiveSection] = useState("mainSection");
 
   const handleScroll = (sectionId:any) => {
     const section = document.getElementById(sectionId);
@@ -36,7 +36,7 @@ function Navbar() {
       sections.forEach(({ id }) => {
         const section = document.getElementById(id);
         if (section) {
-          const sectionTop = section.offsetTop;
+          let sectionTop = section.offsetTop - 100;
           const sectionHeight = section.offsetHeight;
 
           if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
@@ -50,7 +50,7 @@ function Navbar() {
 
     window.addEventListener("scroll", updateActiveSection);
     return () => window.removeEventListener("scroll", updateActiveSection);
-  }, []);
+  }, [sections]);
 
   return (
     <nav className="navbar-bg">
