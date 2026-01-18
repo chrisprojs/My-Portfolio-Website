@@ -123,14 +123,12 @@
 
 .portfolio-content {
   display: flex;
-  min-height: 200px;
   width: 100%;
   min-width: 180px;
   max-width: 300px;
   flex-direction: column;
   padding: 10px;
   align-items: start;
-  justify-content: space-around;
 }
 
 .portfolio-text{
@@ -164,8 +162,8 @@
   flex-wrap: wrap;
   min-width: 180px;
   max-width: 290px;
-  height: 90px;
-  align-items: center;
+  max-height: 120px;
+  align-items: start;
 }
 
 .skill-measure-box {
