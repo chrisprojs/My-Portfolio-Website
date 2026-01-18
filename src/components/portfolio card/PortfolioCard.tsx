@@ -112,7 +112,7 @@ function PortfolioCard({ project, onClick}: any) {
               </div>
               <div className="skills" ref={skillBoxRef}>
                 {visibleSkills.map((skill:String, index:any) => {
-                  const displaySkill = skill.length > 10 ? skill.substring(0, 10) + '...' : skill;
+                  const displaySkill = skill.length > 13 ? skill.substring(0, 10) + '...' : skill;
                   return (
                     <span key={index} className="skill-badge">
                       {displaySkill}
