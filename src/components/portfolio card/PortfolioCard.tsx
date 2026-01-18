@@ -31,7 +31,7 @@ function PortfolioCard({ project, onClick}: any) {
         const skillBoxWidth = skillBoxRef.current.offsetWidth * 2;
         let totalWidth = 0;
         let displayedSkills: string[] = [];
-        const charWidth = 10;
+        const charWidth = 5;
         const paddingWidth = 20;
 
         for (let i = 0; i < projectData.skills.length; i++) {

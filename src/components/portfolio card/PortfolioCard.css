@@ -164,8 +164,16 @@
   flex-wrap: wrap;
   min-width: 180px;
   max-width: 290px;
-  height: 80px;
+  height: 90px;
   align-items: flex-start;
+}
+
+.skill-measure-box {
+  position: absolute;
+  visibility: hidden;
+  height: 0;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .skill-badge {
