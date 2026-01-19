@@ -6,9 +6,7 @@ import SlideProject from './SlideProject';
 import Portfolio from '../../portfolio/Portfolio';
 
 function HomeSectionProject() {
-  const [isGrid, setIsGrid] = useState(
-    () => window.matchMedia('(max-width: 1024px)').matches
-  );
+  const [isGrid, setIsGrid] = useState(true);
   const [projects, setProjects] = useState<Project[]>([]);
   const [loading, setLoading] = useState(true);
 
