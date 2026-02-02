@@ -5,6 +5,11 @@ export const SkillList = [
       level: 8
     },
     {
+      skill: 'Python',
+      details: 'Experienced using Python as programming language for AI and backend development',
+      level: 7
+    },
+    {
       skill: 'Back End Development',
       details: 'Experienced skills in back end development making REST API using Next.js, ASP.NET, and Go.',
       level: 8
@@ -20,9 +25,9 @@ export const SkillList = [
       level: 8
     },
     {
-      skill: 'Python',
-      details: 'Experienced using Python as programming language for AI and backend development',
-      level: 7
+      skill: 'SQL Server',
+      details: 'Fundamental skills in making queries with SQL Server.',
+      level: 6
     },
     {
       skill: 'Elasticsearch',
@@ -50,11 +55,6 @@ export const SkillList = [
       level: 8
     },
     {
-      skill: 'Internet of Things (IoT)',
-      details: 'Fundamental skill in managing microservices-based architecture that use location tracking, supported by a network of 20.000+ GPS-enabled IoT (Internet Of Things) devices.',
-      level: 5
-    },
-    {
       skill: 'Redis Queue',
       details: 'Experienced skill in distributed system that utilize redis queue for queueing and processing jobs on background in another worker module',
       level: 7
@@ -65,29 +65,54 @@ export const SkillList = [
       level: 7
     },
     {
+      skill: 'Docker',
+      details: 'Experienced in containerizing distributed systems with a focus on security hardening, persistent storage volumes, and seamless CI/CD pipeline integration',
+      level: 7
+    },
+    {
+      skill: 'Kubernetes',
+      details: 'Fundamental in deploying and load balancing microservices using GKE in Google Cloud Platform',
+      level: 4
+    },
+    {
+      skill: 'GKE',
+      details: 'Fundamental in deploying cluster that used for running application on the top of Kubernetes Engine.',
+      level: 4
+    },
+    {
+      skill: 'GCP',
+      details: 'Fundamental in utilizing cloud platform for utilize Google Maps API, Gemini API, and GKE',
+      level: 4
+    },
+    {
+      skill: 'Internet of Things (IoT)',
+      details: 'Fundamental skill in managing microservices-based architecture that use location tracking, supported by a network of 20.000+ GPS-enabled IoT (Internet Of Things) devices.',
+      level: 3
+    },
+    {
       skill: 'React',
       details: 'In my role as a web developer, I have developed strong skills in React, enabling me to build dynamic, efficient, and scalable user interfaces.',
-      level:6
+      level: 4
     },
     {
       skill: 'Next.js',
       details: 'Developed strong front end skills in Next.js and fundamental in back end routing API, optimizing SSR and SSG website rendering',
-      level:5
+      level: 4
     },
     {
       skill: 'TypeScript',
       details: 'Strong skills in TypeScript, enabling the building of interactive and dynamic web applications.',
-      level:6
+      level: 4
     },
     {
       skill: 'JavaScript',
       details: 'Strong skills in JavaScript, enabling the building of interactive and dynamic web applications.',
-      level:6
+      level: 4
     },
     {
       skill: 'Front End Development',
       details: 'Strong front end skills by having great work experiences.',
-      level: 6
+      level: 4
     },
     {
       skill: 'Software Development',
@@ -97,7 +122,7 @@ export const SkillList = [
     {
       skill: 'HTML & CSS',
       details: 'Solid skills in HTML and CSS, allowing the creation of well-structured, visually appealing, and responsive web pages.',
-      level: 6
+      level: 4
     },
     {
       skill: 'Software Engineering',
@@ -107,7 +132,7 @@ export const SkillList = [
     {
       skill: 'React Native',
       details: 'Fundamental skills in React Native for making responsive mobile applications.',
-      level: 6
+      level: 3
     },
     {
       skill: 'Azure DevOps',
@@ -123,16 +148,6 @@ export const SkillList = [
       skill: 'Git',
       details: 'Implemented Git to manage the state of applications, particularly in complex projects requiring a predictable state container.',
       level: 7
-    },
-    {
-      skill: 'SQL Server',
-      details: 'Fundamental skills in making queries with SQL Server.',
-      level: 6
-    },
-    {
-      skill: 'Figma',
-      details: 'Fundamental skills in making UI/UX designs in Figma.',
-      level: 5
     },
     {
       skill: 'Laravel',

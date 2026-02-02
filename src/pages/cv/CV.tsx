@@ -191,6 +191,28 @@ function CV() {
         </div>
 
         <div className="cv-section">
+          <h2>Research Experience</h2>
+          <div className={isScrollable ? "scrollable" : ""}>
+            <div className="cv-subsection">
+              <h3 className="cv-subsection-h3">DEVELOPING MARKETPLACE WEBSITE FOR BUYING AND SELLING FRANCHISE BUSINESS</h3>
+              <p className="cv-subsection-p">Software Engineer</p>
+              <p className="cv-subsection-p">February 2025 - January 2026</p>
+              <ul className="cv-subsection-ul">
+                <li className="cv-skills-li">
+                Engineered an advanced search system leveraging LLM Embedded Text and Image Vector Search using Elasticsearch, maintaining a consistent 130ms average latency across complex multi-parameter queries.
+                </li>
+                <li className="cv-skills-li">
+                Implemented Google Maps API to map existing franchise locations across the region in Indonesia, improving geospatial data visualization.
+                </li>
+                <li className="cv-skills-li">
+                Integrated the Midtrans payment gateway to streamline transactions, ensuring secure and efficient payment processing.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div className="cv-section">
           <h2>Education</h2>
           <div className={isScrollable ? "scrollable" : ""}>
             {EducationList.map((education, index) => (
