@@ -8,6 +8,7 @@ import ContactBox from "./ContactBox/ContactBox";
 import SkillCarousel from "../../components/skill-carousel/SkillCarousel";
 import CVBox from "./CVBox/CVBox";
 import { CVProvider } from "../../context/CV-to-CVBox";
+import HomeSectionWorkExperience from "./HomeSectionWorkExperience/HomeSectionWorkExperience";
 
 function Home() {
   return (
@@ -20,6 +21,7 @@ function Home() {
         <HomeSection1/>
         <SkillCarousel/>
         <HomeSectionProject/>
+        <HomeSectionWorkExperience/>
         <HomeSection2/>
         <HomeSection3/>
       </div>

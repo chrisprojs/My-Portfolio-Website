@@ -21,14 +21,15 @@ function Navbar() {
     }
   };
 
-  const sections = [
-    { id: "mainSection", offset: 0 },
-    { id: "projectSection", offset: 0 },
-    { id: "aboutSection", offset: 0 },
-    { id: "serviceSection", offset: 0 },
-  ];
-
   useEffect(() => {
+    const sections = [
+      { id: "mainSection" },
+      { id: "projectSection" },
+      { id: "workExperienceSection"},
+      { id: "aboutSection" },
+      { id: "serviceSection" },
+    ];
+
     const updateActiveSection = () => {
       const scrollPosition = window.scrollY + 100; // Adjust this offset as needed
       let currentSection = "";
@@ -50,7 +51,7 @@ function Navbar() {
 
     window.addEventListener("scroll", updateActiveSection);
     return () => window.removeEventListener("scroll", updateActiveSection);
-  }, [sections]);
+  }, []);
 
   return (
     <nav className="navbar-bg">
@@ -73,6 +74,14 @@ function Navbar() {
               onClick={() => handleScroll('projectSection')}
             >
               Project
+            </p>
+          </li>
+          <li className="navbar-link">
+            <p
+              className={`navbar-link ${activeSection === "workExperienceSection" ? "active" : ""}`}
+              onClick={() => handleScroll('workExperienceSection')}
+            >
+              Work
             </p>
           </li>
           <li className="navbar-link">
