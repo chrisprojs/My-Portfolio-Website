@@ -1,16 +1,4 @@
-.section-project {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 2%;
-}
 
-.section-project-head{
-  display: flex;
-  align-items: center;
-  width: 90%;
-  justify-content: space-between;
-  margin-bottom: 1%;
-}
 
 .section-project-grid{
   width: 30px;
@@ -36,12 +24,6 @@
 
 .section-project-card-edge{
   width: 60vw;
-}
-
-.section-project-header {
-  font-weight: bold;
-  font-size: 24px;
-  margin-bottom: 0;
 }
 
 .section-project-container{
