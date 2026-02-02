@@ -207,6 +207,9 @@ function CV() {
                 <li className="cv-skills-li">
                 Integrated the Midtrans payment gateway to streamline transactions, ensuring secure and efficient payment processing.
                 </li>
+                <li className="cv-skills-li">
+                Orchestrated the deployment of containerized services from Docker Compose to Google Kubernetes Engine (GKE) on Google Cloud Platform (GCP).
+                </li>
               </ul>
             </div>
           </div>
