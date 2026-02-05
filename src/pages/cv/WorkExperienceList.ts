@@ -1,7 +1,7 @@
 export const WorkExperienceList = [
   {
     company: "Moladin",
-    position: "Software Engineer Intern",
+    position: "Fullstack Engineer Intern",
     duration: "September 2025 - Present",
     responsibilities: [
       `Enhanced backend performance by 36% by offloading heavy processing tasks from the monolith architecture to Redis Queue.`,
@@ -26,7 +26,7 @@ export const WorkExperienceList = [
   },
   {
     company: "Bina Nusantara IT Division",
-    position: "Web Developer",
+    position: "Fullstack Engineer",
     duration: "March 2023 - February 2024",
     responsibilities: [
       `Collaborated with a group of 12 people in the development of a Learning Management System website.`,

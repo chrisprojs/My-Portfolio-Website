@@ -65,7 +65,7 @@ function HomeSection1() {
                 )
                 .pauseFor(500)
                 .changeDelay(30)
-                .typeString(`<span class="section-1-typewriter">I'm a Backend Engineer.</span>`)
+                .typeString(`<span class="section-1-typewriter">I'm a Fullstack/Backend Engineer.</span>`)
                 .start();
             }}
           />
