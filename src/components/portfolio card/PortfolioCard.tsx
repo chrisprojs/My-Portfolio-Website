@@ -59,7 +59,7 @@ function PortfolioCard({ project, onClick}: any) {
     event.stopPropagation();
     if (!isLiked && !likedProjects.some((id:number) => id === projectData.projectId)) {
       try {
-        await likeProject(projectData.projectId);
+        likeProject(projectData.projectId);
         setIsLiked(true);
         setLiked(liked + 1);
         dispatch(likeProjectAction(projectData.projectId));
@@ -96,7 +96,7 @@ function PortfolioCard({ project, onClick}: any) {
               {projectData.images.map((image: any, index: any) => (
                 <div className="portfolio-card-slider-box" key={index}>
                   {image.picture.endsWith('.jpg') ? (
-                    <img src={image.picture} alt={`${projectData.title} slide ${index + 1}`} />
+                    <img loading="lazy" src={image.picture} alt={`${projectData.title} slide ${index + 1}`} />
                   ) : image.picture.endsWith('.mp4') ? (
                     <video controls muted>
                       <source src={image.picture} type="video/mp4" />

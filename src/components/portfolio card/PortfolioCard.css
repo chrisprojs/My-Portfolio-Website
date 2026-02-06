@@ -185,7 +185,7 @@
   position: absolute; /* Change to absolute to position it relative to the card */
   top: 10px;
   right: 10px;
-  z-index: 4; /* Ensure it appears above the slider */
+  z-index: 5; /* Ensure it appears above the slider */
 }
 
 .like-button {

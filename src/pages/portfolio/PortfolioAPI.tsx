@@ -1,25 +1,26 @@
 import { Project } from "./PortfolioInterface";
+import projects from "./projects.json";
 
 const apiUrl = process.env.REACT_APP_API_KEY
 
 const portfolioImageRoot = './portfolio-image';
 
-async function retryFetch(url: string, delay: number = 1000): Promise<Response> {
-  while (1==1) {
-    try {
-      const response = await fetch(url);
-      if (response.ok) {
-        return response;
-      } else {
-        throw new Error('Network response was not ok');
-      }
-    } catch (error) {
-      console.warn(`Fetch failed, retrying in ${delay}ms...`);
-      await new Promise(res => setTimeout(res, delay));
-    }
-  }
-  throw new Error('Failed to fetch data after multiple attempts');
-}
+// async function retryFetch(url: string, delay: number = 1000): Promise<Response> {
+//   while (1==1) {
+//     try {
+//       const response = await fetch(url);
+//       if (response.ok) {
+//         return response;
+//       } else {
+//         throw new Error('Network response was not ok');
+//       }
+//     } catch (error) {
+//       console.warn(`Fetch failed, retrying in ${delay}ms...`);
+//       await new Promise(res => setTimeout(res, delay));
+//     }
+//   }
+//   throw new Error('Failed to fetch data after multiple attempts');
+// }
 
 const customSortOrder = [
   "Vehicle Management System",
@@ -68,9 +69,7 @@ function customSort(a: Project, b: Project): number {
 // Function to fetch and transform project data
 export async function getAllProjects(): Promise<Project[]> {
   try {
-    const response = await retryFetch(`${apiUrl}/api/Projects`);
-    const data = await response.json();
-    const transformedData = data.map((project: { projectId: any; title: any; details: any; skills: any[]; images: any[]; publicationLink: any; authors: any[]; likes: any; }) => ({
+    const transformedData = projects.map((project: { projectId: any; title: any; details: any; skills: any[]; images: any[]; publicationLink: any; authors: any[]; likes: any; }) => ({
       projectId: project.projectId,
       title: project.title,
       details: project.details,
@@ -92,18 +91,20 @@ export async function getAllProjects(): Promise<Project[]> {
   }
 }
 
-export async function likeProject(projectId: string): Promise<void> {
+export function likeProject(projectId: string) {
   try {
-    const response = await fetch(`${apiUrl}/api/Projects/like/${projectId}`, {
-      method: 'PUT',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
+    // const response = await fetch(`${apiUrl}/api/Projects/like/${projectId}`, {
+    //   method: 'PUT',
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //   },
+    // });
 
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
-    }
+    // if (!response.ok) {
+    //   throw new Error('Network response was not ok');
+    // }
+
+    console.log("Successfully like the project")
   } catch (error) {
     console.error('Error updating project likes:', error);
   }

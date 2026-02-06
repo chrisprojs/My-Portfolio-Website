@@ -35,6 +35,7 @@ function SkillCarousel() {
               <img
                 src={require(`./../../asset/skill-logo/${skill?.skill.toLowerCase()}.png`)}
                 alt={`skillCaro-image-${index}`}
+                loading="lazy"
               />
               <p>{skill?.level}</p>
           </div>

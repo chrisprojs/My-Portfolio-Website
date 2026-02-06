@@ -4,7 +4,7 @@ import {
   PersonalInformation,
   formatPhoneNumber,
 } from "../../PersonalInformation";
-import chipiChapaCat from "./../../asset/chipi-chapa-cat.gif";
+import chipiChapaCat from "./../../asset/gif-animations/chipi-chapa-cat.gif";
 
 function Contact() {
   return (

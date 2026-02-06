@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import Typewriter from "typewriter-effect";
 import { Link } from "react-router-dom";
-import shigureUiDance from "./../../../asset/shigure-ui-dance.gif";
-import ricardoRicardoFlick from "./../../../asset/ricardo-ricardo-flick.gif";
-import rickRoll from "./../../../asset/rick-roll.gif";
-import chipiChapaCat from "./../../../asset/chipi-chapa-cat.gif";
+import shigureUiDance from "./../../../asset/gif-animations/shigure-ui-dance.gif";
+import ricardoRicardoFlick from "./../../../asset/gif-animations/ricardo-ricardo-flick.gif";
+import rickRoll from "./../../../asset/gif-animations/rick-roll.gif";
+import chipiChapaCat from "./../../../asset/gif-animations/chipi-chapa-cat.gif";
 import './HomeSection1.css'
 import linkedin from "./../../../asset/contact-icon/linkedin.png";
 import { PersonalInformation } from '../../../PersonalInformation';
