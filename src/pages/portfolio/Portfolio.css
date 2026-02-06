@@ -6,12 +6,33 @@
 }
 
 .portfolio-box {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     margin-left: 5%;
     margin-right: 5%;
-    grid-gap: 20px;
     width: 100%;
+}
+
+/* Masonry layout - uses flex columns, no grid-template-rows: masonry */
+.portfolio-masonry {
+    align-items: start;
+    display: flex;
+    margin-left: -20px;
+    width: auto;
+}
+
+.portfolio-masonry-column {
+    padding-left: 20px;
+    background-clip: padding-box;
+}
+
+.portfolio-masonry-column > div {
+    margin-bottom: 20px;
+}
+
+/* Skeleton loading - fallback grid when masonry not shown */
+.portfolio-skeleton-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
 }
 
 .no-scroll {
@@ -20,8 +41,6 @@
 
 @media (max-width: 768px) {
     .portfolio-box{
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        grid-gap: 10px;
         margin-left: 2%;
         margin-right: 2%;
     }
