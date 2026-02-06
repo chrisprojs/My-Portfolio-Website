@@ -1,4 +1,5 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
+import Masonry from "react-masonry-css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Portfolio.css";
@@ -57,25 +58,37 @@ function Portfolio({projects, loading}: {projects:any[], loading:boolean}) {
     }
   };
 
-  const renderCards = () => {
-    return projects.map((project, index) => (
-      <div className="portfolio-card-component" key={index}>
-        <PortfolioCard
-          project={project}
-          onClick={() => handleCardClick(index)}
-        />
-      </div>
-    ));
+  const breakpointColumns = {
+    default: 4,
+    1400: 3,
+    992: 2,
+    576: 1,
   };
 
   return (
     <div className="portfolio">
       <div className="portfolio-box">
-        {(loading || switchLoad)
-          ? Array.from({ length: 8 }).map((_, index) => (
+        {(loading || switchLoad) ? (
+          <div className="portfolio-skeleton-grid">
+            {Array.from({ length: 8 }).map((_, index) => (
               <PortfolioSkeletonCard key={index} />
-            ))
-          : renderCards()}
+            ))}
+          </div>
+        ) : (
+          <Masonry
+            breakpointCols={breakpointColumns}
+            className="portfolio-masonry"
+            columnClassName="portfolio-masonry-column"
+          >
+            {projects.map((project, index) => (
+              <PortfolioCard
+                key={project.projectId ?? index}
+                project={project}
+                onClick={() => handleCardClick(index)}
+              />
+            ))}
+          </Masonry>
+        )}
       </div>
       {selectedProjectIndex !== null && (
         <PortfolioModal
