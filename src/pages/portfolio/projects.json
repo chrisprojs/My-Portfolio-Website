@@ -1,0 +1,974 @@
+[
+    {
+        "projectId": 1,
+        "title": "BINUSMAYA LMS Website",
+        "details": "This project is a Learning Management System (LMS) created when I was in Bina Nusantara IT Division as an Associate Member. As part of the team, my primary focus was on the front end development of the LMS, which is a crucial tool for managing and delivering educational courses, training programs, or learning and development programs.",
+        "skills": [
+            {
+                "skill": "React"
+            },
+            {
+                "skill": "JavaScript"
+            },
+            {
+                "skill": "CSS"
+            },
+            {
+                "skill": "TypeScript"
+            },
+            {
+                "skill": "Front End Development"
+            },
+            {
+                "skill": "Azure DevOps"
+            },
+            {
+                "skill": "Git"
+            },
+            {
+                "skill": "Software Engineering"
+            }
+        ],
+        "images": [
+            {
+                "picture": "BINUSMAYA LMS Website/1.jpg",
+                "desc": "Learning Management System Website for Binus University"
+            },
+            {
+                "picture": "BINUSMAYA LMS Website/2.jpg",
+                "desc": "SSG4 Full Team Bina Nusantara IT Division"
+            },
+            {
+                "picture": "BINUSMAYA LMS Website/3.jpg",
+                "desc": "Certification of Membership from Bina Nusantara IT Division for 1 year of working"
+            },
+            {
+                "picture": "BINUSMAYA LMS Website/4.jpg",
+                "desc": "Portfolio from Bina Nusantara IT Division"
+            }
+        ],
+        "publicationLink": "https://binusmaya.binus.ac.id/",
+        "authors": [
+            {
+                "author": "Bina Nusantara IT Division SSG4 Team"
+            }
+        ],
+        "likes": 9
+    },
+    {
+        "projectId": 2,
+        "title": "My Portfolio Website",
+        "details": "This is a personal portfolio website designed to showcase the best work I have ever done. It serves as a digital resume and a gallery of your projects, highlighting your skills, experience, and accomplishments in the field of web development.",
+        "skills": [
+            {
+                "skill": "React"
+            },
+            {
+                "skill": "JavaScript"
+            },
+            {
+                "skill": "CSS"
+            },
+            {
+                "skill": "TypeScript"
+            },
+            {
+                "skill": "Front End Development"
+            }
+        ],
+        "images": [
+            {
+                "picture": "My Portfolio Website/1.jpg",
+                "desc": "Portfolio Landing Page"
+            },
+            {
+                "picture": "My Portfolio Website/2.jpg",
+                "desc": "View CV"
+            },
+            {
+                "picture": "My Portfolio Website/3.jpg",
+                "desc": "Some Projects"
+            },
+            {
+                "picture": "My Portfolio Website/4.jpg",
+                "desc": "Project Details"
+            }
+        ],
+        "publicationLink": "https://christian-antonius-portfolio.netlify.app/",
+        "authors": [
+            {
+                "author": "Christian Antonius Anggaresta"
+            }
+        ],
+        "likes": 11
+    },
+    {
+        "projectId": 3,
+        "title": "Gibapp Website",
+        "details": "Gibapp is a Lost and Found website developed as a team project using Laravel. The primary responsibility was handling the front end development and some back end tasks. The site facilitates users to report lost items and search for found items, creating a community-driven platform to help people retrieve their lost possessions.",
+        "skills": [
+            {
+                "skill": "Laravel"
+            },
+            {
+                "skill": "HTML"
+            },
+            {
+                "skill": "CSS"
+            },
+            {
+                "skill": "Back End Development"
+            }
+        ],
+        "images": [
+            {
+                "picture": "Gibapp Website/1.jpg",
+                "desc": "Page for reporting lost item"
+            },
+            {
+                "picture": "Gibapp Website/2.jpg",
+                "desc": "List of lost item page"
+            }
+        ],
+        "publicationLink": "https://github.com/gibapp/gibapp",
+        "authors": [
+            {
+                "author": "Christian Antonius Anggaresta"
+            },
+            {
+                "author": "Muhamad Fajar Faturohman"
+            },
+            {
+                "author": "Ashraf Alif Adillah"
+            },
+            {
+                "author": "Vincent Steve Kusnadi"
+            },
+            {
+                "author": "Mousa Khalil Mousa Ayesh"
+            },
+            {
+                "author": "Fitria Nulan Ramadhani"
+            }
+        ],
+        "likes": 2
+    },
+    {
+        "projectId": 4,
+        "title": "Medicare Project Website",
+        "details": "This website was a prototype for showcasing and selling various healthcare products. The focus was on creating a clean, professional, and easy-to-navigate website that could effectively display product information and facilitate online purchases.",
+        "skills": [
+            {
+                "skill": "HTML"
+            },
+            {
+                "skill": "CSS"
+            },
+            {
+                "skill": "JavaScript"
+            },
+            {
+                "skill": "Front End Development"
+            }
+        ],
+        "images": [
+            {
+                "picture": "Medicare Project Website/1.jpg",
+                "desc": "Home page"
+            },
+            {
+                "picture": "Medicare Project Website/2.jpg",
+                "desc": "Products page"
+            },
+            {
+                "picture": "Medicare Project Website/3.jpg",
+                "desc": "About Us page"
+            }
+        ],
+        "publicationLink": "https://github.com/chrisprojs/Medicare-Project-Website/tree/main",
+        "authors": [
+            {
+                "author": "Christian Antonius Anggaresta"
+            }
+        ],
+        "likes": 2
+    },
+    {
+        "projectId": 5,
+        "title": "Movie NET",
+        "details": "Movie NET was the first website developed, serving as a movie listing platform. It allowed users to browse through a list of movies, view details, ratings, and other relevant information. This project was a learning experience in web development.",
+        "skills": [
+            {
+                "skill": "HTML"
+            },
+            {
+                "skill": "CSS"
+            },
+            {
+                "skill": "JavaScript"
+            },
+            {
+                "skill": "Front End Development"
+            }
+        ],
+        "images": [
+            {
+                "picture": "Movie NET/1.jpg",
+                "desc": "Main page"
+            },
+            {
+                "picture": "Movie NET/2.jpg",
+                "desc": "Trending Movies"
+            },
+            {
+                "picture": "Movie NET/3.jpg",
+                "desc": "Superhero Movies"
+            }
+        ],
+        "publicationLink": "https://github.com/chrisprojs/Movie-NET",
+        "authors": [
+            {
+                "author": "Christian Antonius Anggaresta"
+            }
+        ],
+        "likes": 3
+    },
+    {
+        "projectId": 6,
+        "title": "Jasger Mobile App",
+        "details": "Jasger is a mobile application developed collaboratively with friends for the Gemastik Audition. This project involved the development of a mobile application using React Native. I contributed in making interactive and responsive mobile front end and UI/UX for this app.",
+        "skills": [
+            {
+                "skill": "React Native"
+            },
+            {
+                "skill": "Figma"
+            },
+            {
+                "skill": "UI/UX"
+            },
+            {
+                "skill": "Front End Development"
+            }
+        ],
+        "images": [
+            {
+                "picture": "Jasger Mobile App/1.jpg",
+                "desc": "Home Screen"
+            },
+            {
+                "picture": "Jasger Mobile App/2.jpg",
+                "desc": "List of on going order Screen"
+            },
+            {
+                "picture": "Jasger Mobile App/3.jpg",
+                "desc": "List of history Screen"
+            },
+            {
+                "picture": "Jasger Mobile App/4.jpg",
+                "desc": "UI Prototype for Jasger Apps"
+            }
+        ],
+        "publicationLink": "https://github.com/chrisprojs/jasger_app_frontend",
+        "authors": [
+            {
+                "author": "Christian Antonius Anggaresta"
+            },
+            {
+                "author": "Renaldi Apriyanto Kadang"
+            },
+            {
+                "author": "Ashraf Alif Adillah"
+            }
+        ],
+        "likes": 3
+    },
+    {
+        "projectId": 8,
+        "title": "Eksotika Prima Rub Oil Supplier Website",
+        "details": "Eksotika Prima is the largest rub oil supplier distributed from Makassar to Jakarta. This website help pharmacies and oil seller to see various products and details from website.",
+        "skills": [
+            {
+                "skill": "Next.js"
+            },
+            {
+                "skill": "React"
+            },
+            {
+                "skill": "Front End Development"
+            },
+            {
+                "skill": "Back End Development"
+            },
+            {
+                "skill": "Marketing"
+            },
+            {
+                "skill": "CSS"
+            }
+        ],
+        "images": [
+            {
+                "picture": "Eksotika Prima Rub Oil Supplier Website/1.jpg",
+                "desc": "Home Page"
+            },
+            {
+                "picture": "Eksotika Prima Rub Oil Supplier Website/2.jpg",
+                "desc": "Minyak Gosok Cap Beruang Reguler - 120 ml"
+            },
+            {
+                "picture": "Eksotika Prima Rub Oil Supplier Website/3.jpg",
+                "desc": "Product Page"
+            }
+        ],
+        "publicationLink": "https://eksotikaprima.netlify.app",
+        "authors": [
+            {
+                "author": "Christian Antonius Anggaresta"
+            }
+        ],
+        "likes": 5
+    },
+    {
+        "projectId": 10,
+        "title": "Secure Auth With Golang",
+        "details": "Secure Auth With Golang is a robust authentication system built with Go, designed with a focus on security and user privacy. The system features secure user registration and login processes, leveraging email verification to ensure account integrity. It includes functionality for securely handling password changes and protects user data with encryption and token-based authentication. With a strict limit on email verification attempts and expiration policies, this solution is tailored to safeguard sensitive user information while providing a seamless authentication experience.",
+        "skills": [
+            {
+                "skill": "Go"
+            },
+            {
+                "skill": "Chi"
+            },
+            {
+                "skill": "Postgresql"
+            },
+            {
+                "skill": "Backend Development"
+            },
+            {
+                "skill": "RESTful API"
+            }
+        ],
+        "images": [
+            {
+                "picture": "Secure Auth With Golang/1.jpg",
+                "desc": "Betamart Secure Auth Mapping"
+            },
+            {
+                "picture": "Secure Auth With Golang/2.jpg",
+                "desc": "Database Diagram"
+            },
+            {
+                "picture": "Secure Auth With Golang/3.jpg",
+                "desc": "Github Repository"
+            }
+        ],
+        "publicationLink": "https://github.com/chrisprojs/Secure-Auth-With-Golang-Chi",
+        "authors": [
+            {
+                "author": "Christian Antonius Anggaresta"
+            }
+        ],
+        "likes": 4
+    },
+    {
+        "projectId": 12,
+        "title": "Job Sprint API",
+        "details": "I contributed to the Job Sprint HR Form Management System by enhancing its API functionality and optimizing file handling processes. My work focused on fixing and refining the APIs to ensure seamless communication between the frontend and backend, resulting in improved system performance and reliability. Additionally, I implemented file processing solutions by converting image files into JPEG Base64 format and encoding PDF files into PDF Base64 format, enabling secure and efficient integration with the database. These enhancements streamlined the management of HR forms, improved data storage efficiency, and provided a more seamless experience for users.",
+        "skills": [
+            {
+                "skill": "Go"
+            },
+            {
+                "skill": "MongoDB"
+            },
+            {
+                "skill": "REST API"
+            },
+            {
+                "skill": "Backend Development"
+            },
+            {
+                "skill": "DevOps"
+            },
+            {
+                "skill": "HTML"
+            },
+            {
+                "skill": "CSS"
+            },
+            {
+                "skill": "Javascript"
+            }
+        ],
+        "images": [
+            {
+                "picture": "Job Sprint API/1.jpg",
+                "desc": "Job Sprint Form"
+            },
+            {
+                "picture": "Job Sprint API/2.jpg",
+                "desc": "Job Sprint Admin Panel"
+            }
+        ],
+        "publicationLink": "https://github.com/Giuseppeilmacellaio/NewJobSprint",
+        "authors": [
+            {
+                "author": "Christian Antonius Anggaresta"
+            },
+            {
+                "author": "Shamas Ur Rehman"
+            },
+            {
+                "author": "Giuseppe Allegrone"
+            }
+        ],
+        "likes": 8
+    },
+    {
+        "projectId": 13,
+        "title": "Property Listing API",
+        "details": "A robust API for managing project listings using Java and Spring Boot. This portfolio tested my backend development skills, including designing scalable endpoints, implementing secure data handling, and ensuring efficient API performance. Through this project, I demonstrated my ability to solve real-world problems with clean and effective code.",
+        "skills": [
+            {
+                "skill": "Java"
+            },
+            {
+                "skill": "REST API"
+            },
+            {
+                "skill": "Backend Development"
+            },
+            {
+                "skill": "Spring Boot"
+            }
+        ],
+        "images": [
+            {
+                "picture": "99 Back End Tech Challenge/1.jpg",
+                "desc": "Listing Service"
+            },
+            {
+                "picture": "99 Back End Tech Challenge/2.jpg",
+                "desc": "Database Diagram"
+            }
+        ],
+        "publicationLink": "https://github.com/chrisprojs/ListingProject",
+        "authors": [
+            {
+                "author": "Christian Antonius Anggaresta"
+            }
+        ],
+        "likes": 0
+    },
+    {
+        "projectId": 14,
+        "title": "Rumah123.com",
+        "details": "Rumah123.com is a leading online property marketplace in Indonesia, part of the 99 Group, dedicated to simplifying the process of finding and selling properties for individuals and providing effective solutions for real estate professionals like agents and developers, offering a vast array of listings and resources including KPR (mortgage) assistance. My contribution lies in the backend development, specifically working with gRPC for efficient inter-service communication and GraphQL to provide flexible and powerful data fetching capabilities for various client applications.",
+        "skills": [
+            {
+                "skill": "Go"
+            },
+            {
+                "skill": "gRPC"
+            },
+            {
+                "skill": "GraphQL"
+            },
+            {
+                "skill": "Elasticsearch"
+            },
+            {
+                "skill": "Postgresql"
+            },
+            {
+                "skill": "Docker"
+            },
+            {
+                "skill": "Backend Development"
+            },
+            {
+                "skill": "Software Engineering"
+            }
+        ],
+        "images": [
+            {
+                "picture": "Rumah123.com/1.jpg",
+                "desc": "Home Page"
+            },
+            {
+                "picture": "Rumah123.com/2.jpg",
+                "desc": "Search Result Page"
+            },
+            {
+                "picture": "Rumah123.com/3.jpg",
+                "desc": "KPR Simulation Page"
+            },
+            {
+                "picture": "Rumah123.com/4.jpg",
+                "desc": "Letter of Acknowledgement"
+            }
+        ],
+        "publicationLink": "https://www.rumah123.com/",
+        "authors": [
+            {
+                "author": "99 Group"
+            }
+        ],
+        "likes": 0
+    },
+    {
+        "projectId": 15,
+        "title": "AI Live Shopping",
+        "details": "AI Live Shopping on TikTok represents a significant leap forward in e-commerce, transforming passive viewing into dynamic, personalized, and highly interactive retail experiences. By leveraging artificial intelligence, these live streams go beyond traditional broadcasts, fostering deeper engagement and driving sales through intelligent, real-time customer interaction.",
+        "skills": [
+            {
+                "skill": "Machine Learning"
+            },
+            {
+                "skill": "TF-IDF"
+            },
+            {
+                "skill": "Flask"
+            },
+            {
+                "skill": "Python"
+            }
+        ],
+        "images": [
+            {
+                "picture": "AI Live Shopping/1.mp4",
+                "desc": "Interaction With AI"
+            },
+            {
+                "picture": "AI Live Shopping/2.mp4",
+                "desc": "Behind The Scene"
+            }
+        ],
+        "publicationLink": "https://youtube.com/shorts/CWs8mLR88-M?si=YpNTrX2KUm4vI3VP",
+        "authors": [],
+        "likes": 0
+    },
+    {
+        "projectId": 16,
+        "title": "KSN Informatika 2021 Provincial Level",
+        "details": "As a dedicated participant in the 2021 Provincial Level National Science Competition (KSN) in Informatics, I successfully demonstrated my advanced problem-solving abilities and deep understanding of computational concepts. My rigorous preparation and performance in this highly competitive event underscore my proficiency in informatics, showcasing my aptitude for logical reasoning, algorithmic thinking, and efficient coding, which are all critical skills in the field.",
+        "skills": [
+            {
+                "skill": "C++"
+            },
+            {
+                "skill": "Problem Solving"
+            },
+            {
+                "skill": "Competitive Programming"
+            }
+        ],
+        "images": [
+            {
+                "picture": "KSN Informatika 2021 Provincial Level/1.jpg",
+                "desc": "KSN Informatika 2021 Provincial Level Certification"
+            }
+        ],
+        "publicationLink": "https://www.linkedin.com/in/christian-antonius-anggaresta-84b715243/overlay/1749110532882/single-media-viewer/?profileId=ACoAADxwu3sBkKCdBL-STorBWWOKgMMrpbZ7qsk",
+        "authors": [
+            {
+                "author": "Christian Antonius Anggaresta"
+            }
+        ],
+        "likes": 0
+    },
+    {
+        "projectId": 17,
+        "title": "Karya Asuh",
+        "details": "Karya Asuh is an e-commerce platform designed to market various products produced by children in orphanages. The Karya Asuh platform prioritizes transparency and dedication to the well-being of the children. Ninety-nine percent of the proceeds from sales of products or services marketed through this website will be allocated to purchase essential food and other essential supplies for the children in orphanages.",
+        "skills": [
+            {
+                "skill": "Laravel"
+            },
+            {
+                "skill": "PHP"
+            },
+            {
+                "skill": "HTML/CSS"
+            },
+            {
+                "skill": "Web Development"
+            },
+            {
+                "skill": "Javascript"
+            }
+        ],
+        "images": [
+            {
+                "picture": "Karya Asuh/1.jpg",
+                "desc": "Catalog Page"
+            },
+            {
+                "picture": "Karya Asuh/2.jpg",
+                "desc": "List of Orphanage"
+            },
+            {
+                "picture": "Karya Asuh/3.jpg",
+                "desc": "Withdrawal Management Page For Admin"
+            }
+        ],
+        "publicationLink": "https://github.com/chrisprojs/karya-asuh-website",
+        "authors": [
+            {
+                "author": "Christian Antonius Anggaresta"
+            },
+            {
+                "author": "Gabriel Enrico"
+            },
+            {
+                "author": "Andreas Mardohar Kristianto"
+            }
+        ],
+        "likes": 0
+    },
+    {
+        "projectId": 19,
+        "title": "Moladin Marketplace",
+        "details": "Moladin Marketplace is a e-commerce platform to buy/sell used car and new car. The goal was to create a modern, user-friendly, and performant website for vehicle sales platform.",
+        "skills": [
+            {
+                "skill": "Python"
+            },
+            {
+                "skill": "WebSocket"
+            },
+            {
+                "skill": "Redis Queue"
+            },
+            {
+                "skill": "Backend Development"
+            },
+            {
+                "skill": "REST API"
+            },
+            {
+                "skill": "MySQL"
+            },
+            {
+                "skill": "Docker"
+            },
+            {
+                "skill": "Git"
+            },
+            {
+                "skill": "FastAPI"
+            },
+            {
+                "skill": "Redis"
+            },
+            {
+                "skill": "Wordpress"
+            }
+        ],
+        "images": [
+            {
+                "picture": "Moladin Marketplace/1.jpg",
+                "desc": "Moladin Marketplace Home Page"
+            },
+            {
+                "picture": "Moladin Marketplace/2.jpg",
+                "desc": "Architecture of Manual Run Sync Button + Load Distribution in Task Scheduling Using Redis Queue"
+            },
+            {
+                "picture": "Moladin Marketplace/3.jpg",
+                "desc": "Planning for Live Progress Tracking Feature"
+            }
+        ],
+        "publicationLink": "https://moladin.com/",
+        "authors": [
+            {
+                "author": "Smart Tech Team Moladin"
+            }
+        ],
+        "likes": 13
+    },
+    {
+        "projectId": 20,
+        "title": "EduFun",
+        "details": "EduFun is a web-based application developed as my final web development project at Binus University. The platform displays a list of available courses offered during the EduFun program, allowing users to view course information, writers, and related details. EduFun was built to demonstrate full-stack development skills, including database design, Laravel backend development, and responsive frontend implementation.",
+        "skills": [
+            {
+                "skill": "Laravel"
+            },
+            {
+                "skill": "HTML"
+            },
+            {
+                "skill": "CSS"
+            },
+            {
+                "skill": "PHP"
+            },
+            {
+                "skill": "MySQL"
+            }
+        ],
+        "images": [
+            {
+                "picture": "EduFun/1.jpg",
+                "desc": "Database Diagram"
+            },
+            {
+                "picture": "EduFun/2.jpg",
+                "desc": "Home Page"
+            },
+            {
+                "picture": "EduFun/3.jpg",
+                "desc": "Interactive Multimedia Category Page"
+            },
+            {
+                "picture": "EduFun/4.jpg",
+                "desc": "Software Engineering Category Page"
+            },
+            {
+                "picture": "EduFun/5.jpg",
+                "desc": "Read More Page"
+            },
+            {
+                "picture": "EduFun/6.jpg",
+                "desc": "Writer Page"
+            },
+            {
+                "picture": "EduFun/7.jpg",
+                "desc": "Course of Writer Page"
+            },
+            {
+                "picture": "EduFun/8.jpg",
+                "desc": "About Us Page"
+            },
+            {
+                "picture": "EduFun/9.jpg",
+                "desc": "Popular Page"
+            }
+        ],
+        "publicationLink": "https://github.com/chrisprojs/EduFun",
+        "authors": [
+            {
+                "author": "Christian Antonius Anggaresta"
+            }
+        ],
+        "likes": 2
+    },
+    {
+        "projectId": 21,
+        "title": "Vehicle Management System",
+        "details": "The Vehicle Management System (VMS) is comprehensive software designed for the efficient management including inventory, asset tagging, and real-time GPS location tracking. My contribution focused on developing the robust backend architecture required to support a vast network of 20,000+ GPS-enabled IoT devices. This system is critical for business operations, providing a centralized dashboard for managing assets, monitoring vehicle status, and responding to events in real-time.",
+        "skills": [
+            {
+                "skill": "Go"
+            },
+            {
+                "skill": "WebSocket"
+            },
+            {
+                "skill": "Firebase"
+            },
+            {
+                "skill": "Backend Development"
+            },
+            {
+                "skill": "REST API"
+            },
+            {
+                "skill": "MySQL"
+            },
+            {
+                "skill": "Docker"
+            },
+            {
+                "skill": "Git"
+            },
+            {
+                "skill": "Internet of Things (IoT)"
+            }
+        ],
+        "images": [
+            {
+                "picture": "Vehicle Management System/1.jpg",
+                "desc": "What Is Vehicle Management System?"
+            },
+            {
+                "picture": "Vehicle Management System/2.jpg",
+                "desc": "Planning For Notification Alert System Task"
+            },
+            {
+                "picture": "Vehicle Management System/3.jpg",
+                "desc": "Notification Alert System From Client Side View"
+            }
+        ],
+        "publicationLink": "https://moladin.com/",
+        "authors": [
+            {
+                "author": "Smart Tech Team Moladin"
+            }
+        ],
+        "likes": 2
+    },
+    {
+        "projectId": 22,
+        "title": "Franchiso 2",
+        "details": "Franchiso is a web-based marketplace platform designed to facilitate the buying and selling of franchise businesses in Indonesia by connecting franchisors and potential franchisees in a single digital ecosystem. The platform allows franchisors to publish detailed franchise information, including investment costs, return on investment, business documents, and outlet locations, while enabling franchisees to search and compare opportunities using advanced filters and location mapping features. By incorporating business verification, structured information, and secure transaction support, Franchiso aims to increase transparency, trust, and efficiency in the franchise trading process, making it easier for users to find, evaluate, and acquire franchise business opportunities.",
+        "skills": [
+            {
+                "skill": "Go"
+            },
+            {
+                "skill": "Large Language Model (LLM)"
+            },
+            {
+                "skill": "Vector Search"
+            },
+            {
+                "skill": "Gemini"
+            },
+            {
+                "skill": "Elasticsearch"
+            },
+            {
+                "skill": "Midtrans"
+            },
+            {
+                "skill": "React"
+            },
+            {
+                "skill": "Javascript"
+            },
+            {
+                "skill": "PostgreSQL"
+            },
+            {
+                "skill": "Python"
+            },
+            {
+                "skill": "Kubernetes"
+            },
+            {
+                "skill": "Docker"
+            },
+            {
+                "skill": "GCP"
+            },
+            {
+                "skill": "GKE"
+            }
+        ],
+        "images": [
+            {
+                "picture": "Franchiso 2/1.jpg",
+                "desc": "Searching Using AI"
+            },
+            {
+                "picture": "Franchiso 2/2.jpg",
+                "desc": "Midtrans Payment Transaction"
+            },
+            {
+                "picture": "Franchiso 2/3.jpg",
+                "desc": "Complex Searching Filter Using Elasticsearch"
+            },
+            {
+                "picture": "Franchiso 2/4.jpg",
+                "desc": "Franchiso Page Detail With Location Mapping Feature"
+            }
+        ],
+        "publicationLink": "https://github.com/chrisprojs/franchiso-backend-2",
+        "authors": [
+            {
+                "author": "Christian Antonius Anggaresta"
+            }
+        ],
+        "likes": 2
+    },
+    {
+        "projectId": 23,
+        "title": "AI ATS Resume Checker",
+        "details": "An intelligent resume analysis API powered by AI that extracts candidate information from PDF resumes and provides ATS (Applicant Tracking System) compatibility checking. The service can analyze resumes standalone or compare them against job postings to provide relevance scores and improvement feedback.",
+        "skills": [
+            {
+                "skill": "Python"
+            },
+            {
+                "skill": "Large Language Model (LLM)"
+            },
+            {
+                "skill": "Deepseek"
+            },
+            {
+                "skill": "OpenRouter"
+            },
+            {
+                "skill": "REST API"
+            },
+            {
+                "skill": "FastAPI"
+            }
+        ],
+        "images": [
+            {
+                "picture": "AI ATS Resume Checker/1.jpg",
+                "desc": "AI ATS Resume Checker"
+            },
+            {
+                "picture": "AI ATS Resume Checker/2.jpg",
+                "desc": "Result of Resume Checker"
+            },
+            {
+                "picture": "AI ATS Resume Checker/3.jpg",
+                "desc": "Github Repository"
+            }
+        ],
+        "publicationLink": "https://github.com/chrisprojs/AI-ATS-Resume-Checker",
+        "authors": [
+            {
+                "author": "Christian Antonius Anggaresta"
+            }
+        ],
+        "likes": 2
+    },
+    {
+        "projectId": 24,
+        "title": "The Heroes API",
+        "details": "Django-based REST API designed for user management and external data integration, featuring core functionalities such as JWT-authenticated user registration, login, and profile editing. It incorporates a unique referral system and a search feature that allows users to find others by name or fetch randomized, Redis-cached data for League of Legends champions via an external JSON endpoint. Developed to be containerized using Docker, the system relies on a MySQL database for persistent storage and a Redis instance to optimize performance through efficient data caching.",
+        "skills": [
+            {
+                "skill": "Python"
+            },
+            {
+                "skill": "Django"
+            },
+            {
+                "skill": "Redis"
+            },
+            {
+                "skill": "REST API"
+            }
+        ],
+        "images": [
+            {
+                "picture": "The Heroes API/1.jpg",
+                "desc": "Controller Service Repository Pattern Diagram"
+            },
+            {
+                "picture": "The Heroes API/2.jpg",
+                "desc": "Search Hero"
+            },
+            {
+                "picture": "The Heroes API/3.jpg",
+                "desc": "Find User"
+            }
+        ],
+        "publicationLink": "https://github.com/chrisprojs/the-heroes-api",
+        "authors": [
+            {
+                "author": "Christian Antonius Anggaresta"
+            }
+        ],
+        "likes": 1
+    }
+]

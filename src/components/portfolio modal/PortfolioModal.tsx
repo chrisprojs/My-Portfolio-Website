@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../redux/ReduxStorage";
 import { likeProject } from "../../pages/portfolio/PortfolioAPI";
 import { likeProjectAction } from "../../pages/portfolio/likedProjectsReducer";
-import cuteDancing from "./../../asset/cute-dancing.gif";
+import cuteDancing from "./../../asset/gif-animations/cute-dancing.gif";
 
 function PortfolioModal({ project, onClose, onNext, onPrev }: any) {
   const projectData = project;
