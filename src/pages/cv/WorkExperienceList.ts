@@ -30,8 +30,8 @@ export const WorkExperienceList = [
     duration: "March 2023 - February 2024",
     responsibilities: [
       `Collaborated with a group of 12 people in the development of a Learning Management System website.`,
-      `Built high-performance and scalable backend infrastructure to support the Learning Management System.`,
-      `Developed dynamic and adaptable web interfaces for the Learning Management System.`,
+      `Delivered education technology solutions for Binus University, providing technical solutions that align with institutional academic needs.`,
+      `Built high-performance and scalable backend infrastructure to support the learning management process.`,
       `Implemented interactive components and features to enhance student engagement and facilitate seamless learning experiences.`,
     ],
   }
