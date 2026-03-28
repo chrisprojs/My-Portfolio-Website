@@ -25,7 +25,7 @@ function HomeSectionProject() {
     <section id='projectSection' className="section-container">
       <div className='section-head'>
         <p className="section-header">My Project</p>
-        <div className={`section-project-grid ${isGrid ? 'active' : ''}`} onClick={() => setIsGrid(!isGrid)}><i className="fa-solid fa-grid-2"></i></div>
+        <div className={`section-project-grid ${isGrid ? 'active' : ''}`} onClick={() => setIsGrid(!isGrid)}><i className="fa-solid fa-grip"></i></div>
       </div>
       {isGrid ? <Portfolio projects={projects} loading={loading}/> : <SlideProject projects={projects} loading={loading}/>}
     </section>
