@@ -121,7 +121,7 @@ function CVBox() {
       >
         <div className='cvBox-button'
         onMouseDown={handleStart} onTouchStart={handleStart} onClick={handleCVButton}>
-          <div><i className={`fa-solid fa-chevrons-${(offset>0) ? 'down' : 'up'}`}></i></div>
+          <div><i className={`fa-solid fa-angles-${(offset>0) ? 'down' : 'up'}`}></i></div>
           <p>View CV</p>
         </div>
         <div className={`cvBox-box ${isDragging ? 'dragged' : ''}`}
