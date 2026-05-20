@@ -28,6 +28,7 @@ function Navbar() {
       { id: "workExperienceSection"},
       { id: "aboutSection" },
       { id: "serviceSection" },
+      { id: "recommendationSection" },
     ];
 
     const updateActiveSection = () => {
@@ -74,6 +75,14 @@ function Navbar() {
               onClick={() => handleScroll('projectSection')}
             >
               Project
+            </p>
+          </li>
+          <li className="navbar-link">
+            <p
+              className={`navbar-link ${activeSection === "recommendationSection" ? "active" : ""}`}
+              onClick={() => handleScroll('recommendationSection')}
+            >
+              Recommendation
             </p>
           </li>
           <li className="navbar-link">

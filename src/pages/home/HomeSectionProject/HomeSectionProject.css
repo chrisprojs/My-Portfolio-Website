@@ -1,25 +1,54 @@
 
 
-.section-project-grid{
-  width: 30px;
-  height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 2px;
+.section-project-collapse{
+  --collapse-top-peek: 12px;
+  position: relative;
+  isolation: isolate;
+  align-self: stretch;
+  width: 100%;
+  height: calc(800px + var(--collapse-top-peek));
+  margin-top: calc(var(--collapse-top-peek) * -1);
+  padding-top: var(--collapse-top-peek);
+  overflow-y: hidden;
+  overflow-x: visible;
+}
+
+.section-project-collapse > *{
+  position: relative;
+  z-index: 1;
+}
+
+.section-project-collapse:not(.expanded)::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  height: 80px;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0), #000);
+}
+
+.section-project-collapse.expanded{
+  height: auto;
+}
+
+.section-project-toggle{
+  display: block;
+  margin: 18px auto 0;
+  padding: 8px 16px;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  background: #007bff;
+  color: #fff;
   cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.section-project-grid{
-  transition: background-color 0.3s ease;
-}
-
-.section-project-grid.active{
-  background-color: #007bff;
-}
-
-.section-project-grid i{
-  font-size: 1.2rem;
+.section-project-toggle:hover{
+  background: #0056b3;
 }
 
 .section-project-card-edge{

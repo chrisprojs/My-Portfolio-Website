@@ -1,0 +1,152 @@
+.recommendation-section {
+  width: 100%;
+}
+
+.recommendation-section-head {
+  margin-bottom: 12px;
+}
+
+.recommendation-section-note {
+  width: 90%;
+  margin: 0 auto 20px;
+  color: #cfcfcf;
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.recommendation-section-note a {
+  color: #6d76f7;
+  font-size: inherit;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.recommendation-section-note a:hover {
+  color: #8d95ff;
+}
+
+.recommendation-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  align-items: stretch;
+  width: 90%;
+}
+
+.recommendation-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  min-width: 0;
+  height: 100%;
+  padding: 20px;
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.recommendation-card:hover {
+  transform: translateY(-5px);
+  border-color: #007bff;
+}
+
+.recommendation-card-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  min-width: 0;
+}
+
+.recommendation-profile-link {
+  display: block;
+  flex: 0 0 64px;
+  width: 64px;
+  height: 64px;
+  overflow: hidden;
+  background-color: #0b0b0b;
+  border: 2px solid #007bff;
+  border-radius: 50%;
+}
+
+.recommendation-profile-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.recommendation-profile-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  min-width: 0;
+}
+
+.recommendation-name {
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.25;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.recommendation-name:hover {
+  color: #8d95ff;
+}
+
+.recommendation-role {
+  margin: 0;
+  color: #888;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.recommendation-letter {
+  margin: 0;
+  color: #ccc;
+  font-size: 14px;
+  line-height: 1.65;
+  text-align: left;
+  white-space: pre-line;
+}
+
+@media (max-width: 900px) {
+  .recommendation-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .recommendation-section-note {
+    font-size: 13px;
+  }
+
+  .recommendation-card {
+    padding: 16px;
+  }
+
+  .recommendation-card-header {
+    align-items: flex-start;
+  }
+
+  .recommendation-profile-link {
+    flex-basis: 56px;
+    width: 56px;
+    height: 56px;
+  }
+
+  .recommendation-name {
+    font-size: 16px;
+  }
+
+  .recommendation-role,
+  .recommendation-letter {
+    font-size: 13px;
+  }
+}

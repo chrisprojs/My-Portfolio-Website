@@ -75,6 +75,11 @@ export const SkillList = [
       level: 4
     },
     {
+      skill: 'Kafka',
+      details: 'Experience building high traffic application gateway using Kafka as messaging brokers',
+      level: 7
+    },
+    {
       skill: 'GKE',
       details: 'Fundamental in deploying cluster that used for running application on the top of Kubernetes Engine.',
       level: 4
