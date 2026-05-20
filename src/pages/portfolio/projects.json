@@ -765,6 +765,9 @@
                 "skill": "Go"
             },
             {
+                "skill": "Python"
+            },
+            {
                 "skill": "WebSocket"
             },
             {
@@ -787,6 +790,9 @@
             },
             {
                 "skill": "Internet of Things (IoT)"
+            },
+            {
+                "skill": "Kafka"
             }
         ],
         "images": [

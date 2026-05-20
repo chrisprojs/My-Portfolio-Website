@@ -2,11 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { getAllProjects } from '../../portfolio/PortfolioAPI';
 import { Project } from '../../portfolio/PortfolioInterface';
 import './HomeSectionProject.css';
-import SlideProject from './SlideProject';
 import Portfolio from '../../portfolio/Portfolio';
 
 function HomeSectionProject() {
-  const [isGrid, setIsGrid] = useState(true);
+  const [isProjectsExpanded, setIsProjectsExpanded] = useState(false);
   const [projects, setProjects] = useState<Project[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -16,18 +15,25 @@ function HomeSectionProject() {
       setProjects(projectsData);
       setLoading(false);
     };
-    if (loading) {
-      fetchProjects();
-    }
-  },[]);
+    fetchProjects();
+  }, []);
 
   return (
     <section id='projectSection' className="section-container">
       <div className='section-head'>
-        <p className="section-header">My Project</p>
-        <div className={`section-project-grid ${isGrid ? 'active' : ''}`} onClick={() => setIsGrid(!isGrid)}><i className="fa-solid fa-grip"></i></div>
+        <p className="section-header">My Projects</p>
       </div>
-      {isGrid ? <Portfolio projects={projects} loading={loading}/> : <SlideProject projects={projects} loading={loading}/>}
+      <div className={`section-project-collapse ${isProjectsExpanded ? 'expanded' : ''}`}>
+        <Portfolio projects={projects} loading={loading}/>
+      </div>
+      <button
+        type="button"
+        className="section-project-toggle"
+        aria-expanded={isProjectsExpanded}
+        onClick={() => setIsProjectsExpanded(!isProjectsExpanded)}
+      >
+        {isProjectsExpanded ? 'Show Less' : 'Show All Projects'}
+      </button>
     </section>
   );
 }

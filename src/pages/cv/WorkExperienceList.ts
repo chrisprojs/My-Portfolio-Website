@@ -1,14 +1,14 @@
 export const WorkExperienceList = [
   {
     company: "Moladin",
-    position: "Fullstack Engineer Intern",
+    position: "Fullstack Engineer Intern | IoT Team",
     duration: "September 2025 - Present",
     responsibilities: [
-      `Enhanced backend performance by 36% by offloading heavy processing tasks from the monolith architecture to Redis Queue.`,
-      `Built a Vehicle Management System for managing inventory, tagging, and tracking GPS location supported by a network of 20,000+ GPS-enabled IoT devices.`,
-      `Developed a Notification Alert System for the Vehicle Management System that potentially increases fraud indication awareness by 70%.`,
-      `Collaborated with a group of 3 interns in the development of the project and supported the manager handling configuration for deployment.`,
-      `Maintained a car marketplace to showcase and manage the car auction schedule, ensuring there is no blockage between the schedules.`,
+      `Built a Vehicle Management System for managing inventory, tagging, application gateway, alert system, and tracking GPS location analytics supported by a network of 20,000+ GPS-enabled IoT devices.`,
+      `Found critical vulnerability in Device Acceptance App authentication and preventing company from losing 9 million per month.`,
+      `Configured and optimized an IoT server to concurrently support diverse GPS protocols (including GT06 and H02)`,
+      `Reduced around 4 million monthly operational cost by refactoring and proposing alternative cheaper solution.`,
+      `Enhanced backend performance by 36% by offloading heavy processing tasks from the monolith architecture to Redis worker.`,
       `Contributed to the revamp of Moladin marketplace, transforming the platform from a used-car marketplace into a new-car marketplace system.`
     ],
   },
