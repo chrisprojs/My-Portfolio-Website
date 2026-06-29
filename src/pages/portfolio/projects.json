@@ -286,10 +286,16 @@
     {
         "projectId": 8,
         "title": "Eksotika Prima Rub Oil Supplier Website",
-        "details": "Eksotika Prima is the largest rub oil supplier distributed from Makassar to Jakarta. This website help pharmacies and oil seller to see various products and details from website.",
+        "details": "Built a responsive marketing website with product catalog, SEO-optimized news articles, and an internal dynamic CMS that allows administrators to manage products and publish content. To minimize operational costs, the system was architected using a serverless deployment and lightweight SQLite database, resulting in hosting and infrastructure costs of less than US$10 per year while maintaining fast page loads and strong SEO performance.",
         "skills": [
             {
                 "skill": "Next.js"
+            },
+            {
+                "skill": "libSQL"
+            },
+            {
+                "skill": "SQLite"
             },
             {
                 "skill": "React"
@@ -301,27 +307,27 @@
                 "skill": "Back End Development"
             },
             {
-                "skill": "Marketing"
-            },
-            {
                 "skill": "CSS"
             }
         ],
         "images": [
             {
                 "picture": "Eksotika Prima Rub Oil Supplier Website/1.jpg",
-                "desc": "Home Page"
+                "desc": "Implementation of Content Management System"
             },
             {
                 "picture": "Eksotika Prima Rub Oil Supplier Website/2.jpg",
-                "desc": "Minyak Gosok Cap Beruang Reguler - 120 ml"
+                "desc": "Landing Page"
             },
             {
                 "picture": "Eksotika Prima Rub Oil Supplier Website/3.jpg",
-                "desc": "Product Page"
+                "desc": "News Article Page"
+            },{
+                "picture": "Eksotika Prima Rub Oil Supplier Website/4.jpg",
+                "desc": "Product Detail Page"
             }
         ],
-        "publicationLink": "https://eksotikaprima.netlify.app",
+        "publicationLink": "https://eksotikaprima.com",
         "authors": [
             {
                 "author": "Christian Antonius Anggaresta"
