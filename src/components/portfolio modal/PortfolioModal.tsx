@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import { CSSTransition } from "react-transition-group";
+import { createPortal } from "react-dom";
 import "./PortfolioModal.css";
 import Slider from "react-slick";
 import { useDispatch, useSelector } from "react-redux";
@@ -319,7 +320,7 @@ function PortfolioModal({ project, onClose, onNext, onPrev }: any) {
     ),
   };
 
-  return (
+  return createPortal(
     <>
       <CSSTransition
         in={showModal}
@@ -496,8 +497,12 @@ function PortfolioModal({ project, onClose, onNext, onPrev }: any) {
           </div>
         </div>
       </CSSTransition>
-    </>
+    </>,
+    document.body
   );
 }
 
 export default PortfolioModal;
+
+
+
