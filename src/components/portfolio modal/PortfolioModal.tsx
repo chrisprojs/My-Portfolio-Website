@@ -27,6 +27,7 @@ function PortfolioModal({ project, onClose, onNext, onPrev }: any) {
   const previewImageRef = useRef<HTMLImageElement>(null);
   const previewContentRef = useRef<HTMLDivElement>(null);
   const previewOverlayRef = useRef<HTMLDivElement>(null);
+  const modalOverlayRef = useRef<HTMLDivElement>(null);
   const sliderRef = useRef<Slider>(null);
 
   const dispatch = useDispatch();
@@ -327,8 +328,9 @@ function PortfolioModal({ project, onClose, onNext, onPrev }: any) {
         timeout={100}
         classNames="modal"
         unmountOnExit
+        nodeRef={modalOverlayRef}
       >
-        <div className="modal-overlay" onClick={handleClose}>
+        <div ref={modalOverlayRef} className="modal-overlay" onClick={handleClose}>
           <div className="modal-content-wrapper">
             <div
               className="modal-navigation"
@@ -451,6 +453,7 @@ function PortfolioModal({ project, onClose, onNext, onPrev }: any) {
         timeout={200}
         classNames="preview"
         unmountOnExit
+        nodeRef={previewOverlayRef}
       >
         <div
           ref={previewOverlayRef}
@@ -503,6 +506,5 @@ function PortfolioModal({ project, onClose, onNext, onPrev }: any) {
 }
 
 export default PortfolioModal;
-
 
 
