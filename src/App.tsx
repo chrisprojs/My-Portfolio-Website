@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import {
   Route,
   BrowserRouter as Router,
@@ -19,6 +19,7 @@ import Portfolio from "./pages/portfolio/Portfolio";
 function PageWrapper() {
   const [loading, setLoading] = useState(true);
   const location = useLocation();
+  const nodeRef = useMemo(() => React.createRef<HTMLDivElement>(), [location.key]);
 
   useEffect(() => {
     setLoading(true); // Show loading indicator
@@ -30,8 +31,8 @@ function PageWrapper() {
     <>
       {loading && <Loading />}
       <TransitionGroup>
-        <CSSTransition key={location.key} classNames="fade" timeout={300}>
-          <div className="page-content">
+        <CSSTransition key={location.key} classNames="fade" timeout={300} nodeRef={nodeRef}>
+          <div ref={nodeRef} className="page-content">
             <Routes location={location}>
               <Route path="/" element={<Home />} />
             </Routes>
