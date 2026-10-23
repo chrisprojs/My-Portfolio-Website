@@ -1,8 +1,18 @@
 export const WorkExperienceList = [
   {
+    company: "MSC Mediterranean Shipping Company",
+    position: "Fullstack Engineer",
+    duration: "August 2026 - June 2027",
+    responsibilities: [
+      `Architect a payment solution to process around IDR 1T+ in monthly transactions and reduce finance team workload from manual payment checking into semi-automated payment checking.`,
+      `Hold cross-functional discussions with Finance and Business Process teams to map core business requirements and align operational expectations.`,
+      `Ensure security compliance with Indonesian regulatory frameworks while maintaining alignment with Geneva security standards.`
+    ],
+  },
+  {
     company: "Moladin",
     position: "Fullstack Engineer Intern | IoT Team",
-    duration: "September 2025 - Present",
+    duration: "September 2025 - August 2026",
     responsibilities: [
       `Built a Vehicle Management System for managing inventory, tagging, application gateway, alert system, and tracking GPS location analytics supported by a network of 20,000+ GPS-enabled IoT devices.`,
       `Designed and implemented support for 2+ car loan product types within the IoT Vehicle Management System, enabling broader business integration and operational flexibility.`,
