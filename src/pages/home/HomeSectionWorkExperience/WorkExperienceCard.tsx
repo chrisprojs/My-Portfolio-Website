@@ -15,6 +15,7 @@ interface WorkExperienceCardProps {
 function WorkExperienceCard({ experience }: WorkExperienceCardProps) {
   const getLogoPath = (company: string) => {
     const logoMap: { [key: string]: any } = {
+      'MSC Mediterranean Shipping Company': require('../../../asset/work-experience-logo/msc mediterranean shipping company.jpeg'),
       'Moladin': require('../../../asset/work-experience-logo/moladin.jpeg'),
       '99 Group': require('../../../asset/work-experience-logo/99 group.jpeg'),
       'Bina Nusantara IT Division': require('../../../asset/work-experience-logo/bina nusantara it division.jpeg')
